@@ -1,0 +1,180 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-bg {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 255, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(./assets/conact-bnr.jpg);
+}
+
+/* .vision-bg {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.473)), url(./assets/vision.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover
+} */
+
+.abouthome-bg {
+  /* background-image: url(./assets/nxtgn_office.jpg); */
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.37),
+      rgba(0, 0, 0, 0.048)
+    ),
+    url(./assets/banner.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.svg-icon {
+  transition: fill 0.3s;
+  /* Smooth transition */
+}
+
+.button-txt:hover .icon-color {
+  fill: black;
+  /* Change color to black on hover */
+}
+
+.bg-call {
+  /* background-color: #28aa4a; */
+  background-color: #027b9a;
+}
+
+.faq-bg {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.212),
+      rgb(255, 255, 255)
+    ),
+    url(./assets/testimonial-bg.webp);
+}
+
+.cards-bg {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.89),
+      rgba(255, 255, 255, 0.897)
+    ),
+    url(./assets/cards-bg.jpeg);
+}
+
+.leadership-cnt {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.644),
+      rgba(0, 0, 0, 0.658)
+    ),
+    url(./assets/leaders.jpg);
+  background-size: contain;
+  background-position: center;
+}
+
+.blog-banner {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.644),
+      rgba(0, 0, 0, 0.658)
+    ),
+    url(./assets/blog-banner.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-leaders {
+  background-image: url(./assets/bg-leaders.png);
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .leadership-cnt {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.644),
+        rgba(0, 0, 0, 0.658)
+      ),
+      url(./assets/l.jpg);
+    background-size: contain;
+    /* Change to contain for mobile */
+  }
+}
+
+.landing-cw {
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.329),
+      rgba(0, 0, 0, 0.301)
+    ),
+    url(./assets/images/bg.jpg) center / cover no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .landing-cw {
+    height: fit-content;
+  }
+}
+
+/* .bg-homeaboutdesign {
+  background: url(./assets/about/abouthomebg.png) center / cover no-repeat;
+} */
+.side-section {
+  position: sticky;
+  top: 0;
+  max-height: fit-content;
+  padding-top: 20px; /* Space from the top */
+}
+
+.testimonial-area2 {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.173),
+      rgba(0, 0, 0, 0.658)
+    ),
+    url(./assets/testimonials-background.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+}

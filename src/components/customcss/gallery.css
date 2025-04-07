@@ -1,0 +1,15 @@
+.gallery-bnr-cont {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/gallery-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.text-transparent {
+    color: transparent;
+    /* Makes the inside of the letters transparent */
+    background-clip: text;
+    /* Clips the background to the text */
+    -webkit-text-stroke: 2px white;
+    /* Applies a white stroke around the text */
+}

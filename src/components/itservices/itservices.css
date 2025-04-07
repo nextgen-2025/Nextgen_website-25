@@ -1,0 +1,23 @@
+.it-banner {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.842), rgba(0, 0, 0, 0.459)), url(../../assets/ITbanner.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.itser-summ {
+  background-image: url(../../assets/summuryit.png);
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .itser-summ {
+    background-image: none;
+  }
+}
+
+.servicesdetails-bnr {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.842), rgba(0, 0, 0, 0.459)), url(../../assets/itdetails.jpg);
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "title": "Network Services",
+    "description": "Network services are vital for ensuring that your organization’s data remains secure and accessible. With a focus on database security, we implement protective measures that shield your databases from both intentional and unintentional threats. Our approach includes controlling access, ensuring data integrity, and maintaining data availability, all crucial for operational efficiency. A robust network security strategy helps safeguard against potential vulnerabilities, providing peace of mind that your sensitive information is well-protected.",
+    "image": "/ITCardsServices/ITDetails/1.jpg",
+    "faq": [
+      {
+        "question": "What is database security?",
+        "answer": "Database security involves measures to protect databases from unauthorized access, misuse, or corruption."
+      },
+      {
+        "question": "Why is database security important?",
+        "answer": "It's crucial to prevent data breaches, which can lead to financial loss and damage to reputation."
+      },
+      {
+        "question": "What are common database security measures?",
+        "answer": "Common measures include encryption, access controls, and regular audits."
+      },
+      {
+        "question": "How do you monitor database security?",
+        "answer": "Continuous monitoring tools and regular assessments help identify and address vulnerabilities in real-time."
+      },
+      {
+        "question": "What happens in case of a database breach?",
+        "answer": "We have an incident response plan in place to quickly address breaches and mitigate potential damage."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Server Services",
+    "description": "Our server services are designed to harness the power of cloud computing, providing your business with flexible and scalable solutions. By delivering various services over the internet, including storage, processing, and software applications, we enable users to access and store data remotely. This not only enhances operational efficiency but also allows for greater collaboration across teams. Transitioning to cloud-based server solutions can result in significant cost savings and reduced maintenance burdens.",
+    "image": "/ITCardsServices/ITDetails/2.jpg",
+    "faq": [
+      {
+        "question": "What is cloud computing?",
+        "answer": "Cloud computing is a technology that allows users to access and store data and applications over the internet."
+      },
+      {
+        "question": "What are the benefits of cloud computing?",
+        "answer": "Benefits include cost savings, scalability, and enhanced collaboration."
+      },
+      {
+        "question": "Is cloud computing secure?",
+        "answer": "While cloud services offer robust security measures, users must also take precautions to protect their data."
+      },
+      {
+        "question": "Can I migrate my existing data to the cloud?",
+        "answer": "Yes, we provide migration services to ensure a smooth transition of your data to the cloud."
+      },
+      {
+        "question": "What types of cloud services do you offer?",
+        "answer": "We offer a range of services, including Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS)."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Data Management",
+    "description": "Effective data management is essential for any organization seeking to protect the integrity and usability of its data. Our services encompass a comprehensive approach to network security, utilizing both hardware and software technologies to guard against a variety of threats. By implementing robust data management practices, we ensure that your information remains secure and accessible. In today’s data-driven world, safeguarding your data assets is crucial.",
+    "image": "/ITCardsServices/ITDetails/3.jpg",
+    "faq": [
+      {
+        "question": "What is network security?",
+        "answer": "Network security consists of policies and practices designed to monitor and protect computer networks."
+      },
+      {
+        "question": "What are common network security threats?",
+        "answer": "Common threats include malware, phishing, and denial-of-service attacks."
+      },
+      {
+        "question": "How can I improve my network security?",
+        "answer": "You can improve security by using firewalls, antivirus software, and implementing strong password policies."
+      },
+      {
+        "question": "What is the role of data encryption in security?",
+        "answer": "Data encryption helps protect sensitive information by converting it into a format that is unreadable without the appropriate key."
+      },
+      {
+        "question": "How often should I conduct security audits?",
+        "answer": "Regular audits, at least annually, are recommended to identify vulnerabilities and ensure compliance with security standards."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Firewall Services",
+    "description": "Firewall services play a critical role in protecting your network from unauthorized access and cyber threats. By implementing advanced firewall solutions, we can monitor incoming and outgoing traffic, ensuring that only legitimate data is allowed through. This layer of security is essential for maintaining the integrity of your systems and safeguarding sensitive information. In addition to traditional firewalls, our services include next-generation firewall technologies that utilize artificial intelligence to enhance threat detection and response.",
+    "image": "/ITCardsServices/ITDetails/4.jpg",
+    "faq": [
+      {
+        "question": "What is a firewall?",
+        "answer": "A firewall is a security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules."
+      },
+      {
+        "question": "How does a firewall protect my network?",
+        "answer": "It creates a barrier between your internal network and external sources, blocking unauthorized access."
+      },
+      {
+        "question": "What types of firewalls are available?",
+        "answer": "We offer hardware firewalls, software firewalls, and next-generation firewalls with advanced threat detection capabilities."
+      },
+      {
+        "question": "Can firewalls prevent all cyber attacks?",
+        "answer": "While they significantly reduce risk, firewalls should be part of a comprehensive security strategy that includes other measures."
+      },
+      {
+        "question": "How often should firewall rules be updated?",
+        "answer": "Firewall rules should be reviewed and updated regularly to adapt to new threats and changes in your network."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Web Development",
+    "description": "Web development is crucial for establishing a strong online presence. Our services encompass everything from designing user-friendly websites to implementing robust cybersecurity measures that protect your digital assets. By focusing on both aesthetics and functionality, we create websites that not only attract visitors but also keep their data secure. With an emphasis on responsive design and seamless user experiences, our web development team ensures that your website performs well across all devices.",
+    "image": "/ITCardsServices/ITDetails/5.jpg",
+    "faq": [
+      {
+        "question": "What is web development?",
+        "answer": "Web development involves building and maintaining websites, focusing on functionality and user experience."
+      },
+      {
+        "question": "Why is cybersecurity important for websites?",
+        "answer": "It protects sensitive data, such as customer information and payment details, from cyber threats."
+      },
+      {
+        "question": "Do you offer e-commerce solutions?",
+        "answer": "Yes, we provide tailored e-commerce development services to help you sell products online securely."
+      },
+      {
+        "question": "What technologies do you use for web development?",
+        "answer": "We utilize a range of technologies, including HTML, CSS, JavaScript, and various frameworks to build scalable websites."
+      },
+      {
+        "question": "How do you ensure website performance?",
+        "answer": "We employ best practices in coding, optimize images, and utilize content delivery networks (CDNs) to enhance site speed and performance."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "24/7 IT Support",
+    "description": "Our 24/7 IT support services ensure that your business operations run smoothly without interruption. With a dedicated team available around the clock, we address any IT challenges that arise, allowing you to focus on your core business activities. Our support encompasses troubleshooting, system maintenance, and proactive monitoring to prevent issues before they affect your operations. In today's fast-paced digital landscape, having reliable IT support is crucial for maintaining productivity and efficiency.",
+    "image": "/ITCardsServices/ITDetails/6.jpg",
+    "faq": [
+      {
+        "question": "What types of IT support do you offer?",
+        "answer": "We provide technical support, system maintenance, and troubleshooting services."
+      },
+      {
+        "question": "How can I contact your support team?",
+        "answer": "You can reach our support team via phone, email, or through our online support portal."
+      },
+      {
+        "question": "What is your average response time for support requests?",
+        "answer": "Our average response time is typically within one hour, depending on the urgency of the issue."
+      },
+      {
+        "question": "Do you provide support for remote employees?",
+        "answer": "Yes, we offer remote support services to assist employees working from home or other locations."
+      },
+      {
+        "question": "What preventative measures do you take to reduce downtime?",
+        "answer": "We implement proactive monitoring and maintenance practices to identify and resolve issues before they impact your operations."
+      }
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+/* .coolBeans {
+    color: yellow;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.coolBeans::after {
+    background: linear-gradient(to right top,
+            #91d399,
+            #92d59a,
+            #92d89c,
+            #93da9d,
+            #93dd9f,
+            #8dda9a,
+            #87d696,
+            #81d391,
+            #74c985,
+            #66bf7a,
+            #58b66e,
+            #49ac63);
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.3s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.coolBeans:hover::after {
+    transform: translate(0, 0);
+}
+
+.coolBeans:hover {
+    border: 2px solid transparent;
+    transform: scale(1.05);
+    will-change: transform;
+} */
+
