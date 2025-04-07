@@ -25,7 +25,7 @@ const CareerHome = () => {
               href="mailto:nextgeninfratechs@gmail.com"
               className="text-[#24aa4a] hover:underline md:px-2 font-Manrope"
             >
-              nextgeninfratechs@gmail.com
+              hr1@nextgeninfratech.in
             </a>
           </span>
           <span className="flex flex-row md:flex-row md:items-center">
@@ -36,7 +36,7 @@ const CareerHome = () => {
               href="tel:1234567890"
               className="text-[#24aa4a] hover:underline md:px-2 font-Manrope"
             >
-              +91 1234567890
+              +91 7977763010
             </a>
           </span>
         </div>

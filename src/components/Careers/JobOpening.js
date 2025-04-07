@@ -5,7 +5,7 @@ const JobOpening = ({ onApplyClick }) => {
 
   const jobs = [
     { 
-      title: "Telecaller", 
+      title: "Telecaller Domecstic & International", 
       location: "Mahape-MBP, Ghansoli",
       description: "We are looking for an enthusiastic Telecaller to contact potential customers and handle client communications. Requirements include excellent communication skills and 1-2 years of experience in telemarketing.",
       skills: ["Communication Skills", "Telesales", "Customer Service", "MS Office", "Hindi & English Proficiency"]
@@ -23,22 +23,16 @@ const JobOpening = ({ onApplyClick }) => {
       skills: ["SEO", "Social Media Marketing","SMMO", "Content Strategy", "Google Analytics", "PPC Campaigns"]
     },
     { 
-      title: "Sales Manager", 
-      location: "Mahape-MBP, Ghansoli",
-      description: "Experienced Sales Manager needed to lead and grow our sales team. Must have 5+ years of B2B sales experience and proven track record of meeting targets.",
-      skills: ["B2B Sales", "Team Leadership", "Sales Strategy", "CRM Software", "Negotiation"]
-    },
-    { 
       title: "Graphic Designer", 
       location: "Mahape-MBP, Ghansoli",
       description: "Creative Graphic Designer wanted with expertise in Adobe Creative Suite. Should have 2+ years of experience in creating marketing materials and brand assets.",
       skills: ["Adobe Photoshop", "Adobe Illustrator", "UI/UX Design", "Typography", "Brand Design"]
     },
     { 
-      title: "IT-Head", 
+      title: "App Developer", 
       location: "Mahape-MBP, Ghansoli",
-      description: "Seeking an IT Head to oversee all technology operations. Should have 8+ years of experience in IT management and strong leadership skills.",
-      skills: ["IT Strategy", "Team Management", "Project Management", "Cloud Services", "Information Security"]
+      description: "We are looking for an App Developer with experience in iOS and Android development. Must have a strong portfolio and knowledge of mobile app frameworks.",
+      skills: ["iOS Development", "Android Development", "React Native", "Flutter", "Java", "Swift"]
     },
   ];
 
