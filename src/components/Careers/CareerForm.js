@@ -116,7 +116,7 @@ const CareerForm = ({ selectedJob }) => {
 
       try {
         const response = await fetch(
-          `https://nextgen-server-ap3a.onrender.com/submit-form`,
+          `http://localhost:5000/submit-form`,
           {
             method: "POST",
             body: formDataToSend,
