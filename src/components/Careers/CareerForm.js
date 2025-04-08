@@ -116,7 +116,7 @@ const CareerForm = ({ selectedJob }) => {
 
       try {
         const response = await fetch(
-          `http://localhost:5000/submit-form`,
+          `nextgen-backend-2025-production.up.railway.app`,
           {
             method: "POST",
             body: formDataToSend,
