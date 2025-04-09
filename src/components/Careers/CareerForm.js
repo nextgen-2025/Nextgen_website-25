@@ -123,6 +123,8 @@ const CareerForm = ({ selectedJob }) => {
       formDataToSend.append("experience", formData.experience);
       formDataToSend.append("location", formData.location);
       formDataToSend.append("skills", formData.skills);
+      formDataToSend.append("currentSalary", formData.currentSalary);
+      formDataToSend.append("expectedSalary", formData.expectedSalary);
       formDataToSend.append("jobTitle", formData.jobTitle);
       formDataToSend.append("resume", formData.resume);
 
