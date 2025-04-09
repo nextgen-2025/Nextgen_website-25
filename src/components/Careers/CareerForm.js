@@ -145,6 +145,8 @@ const CareerForm = ({ selectedJob }) => {
             phone: "",
             experience: "",
             location: "",
+            expectedSalary: "",
+            currentSalary: "",
             skills: "",
             resume: null,
             jobTitle: "",
@@ -312,7 +314,7 @@ const CareerForm = ({ selectedJob }) => {
               className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Enter your Location"
             />
-            {errors.name && (
+            {errors.location && (
               <p className="text-red-500 text-sm mt-1 text-start">
                 {errors.location}
               </p>
