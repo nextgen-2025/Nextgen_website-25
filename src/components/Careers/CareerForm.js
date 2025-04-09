@@ -7,6 +7,9 @@ const CareerForm = ({ selectedJob }) => {
     name: "",
     email: "",
     phone: "",
+    location: "",
+    currentSalary: "",
+    expectedSalary: "",
     experience: "",
     skills: "",
     resume: null,
@@ -17,6 +20,9 @@ const CareerForm = ({ selectedJob }) => {
     name: "",
     email: "",
     phone: "",
+    currentSalary: "",
+    expectedSalary: "",
+    location: "",
     experience: "",
     skills: "",
     resume: "", // New error state for resume
@@ -82,6 +88,11 @@ const CareerForm = ({ selectedJob }) => {
       isValid = false;
     }
 
+    if (!formData.location) {
+      tempErrors.location = "Location is required";
+      isValid = false;
+    }
+
     if (!formData.skills) {
       tempErrors.skills = "Skills are required";
       isValid = false;
@@ -110,6 +121,7 @@ const CareerForm = ({ selectedJob }) => {
       formDataToSend.append("email", formData.email);
       formDataToSend.append("phone", formData.phone);
       formDataToSend.append("experience", formData.experience);
+      formDataToSend.append("location", formData.location);
       formDataToSend.append("skills", formData.skills);
       formDataToSend.append("jobTitle", formData.jobTitle);
       formDataToSend.append("resume", formData.resume);
@@ -130,6 +142,7 @@ const CareerForm = ({ selectedJob }) => {
             email: "",
             phone: "",
             experience: "",
+            location: "",
             skills: "",
             resume: null,
             jobTitle: "",
@@ -152,7 +165,7 @@ const CareerForm = ({ selectedJob }) => {
   return (
     <div className="min-h-screen bg-gradient-to-r  flex justify-center items-center w-full lg:w-[50%]">
       <div
-        className="bg-white p-8 rounded-xl shadow-xl w-full lg:max-w-md"
+        className="bg-white p-8 rounded-xl shadow-xl w-full"
         id="form-career"
       >
         <h2 className="text-3xl font-bold text-center text-green-800 mb-6">
@@ -231,51 +244,115 @@ const CareerForm = ({ selectedJob }) => {
           </div>
 
           {/* Phone Input */}
+          <div className="flex flex-col md:flex-row md:gap-4">
+            <div>
+              <label
+                htmlFor="phone"
+                className="block text-lg font-semibold text-green-700 text-start"
+              >
+                Phone Number
+              </label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                placeholder="Enter your number"
+              />
+              {errors.phone && (
+                <p className="text-red-500 text-sm mt-1 text-start">
+                  {errors.phone}
+                </p>
+              )}
+            </div>
+
+            {/* Experience Input */}
+            <div>
+              <label
+                htmlFor="experience"
+                className="block text-lg font-semibold text-green-700 text-start"
+              >
+                Experience (years)
+              </label>
+              <input
+                type="number"
+                id="experience"
+                name="experience"
+                value={formData.experience}
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                placeholder="Example: 3 years"
+              />
+              {errors.experience && (
+                <p className="text-red-500 text-sm mt-1 text-start">
+                  {errors.experience}
+                </p>
+              )}
+            </div>
+          </div>
+
+          {/* Location Input */}
           <div>
             <label
-              htmlFor="phone"
+              htmlFor="location"
               className="block text-lg font-semibold text-green-700 text-start"
             >
-              Phone Number
+              Location
             </label>
             <input
               type="text"
-              id="phone"
-              name="phone"
-              value={formData.phone}
+              id="location"
+              name="location"
+              value={formData.location}
               onChange={handleInputChange}
               className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Enter your phone number"
+              placeholder="Enter your Location"
             />
-            {errors.phone && (
+            {errors.name && (
               <p className="text-red-500 text-sm mt-1 text-start">
-                {errors.phone}
+                {errors.location}
               </p>
             )}
           </div>
 
-          {/* Experience Input */}
-          <div>
-            <label
-              htmlFor="experience"
-              className="block text-lg font-semibold text-green-700 text-start"
-            >
-              Experience (years)
-            </label>
-            <input
-              type="number"
-              id="experience"
-              name="experience"
-              value={formData.experience}
-              onChange={handleInputChange}
-              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Enter your years of experience"
-            />
-            {errors.experience && (
-              <p className="text-red-500 text-sm mt-1 text-start">
-                {errors.experience}
-              </p>
-            )}
+          {/* Salary Input */}
+          <div className="flex flex-col md:flex-row md:gap-4">
+            <div>
+              <label
+                htmlFor="currentSalary"
+                className="block text-lg font-semibold text-green-700 text-start"
+              >
+                Current Salary (in LPA)
+              </label>
+              <input
+                type="number" 
+                id="currentSalary"
+                name="currentSalary"
+                value={formData.currentSalary}
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                placeholder="Example: 3"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="expectedSalary"
+                className="block text-lg font-semibold text-green-700 text-start"
+              >
+                Expected Salary (in LPA)
+              </label>
+              <input
+                type="number"
+                id="expectedSalary"
+                name="expectedSalary"
+                value={formData.expectedSalary}
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                placeholder="Example: 4.5"
+              />
+            </div>
           </div>
 
           {/* Skills Input */}
