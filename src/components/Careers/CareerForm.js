@@ -167,7 +167,7 @@ const CareerForm = ({ selectedJob }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r  flex justify-center items-center w-full lg:w-[50%]">
+    <div className="min-h-screen bg-gradient-to-r  flex justify-center items-center w-full lg:w-[50%] mb-[50px]">
       <div
         className="bg-white p-8 rounded-xl shadow-xl w-full"
         id="form-career"
