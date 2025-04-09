@@ -138,7 +138,6 @@ const CareerForm = ({ selectedJob }) => {
         );
         if (response.ok) {
           setSubmitSuccess(true);
-          alert("Form submitted successfully!");
           setFormData({
             name: "",
             email: "",
