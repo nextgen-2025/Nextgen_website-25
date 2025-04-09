@@ -372,7 +372,7 @@ const CareerForm = ({ selectedJob }) => {
               name="skills"
               value={formData.skills}
               onChange={handleInputChange}
-              rows="4"
+              rows="2"
               className="w-full px-4 py-2 mt-2 text-black border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="List your key skills"
             />
