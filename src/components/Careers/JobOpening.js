@@ -6,7 +6,7 @@ const JobOpening = ({ onApplyClick }) => {
 
   useEffect(() => {
     // Fetch job openings from backend
-    fetch("http://localhost:5000/jobs")
+    fetch("https://job-opening-backend-production.up.railway.app/jobs")
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
