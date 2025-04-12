@@ -33,7 +33,7 @@ const CareerHome = () => {
               For any inquiries, please contact us at:
             </p>
             <a
-              href="tel:1234567890"
+              href="tel:+91 7977763010"
               className="text-[#24aa4a] hover:underline md:px-2 font-Manrope"
             >
               +91 7977763010
