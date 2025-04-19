@@ -132,7 +132,7 @@ const Navbar = () => {
                 >
                   <li>
                     <Link
-                      to="/aboutus"
+                      to="/about"
                       className="block py-2 px-4 text-black hover:bg-gray-100 border-b border-[#1b23360a] border-dashed"
                     >
                       About
@@ -225,6 +225,14 @@ const Navbar = () => {
                 </Link>
               </li>
 
+              <li>
+                <Link
+                  to="/training"
+                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
+                >
+                  Training
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/blog"

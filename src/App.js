@@ -17,6 +17,7 @@ import { Careers } from "./pages/Careers";
 import Gallery from "./pages/Gallery";
 import BlogPage from "./pages/BlogPage";
 import BlogPageDetails from "./components/blogs/BlogPageDetails";
+import Traning from "./pages/Traning";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/aboutus" element={<About />}></Route>
+          <Route path="/about" element={<About />}></Route>
           <Route path="/teams" element={<Team />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/leaderships" element={<Leaderships />}></Route>
@@ -48,6 +49,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />}></Route>
           <Route path="/blog" element={<BlogPage />}></Route>
           <Route path="/blog-details/:id" element={<BlogPageDetails />}></Route>
+          <Route path="/training" element={<Traning />}></Route>
         </Routes>
       </Router>
     </div>
