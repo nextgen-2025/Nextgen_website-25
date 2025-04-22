@@ -20,11 +20,8 @@ const CareerForm = ({ selectedJob }) => {
     name: "",
     email: "",
     phone: "",
-    currentSalary: "",
-    expectedSalary: "",
     location: "",
     experience: "",
-    skills: "",
     resume: "", // New error state for resume
   });
 
@@ -50,11 +47,11 @@ const CareerForm = ({ selectedJob }) => {
         setFormData({ ...formData, resume: null });
       }
       // Check if file size is less than 200KB
-      else if (file.size > 200 * 1024) {
+      else if (file.size > 2000 * 1024) {
         // 200KB in bytes
         setErrors({
           ...errors,
-          resume: "File size should be less than 200KB.",
+          resume: "File size should be less than 2MB.",
         });
         setFormData({ ...formData, resume: null });
       } else {
@@ -93,11 +90,6 @@ const CareerForm = ({ selectedJob }) => {
       isValid = false;
     }
 
-    if (!formData.skills) {
-      tempErrors.skills = "Skills are required";
-      isValid = false;
-    }
-
     if (!formData.resume) {
       tempErrors.resume = "Resume is required";
       isValid = false;
@@ -122,9 +114,6 @@ const CareerForm = ({ selectedJob }) => {
       formDataToSend.append("phone", formData.phone);
       formDataToSend.append("experience", formData.experience);
       formDataToSend.append("location", formData.location);
-      formDataToSend.append("skills", formData.skills);
-      formDataToSend.append("currentSalary", formData.currentSalary);
-      formDataToSend.append("expectedSalary", formData.expectedSalary);
       formDataToSend.append("jobTitle", formData.jobTitle);
       formDataToSend.append("resume", formData.resume);
 
@@ -316,68 +305,6 @@ const CareerForm = ({ selectedJob }) => {
             {errors.location && (
               <p className="text-red-500 text-sm mt-1 text-start">
                 {errors.location}
-              </p>
-            )}
-          </div>
-
-          {/* Salary Input */}
-          <div className="flex flex-col md:flex-row md:gap-4">
-            <div>
-              <label
-                htmlFor="currentSalary"
-                className="block text-lg font-semibold text-green-700 text-start"
-              >
-                Current Salary (in LPA)
-              </label>
-              <input
-                type="number" 
-                id="currentSalary"
-                name="currentSalary"
-                value={formData.currentSalary}
-                onChange={handleInputChange}
-                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                placeholder="Example: 3"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="expectedSalary"
-                className="block text-lg font-semibold text-green-700 text-start"
-              >
-                Expected Salary (in LPA)
-              </label>
-              <input
-                type="number"
-                id="expectedSalary"
-                name="expectedSalary"
-                value={formData.expectedSalary}
-                onChange={handleInputChange}
-                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                placeholder="Example: 4.5"
-              />
-            </div>
-          </div>
-
-          {/* Skills Input */}
-          <div>
-            <label
-              htmlFor="skills"
-              className="block text-lg font-semibold text-green-700 text-start"
-            >
-              Key Skills
-            </label>
-            <textarea
-              id="skills"
-              name="skills"
-              value={formData.skills}
-              onChange={handleInputChange}
-              rows="2"
-              className="w-full px-4 py-2 mt-2 text-black border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="List your key skills"
-            />
-            {errors.skills && (
-              <p className="text-red-500 text-sm mt-1 text-start">
-                {errors.skills}
               </p>
             )}
           </div>
