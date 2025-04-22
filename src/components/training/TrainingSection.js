@@ -2,7 +2,22 @@ import React from "react";
 import training from "../../assets/training-nxg.jpg";
 import trainingRoom from "../../assets/images/11.jpg";
 import dedicatedDesk from "../../assets/images/dedicatedDesk.jpg";
-import privateCabin from "../../assets/images/4.jpg"
+import banner from "../../assets/banner.webp"
+import privateCabin from "../../assets/_6_08290-Enhanced-NR (1).jpg"
+import fourth from "../../assets/Dedicated Desk 3.jpg"
+
+import { FaAngular, FaCloud } from "react-icons/fa";
+import { AiOutlineRobot } from "react-icons/ai";
+
+import { FaNetworkWired, FaRobot } from "react-icons/fa";
+import {
+  SiDotnet,
+  SiKubernetes,
+
+} from "react-icons/si";
+import { DiJava } from "react-icons/di";
+import { FaAws, FaMicrosoft } from "react-icons/fa6";
+
 import {
   Wifi,
   Fan,
@@ -18,22 +33,69 @@ const TrainingSection = () => {
 
   const trainingPrograms = [
     {
-      title: "Full Stack Development",
+      icon: <SiDotnet className="text-4xl text-blue-600" />,
+      title: ".NET Development",
       description:
-        "Master front-end and back-end development with hands-on projects using MERN stack.",
+        "Build robust, cross‑platform applications using the Microsoft .NET framework and C#.",
     },
     {
+      icon: <DiJava className="text-4xl text-red-500" />,
+      title: "Java Fundamentals",
+      description:
+        "Master core Java concepts, OOP principles, and build console‑based & GUI applications.",
+    },
+    {
+      icon: <FaNetworkWired className="text-4xl text-green-600" />,
+      title: "IMS Network",
+      description:
+        "Understand IP Multimedia Subsystem (IMS) architecture, protocols, and real‑world deployments.",
+    },
+    {
+      icon: <FaRobot className="text-4xl text-purple-600" />,
+      title: "V&V Automation",
+      description:
+        "Learn Verification & Validation automation techniques, test‑frameworks, and CI/CD integration.",
+    },
+    {
+      icon: <SiKubernetes className="text-4xl text-indigo-500" />,
+      title: "Kubernetes",
+      description:
+        "Deploy, scale, and manage containerized applications using Kubernetes and Helm charts.",
+    },
+    {
+      icon: <FaAws className="text-4xl text-yellow-500" />,
+      title: "AWS Fundamentals",
+      description:
+        "Get hands‑on with core AWS services—EC2, S3, Lambda, and best practices for cloud architecture.",
+    },
+    {
+      icon: <FaMicrosoft className="text-4xl text-teal-600" />,
+      title: "Azure Fundamentals",
+      description:
+        "Explore Azure compute, storage, networking services, and learn how to design cloud solutions.",
+    },
+  
+    {
+      icon: <FaAngular className="text-4xl text-red-600" />,
+      title: "Angular.js",
+      description:
+        "Master front-end and back-end development with hands-on projects using Angular.js",
+    },
+    {
+      icon: <AiOutlineRobot className="text-4xl text-blue-600" />,
       title: "Data Science & AI",
       description:
         "Learn data analytics, machine learning, and AI with Python and real-world case studies.",
     },
     {
+      icon: <FaCloud className="text-4xl text-indigo-500" />,
       title: "Cloud Computing",
       description:
         "Gain cloud skills with AWS, Azure, and DevOps tools for deploying and managing apps.",
     },
-    // Add more programs if needed
+    // …add more programs here
   ];
+  
 
   const features = [
     {
@@ -64,80 +126,99 @@ const TrainingSection = () => {
 
   const workspaces = [
     {
-      name: "Private Cabins",
-      image: privateCabin, // update with your actual image paths
+      image: privateCabin,
+     title: "Private Cabins", // update with your actual image paths
       description: "Quiet and secure spaces for individuals or small teams.",
     },
     {
-      name: "Co-working Area",
       image: dedicatedDesk,
+     title: "Co-working Area",
       description:
         "Collaborative open desk environment for freelancers and teams with dedicated desk.",
     },
     {
-      name: "Training Rooms",
       image: trainingRoom,
-      description:
+      title: "Training Rooms",
+       description:
         "Fully equipped training rooms for efficient learning and team discussions",
+    },
+    {
+      image:banner,
+      title: "Private Office",
+      description: "A peaceful space to focus and create.",
+    },
+    {
+      image: fourth,
+      title: "Meeting Room",
+      description: "Collaborate and brainstorm with your team.",
     },
   ];
 
   return (
     <div className="bg-gray-50 py-16">
       <div className="container mx-auto px-6 lg:px-20">
-        <div className="flex flex-col lg:flex-row items-center justify-between space-y-10 lg:space-y-0">
-          {/* Left Column */}
-          <div className="lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Empower Your Skills with Our IT Training Programs
-            </h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Whether you're a beginner or looking to advance your career, our
-              IT training programs will equip you with the knowledge and skills
-              to thrive in today's fast-paced digital world.
-            </p>
-            <div className="space-x-4">
-              <a
-                href="/training"
-                className="inline-block bg-green-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-600 transition duration-300"
-              >
-                Explore Courses
-              </a>
-              <a
-                href="/training"
-                className="inline-block text-green-500 font-semibold py-2 px-6 rounded-full border-2 border-green-500 hover:bg-green-500 hover:text-white transition duration-300"
-              >
-                Get in Touch
-              </a>
-            </div>
-          </div>
-
-          {/* Right Column */}
-          <div className="lg:w-1/2">
-            <img
-              src={training}
-              alt="Training"
-              className="rounded-lg shadow-md w-full"
-            />
-          </div>
-        </div>
-        <div className="mt-16 mb-10">
+         <div className="mt-16 mb-10">
           <h3 className="text-2xl font-bold text-gray-800 text-center">
             Our Training Programs
           </h3>
-          <div className="grid gap-10 p-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-            {trainingPrograms.map((program, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition duration-300 h-full flex flex-col min-h-[175px]"
-              >
-                <h4 className="text-xl font-semibold text-green-600 mb-2">
-                  {program.title}
-                </h4>
-                <p className="text-gray-600 text-sm">{program.description}</p>
-              </div>
-            ))}
-          </div>
+         <div className="grid gap-5 p-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center">
+  {trainingPrograms.map((p, i) => (
+    <div
+      key={i}
+      className="
+        relative group bg-white/90 rounded-2xl shadow-md overflow-hidden
+        transition-all duration-300 py-2 px-2 w-[300px] backdrop-blur-sm border border-purple-100
+
+        /* base overlays */
+        [&>._top]:bg-blue-100/50
+        [&>._bottom]:bg-blue-200/60
+
+        /* on-hover: darken whole card */
+        hover:bg-blue-900/50
+
+        /* on-hover: tweak your overlays darker */
+        hover:[&>._top]:bg-blue-600/30
+        hover:[&>._bottom]:bg-blue-800/50
+
+        /* subtle lift + shadow */
+        hover:shadow-xl hover:-translate-y-1
+      "
+    >
+      {/* top‑right diagonal */}
+      <div className="absolute _top top-0 right-0 w-1/2 h-full bg-purple-100/50 skew-x-[-20deg] origin-top-right"></div>
+      {/* bottom‑half overlay */}
+      <div className="absolute _bottom bottom-0 left-0 w-full h-1/2 bg-purple-200/60 opacity-80"></div>
+
+      {/* content */}
+      <div className="relative z-10 flex flex-col h-full p-8 text-left">
+        <div className="mb-6 transform group-hover:scale-110 transition-transform duration-200">
+          {p.icon}
+        </div>
+
+        <h4 className="text-2xl font-bold text-black-900 mb-4">
+          {p.title}
+        </h4>
+
+        <p className="text-black-700 text-base flex-grow leading-relaxed">
+          {p.description}
+        </p>
+
+        <div className="mt-6 flex items-center justify-between">
+          <button className="
+            bg-green-600/90 text-white text-sm font-medium
+            px-6 py-3 rounded-full w-full
+            hover:bg-green-800 transition-colors duration-200
+            hover:shadow-lg
+          ">
+            Read More →
+          </button>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+
         </div>
         <div className="bg-white py-16">
           <div className="container mx-auto px-6 lg:px-20 text-center">
@@ -160,28 +241,47 @@ const TrainingSection = () => {
         <div className="bg-gray-50 py-16">
           <div className="container mx-auto px-6 lg:px-20">
             <h3 className="text-2xl font-bold text-gray-800 text-center mb-10">
-              Our Workspaces
+              Our Training Rooms & Workspaces
             </h3>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {workspaces.map((space, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300"
-                >
-                  <img
-                    src={space.image}
-                    alt={space.name}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-4">
-                    <h4 className="text-lg font-semibold text-green-600 mb-1">
-                      {space.name}
-                    </h4>
-                    <p className="text-gray-600 text-sm">{space.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[300px]">
+  {workspaces.map((space, index) => (
+    <div
+      key={index}
+      className={`
+        relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300
+        ${index % 5 === 0 ? "col-span-2 row-span-2" : ""} 
+        ${index % 4 === 0 ? "col-span-2" : ""} 
+        ${index === 3 ? "col-span-2" : ""}
+      `}
+    >
+      {/* Image */}
+      <img
+        src={space.image}
+        alt={space.name}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      />
+
+      {/* Static title at bottom */}
+      <div
+        className="
+          absolute bottom-0 w-full
+          bg-black/50 text-white text-sm p-2 text-center z-10
+          opacity-100 transition-opacity duration-300 ease-in-out
+          group-hover:opacity-0
+        "
+      >
+        {space.title}
+      </div>
+
+      {/* Hover overlay */}
+      <div className="absolute bottom-0 w-full bg-black/80 text-white p-4 text-center transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out z-20">
+        <h4 className="text-lg font-semibold">{space.title}</h4>
+        <p className="text-xs mt-1 text-white">{space.description}</p>
+      </div>
+    </div>
+  ))}
+</div>
+ 
           </div>
         </div>
         <div className="bg-green-50 py-16">

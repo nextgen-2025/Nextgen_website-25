@@ -359,14 +359,7 @@ const Navbar = () => {
                         Team
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="/careers"
-                        className="block text-2xl py-2 px-4 w-full text-gray-600 font-thin hover:bg-gray-50 border-b border-[#1b23360a] border-dashed"
-                      >
-                        Careers
-                      </Link>
-                    </li>
+                   
                     <li>
                       <Link
                         to="/gallery"
@@ -448,13 +441,31 @@ const Navbar = () => {
             </li>
             <li className="">
               <Link
+                to="/careers" 
+                className="block text-3xl py-2 px-4 text-gray-600 font-thin"
+              >
+                Careers
+              </Link>
+              </li>
+            <li className="">
+              <Link
                 to="/contact"
                 className="block text-3xl py-2 px-4 text-gray-600 font-thin"
               >
                 Contact
               </Link>
             </li>
+             <li className="">
+              <Link
+                to="/training"
+                className="block text-3xl py-2 px-4 text-gray-600 font-thin"
+              >
+                Training
+              </Link>
+
+            </li>
           </ul>
+        
         </div>
       </div>
       <style>{`
