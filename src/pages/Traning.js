@@ -5,7 +5,7 @@ import CTA from "../components/about/CTA";
 import Loader from "../components/loader/Loader";
 import TrainingBanner from "../components/training/Traning";
 import TrainingSection from "../components/training/TrainingSection";
-
+import TrainingPrograms from "../components/training/TrainingPrograms";
 const Training = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -22,11 +22,12 @@ const Training = () => {
       {isLoading && <Loader />}
       {!isLoading && (
         <>
+        
           <Navbar />
           <TrainingBanner />
-          <TrainingSection />
-         
-          <CTA />
+          <TrainingPrograms/>
+          <TrainingSection/>
+          <CTA/>
           <Footer />
         </>
       )}

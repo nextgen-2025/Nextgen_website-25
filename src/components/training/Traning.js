@@ -35,8 +35,8 @@ const TrainingBanner = () => {
       {/* Banner Section */}
       <div className="aboutus-bnr-cont flex justify-center bg-center bg-fixed relative overflow-hidden w-full h-[40vh] md:h-[60vh] rounded-b-[60px]">
         <div className="text-white flex flex-col justify-center items-center mx-auto mt-10 md:mt-0">
-          <h1 className="text-6xl md:text-[80px] font-bold drop-in font-lato">
-            Training
+          <h1 className="text-5xl md:text-[80px] font-bold drop-in font-lato">
+            Training and WorkSpace
           </h1>
           <p className="font-Manrope mx-2 md:mx-0 text-xl md:text-3xl text-center text-white py-4 font-thin drop-in-2">
             Your Partner in Innovative IT Infrastructure Solutions
