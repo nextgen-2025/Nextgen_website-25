@@ -6,6 +6,7 @@ import Loader from "../components/loader/Loader";
 import TrainingBanner from "../components/training/Traning";
 import TrainingSection from "../components/training/TrainingSection";
 import TrainingPrograms from "../components/training/TrainingPrograms";
+
 const Training = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -18,16 +19,19 @@ const Training = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden min-h-screen flex flex-col">
       {isLoading && <Loader />}
       {!isLoading && (
         <>
-        
           <Navbar />
-          <TrainingBanner />
-          <TrainingPrograms/>
-          <TrainingSection/>
-          <CTA/>
+          <main className="flex-grow">
+            <TrainingBanner />
+            <div className="container mx-auto px-4 py-6">
+              <TrainingPrograms />
+              <TrainingSection />
+            </div>
+          </main>
+          <CTA />
           <Footer />
         </>
       )}

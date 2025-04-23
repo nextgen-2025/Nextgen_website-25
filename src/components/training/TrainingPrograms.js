@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import {
     FaAngular,
     FaCloud,
@@ -115,51 +115,47 @@ const trainingPrograms = [
   },
 ];
 
+const CardSkeleton = () => (
+  <div className="h-[200px] bg-gray-100 animate-pulse rounded-2xl">
+    <div className="h-full flex flex-col items-center justify-center p-6">
+      <div className="w-16 h-16 bg-gray-200 rounded-full mb-4"></div>
+      <div className="h-6 bg-gray-200 rounded w-3/4"></div>
+    </div>
+  </div>
+);
+
 function TrainingPrograms() {
   return (
     <div className="mt-16 mb-10">
       <h2 className="text-3xl font-bold text-gray-800 text-center py-7">
         Our Training Programs
       </h2>
-      <div className="grid gap-y-3 gap-x-1 p-2 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 justify-center justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
         {trainingPrograms.map((p, i) => (
-          <div
-            key={i}
-            className={
-              `relative group bg-white/90 rounded-2xl shadow-md overflow-hidden
-               transition-all duration-300 py-2 px-2 w-[300px] backdrop-blur-sm border border-purple-100
+          <Suspense key={i} fallback={<CardSkeleton />}>
+            <div
+              className="relative group bg-white/90 rounded-2xl overflow-hidden
+                transition-all duration-300 h-[200px] backdrop-blur-sm border border-purple-100
+                hover:bg-blue-900/50 hover:shadow-xl hover:-translate-y-1
+                [&>._top]:bg-blue-100/50 [&>._bottom]:bg-blue-200/60
+                hover:[&>._top]:bg-blue-600/30 hover:[&>._bottom]:bg-blue-800/50"
+            >
+              {/* top-right diagonal */}
+              <div className="absolute _top top-0 right-0 w-1/2 h-full bg-purple-100/50 skew-x-[-20deg] origin-top-right"></div>
+              {/* bottom-half overlay */}
+              <div className="absolute _bottom bottom-0 left-0 w-full h-1/2 bg-purple-200/60 opacity-80"></div>
 
-               /* base overlays */
-               [&>._top]:bg-blue-100/50
-               [&>._bottom]:bg-blue-200/60
-
-               /* on-hover: darken whole card */
-               hover:bg-blue-900/50
-
-               /* on-hover: tweak your overlays darker */
-               hover:[&>._top]:bg-blue-600/30
-               hover:[&>._bottom]:bg-blue-800/50
-
-               /* subtle lift + shadow */
-               hover:shadow-xl hover:-translate-y-1`
-            }
-          >
-            {/* top-right diagonal */}
-            <div className="absolute _top top-0 right-0 w-1/2 h-full bg-purple-100/50 skew-x-[-20deg] origin-top-right"></div>
-            {/* bottom-half overlay */}
-            <div className="absolute _bottom bottom-0 left-0 w-full h-1/2 bg-purple-200/60 opacity-80"></div>
-
-            {/* content */}
-            <div className="relative z-10 flex flex-col h-full p-8 text-left">
-              <div className="mb-6 transform group-hover:scale-110 transition-transform duration-200">
-                {p.icon}
+              {/* content */}
+              <div className="relative z-10 flex flex-col items-center justify-center h-full p-6 text-center">
+                <div className="mb-4 transform group-hover:scale-110 transition-transform duration-200">
+                  {p.icon}
+                </div>
+                <h4 className="text-xl font-bold text-black-900">
+                  {p.title}
+                </h4>
               </div>
-
-              <h4 className="text-2xl font-bold text-black-900 mb-4">
-                {p.title}
-              </h4>
             </div>
-          </div>
+          </Suspense>
         ))}
       </div>
     </div>
