@@ -24,7 +24,7 @@ const CWForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus("Sending...");  
     setStatusType("success");
 
     const response = await fetch("https://formspree.io/f/xnnqnvdg", {
@@ -55,14 +55,14 @@ const CWForm = () => {
   };
   return (
     <div id="quote_form">
-      <div className="form flex md:block justify-center">
-        <form
-          id="quick_form"
+ <div className="form flex flex-col items-center justify-center px-5 py-2 md:">
+<form     id="quick_form"
           className="form-border"
           onSubmit={handleSubmit}
           data-bgcolor="#ffffff"
-        >
-          <div className="form-div bg-white p-5 relative z-10 mt-5 md:mt-16">
+          >
+ <div className="form-div bg-white p-5 absolate z-10 py-2 md:py-5">
+
             <div className="form-top">
               <h3 className="text-2xl font-semibold">Let's Get In Touch</h3>
               <select
