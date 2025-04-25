@@ -16,7 +16,7 @@ const CWHome = () => {
                 We are #1 Cospace
               </h2>
               <h1 className="heading-banner text-start text-6xl mb-5 leading-[65px] tracking-normal text-white">
-                Upgrade Your <span className="id-color">Workspace</span> with
+              Smart Spaces ,<span className="id-color"> Better Business  </span> with
                 <span className="id-color text-[#00C89A] mx-3 font-bold">
                   NextGen Infratech
                 </span>

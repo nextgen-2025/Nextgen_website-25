@@ -1,53 +1,35 @@
+import { faCity } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const CWForm = () => {
   const [formData, setFormData] = useState({
-    select_plan: "",
-    work_email: "",
-    mobile_phone: "",
-    full_name: "",
-    move_in_date: "",
-    number_of_people: "",
-    company: "",
-    additional_info: "",
+    type: "",
+    city: "",
+    area: "",
   });
   const [status, setStatus] = useState("");
   const [statusType, setStatusType] = useState("success");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    setFormData((p) => ({ ...p, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");  
+    setStatus("Sending...");
     setStatusType("success");
-
-    const response = await fetch("https://formspree.io/f/xnnqnvdg", {
+    // → swap in your own endpoint here
+    const res = await fetch("https://formspree.io/f/xnnqnvdg", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
 
-    if (response.ok) {
+    if (res.ok) {
       setStatus("Message sent successfully!");
-      setFormData({
-        select_plan: "",
-        work_email: "",
-        mobile_phone: "",
-        full_name: "",
-        move_in_date: "",
-        number_of_people: "",
-        company: "",
-        additional_info: "",
-      });
-      setStatusType("success");
+      setFormData({ type: "", city: "", area: "" });
     } else {
       setStatus("There was an error. Please try again.");
       setStatusType("error");
@@ -55,124 +37,105 @@ const CWForm = () => {
   };
   return (
     <div id="quote_form">
- <div className="form flex flex-col items-center justify-center px-5 py-2 md:">
-<form     id="quick_form"
+      <div className=" flex-col items-center justify-center px-5 py-2 md:py-10 ">
+        <form
+          id="quick_form"
           className="form-border"
           onSubmit={handleSubmit}
           data-bgcolor="#ffffff"
-          >
- <div className="form-div bg-white p-5 absolate z-10 py-2 md:py-5">
+        >
+            <div className="flex items-center justify-end p-5 ">
+              {/* Frosted glass backdrop */}
+              <div className="bg-black bg-opacity-50" />
+              {/* Form panel */}
+              <form
+                onSubmit={handleSubmit}
+                className="relative bg-white bg-opacity-20 rounded-none shadow-lg w-[500px] p-10 flex flex-col gap-6 mr-12"
+               >
+                {/* Row 1 */}
+                <div className="flex divide-x divide-gray-300 rounded-md overflow-hidden">
+                  <div className="bg-white px-4 py-2 font-semibold text-gray-700 flex-shrink-0 w-[80px] text-center">
+                    Find
+                  </div>
+                  <select
+                    name="type"
+                    value={formData.type}
+                    onChange={handleChange}
+                    className="flex-1 px-4 py-2 bg-white focus:outline-none"
+                    required
+                  >
+                    <option value="" disabled>
+                      Select Type
+                    </option>
+                    <option value="dedicated desk">Dedicated Desk</option>
+                    <option value="private cabins">Private Cabins</option>
+                    <option value="meeting rooms">Meeting Rooms</option>
+                    <option value="conference room">Conference Room</option>
+                    <option value="training room">Training Room</option>
+                    <option value="mini cabin">Mini Cabin</option>
+                  </select>
+                </div>
 
-            <div className="form-top">
-              <h3 className="text-2xl font-semibold">Let's Get In Touch</h3>
-              <select
-                className="block w-full px-3 py-2 text-base font-normal leading-6 text-gray-900 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:border-blue-500 focus:ring focus:ring-blue-200 my-2 "
-                name="select_plan"
-                value={formData.select_plan}
-                onChange={handleChange}
-                id="select_plan"
-              >
-                <option value="">Pick an option</option>
-                <option value="dedicated desk">Dedicated Desk</option>
-                <option value="private cabins">Private Cabins</option>
-                <option value="meeting rooms">Meeting Rooms</option>
-                <option value="conference room">Conference Room</option>
-                <option value="training room">Training Room</option>
-                <option value="mini cabin">Mini Cabin</option>
-              </select>
-            </div>
+                {/* Row 2 */}
+                <div className="flex divide-x divide-gray-300 rounded-md overflow-hidden">
+                  <div className="bg-white px-4 py-2 font-semibold text-gray-700 flex-shrink-0 w-[80px] text-center">
+                    In
+                  </div>
 
-            <div className="form-inputs">
-              <div className="input-group">
-                <input
-                  type="email"
-                  name="work_email"
-                  value={formData.work_email}
-                  onChange={handleChange}
-                  id="work_email"
-                  className="block w-full px-3 py-2 text-base font-normal leading-6 text-gray-900 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:border-blue-500 focus:ring focus:ring-blue-200"
-                  placeholder="Work Email"
-                  required
-                />
-                <input
-                  type="tel"
-                  name="mobile_phone"
-                  value={formData.mobile_phone}
-                  onChange={handleChange}
-                  id="mobile_phone"
-                  className="block w-full px-3 py-2 text-base font-normal leading-6 text-gray-900 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:border-blue-500 focus:ring focus:ring-blue-200 my-2 "
-                  placeholder="Mobile Phone"
-                  required
-                />
-              </div>
-              <input
-                type="text"
-                name="full_name"
-                value={formData.full_name}
-                onChange={handleChange}
-                id="full_name"
-                className="block w-full px-3 py-2 text-base font-normal leading-6 text-gray-900 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:border-blue-500 focus:ring focus:ring-blue-200 my-2 "
-                placeholder="Full Name"
-                required
-              />
-              <div className="input-group flex gap-4">
-                <input
-                  type="text"
-                  name="move_in_date"
-                  value={formData.move_in_date}
-                  onChange={handleChange}
-                  id="move_in_date"
-                  className="block w-full px-3 py-2 text-base font-normal leading-6 text-gray-900 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:border-blue-500 focus:ring focus:ring-blue-200 my-2 "
-                  placeholder="Move in date"
-                />
-                <input
-                  type="text"
-                  name="number_of_people"
-                  value={formData.number_of_people}
-                  onChange={handleChange}
-                  id="number_of_people"
-                  className="block w-full px-3 py-2 text-base font-normal leading-6 text-gray-900 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:border-blue-500 focus:ring focus:ring-blue-200 my-2 "
-                  placeholder="Number of people"
-                />
-              </div>
-              <input
-                type="text"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                id="company"
-                className="w-full px-3 py-2 text-base font-normal leading-6 text-gray-900 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:border-blue-500 focus:ring focus:ring-blue-200 my-2 "
-                placeholder="Company"
-              />
-              <input
-                type="text"
-                name="additional_info"
-                value={formData.additional_info}
-                onChange={handleChange}
-                id="additional_info"
-                className="w-full px-3 py-2 text-base font-normal leading-6 text-gray-900 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:border-blue-500 focus:ring focus:ring-blue-200 my-2 "
-                placeholder="Location"
-              />
-            </div>
-            {/* <div
-                    className="g-recaptcha"
-                    data-sitekey="6LeLhFMqAAAAAFUZK4CVOxUlDQruKSjfxY9xgtPx"
-                  ></div> */}
+                  <select
+                    name="city"
+                    value={formData.city}
+                    onChange={handleChange}
+                    className="flex-1 px-4 py-2 bg-white focus:outline-none"
+                    required
+                  >
+                    <option value="" disabled>
+                      Select City
+                    </option>
+                    <option value="new york">New York</option>
+                    <option value="san francisco">San Francisco</option>
+                    <option value="chicago">Chicago</option>
+                    {/* …etc */}
+                  </select>
+                </div>
 
-            <div className="form-btn bg-[#12223b] text-white mx-auto w-[60%] py-3 px-5 cursor-pointer text-center mt-5">
-              <button type="submit">Enquire now</button>
+                {/* Row 3 */}
+                <div className="flex divide-x divide-gray-300 relative rounded-md overflow-hidden">
+                  <div className="bg-white px-4 py-2 font-semibold text-gray-700 flex-shrink-0 w-[80px] text-center">
+                    Near
+                  </div>
+                  <input
+                    type="text"
+                    name="area"
+                    value={formData.area}
+                    onChange={handleChange}
+                    placeholder="Area / Locality"
+                    className="flex-1 px-4 py-2 bg-white focus:outline-none pr-10"
+                    required
+                  />
+                  <FaMapMarkerAlt className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+                </div>
+
+                {/* Submit */}
+                <button
+                  type="submit"
+                  className="mt-2 bg-red-600 hover:bg-red-700 text-white font-medium py-3 rounded-md"
+                >
+                  Search
+                </button>
+
+                {/* Status message */}
+                {status && (
+                  <p
+                    className={`mt-2 text-center ${
+                      statusType === "success" ? "text-green-200" : "text-red-200"
+                    }`}
+                  >
+                    {status}
+                  </p>
+                )}
+              </form>
             </div>
-            {status && (
-              <div
-                id="msgSubmit"
-                className={`h3 ${
-                  statusType === "success" ? "text-green-500" : "text-red-500"
-                }`}
-              >
-                {status}
-              </div>
-            )}
-          </div>
         </form>
       </div>
     </div>
