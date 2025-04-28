@@ -182,12 +182,13 @@ const Navbar = () => {
                 >
                   <li>
                     <Link
-                      to="/coworking"
-                      className="block py-2 px-4 text-gray-900 hover:bg-gray-100 border-b border-[#1b23360a] border-dashed"
+                      to="/leaderships"
+                      className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
                     >
-                      Co-Working Space
+                      Leadership Team
                     </Link>
                   </li>
+
                   <li>
                     <Link
                       // to="/it-services"
@@ -216,15 +217,15 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+
               <li>
                 <Link
-                  to="/leaderships"
+                  to="/coworking"
                   className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
                 >
-                  Leadership Team
+                  Co-Working Space
                 </Link>
               </li>
-
               <li>
                 <Link
                   to="/training"
@@ -359,7 +360,7 @@ const Navbar = () => {
                         Team
                       </Link>
                     </li>
-                   
+
                     <li>
                       <Link
                         to="/gallery"
@@ -397,14 +398,6 @@ const Navbar = () => {
                   <div className="flex flex-col items-start">
                     <li>
                       <Link
-                        to="/coworking"
-                        className="block text-2xl py-2 px-4 text-gray-600 font-thin  hover:bg-gray-100 border-b border-[#1b23360a] border-dashed"
-                      >
-                        Co-Working Space
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
                         to="/it-services"
                         className="block text-2xl py-2 px-4 w-full text-gray-600 font-thin hover:bg-gray-50 border-b border-[#1b23360a] border-dashed"
                       >
@@ -427,26 +420,35 @@ const Navbar = () => {
                         Real Estate
                       </Link>
                     </li>
+                    <li className="">
+                      <Link
+                        to="/leaderships"
+                        className="block text-2xl py-2 px-4 text-gray-600 font-thin  hover:bg-gray-100 border-b border-[#1b23360a] border-dashed"
+                      >
+                        Leadership Team
+                      </Link>
+                    </li>
                   </div>
                 )}
               </ul>
             </li>
-            <li className="">
+
+            <li>
               <Link
-                to="/leaderships"
+                to="/coworking"
                 className="block text-3xl py-2 px-4 text-gray-600 font-thin"
               >
-                Leadership Team
+                Co-Working Space
               </Link>
             </li>
             <li className="">
               <Link
-                to="/careers" 
+                to="/careers"
                 className="block text-3xl py-2 px-4 text-gray-600 font-thin"
               >
                 Careers
               </Link>
-              </li>
+            </li>
             <li className="">
               <Link
                 to="/contact"
@@ -455,17 +457,15 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-             <li className="">
+            <li className="">
               <Link
                 to="/training"
                 className="block text-3xl py-2 px-4 text-gray-600 font-thin"
               >
                 Training
               </Link>
-
             </li>
           </ul>
-        
         </div>
       </div>
       <style>{`

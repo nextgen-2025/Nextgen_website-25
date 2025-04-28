@@ -1,6 +1,7 @@
 import { faCity } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import arrow from "../../assets/aroowog.png";
 
 const CWForm = () => {
   const [formData, setFormData] = useState({
@@ -61,7 +62,10 @@ const CWForm = () => {
                     name="type"
                     value={formData.type}
                     onChange={handleChange}
-                    className="flex-1 px-4 py-2 bg-white focus:outline-none"
+                    style={{ 
+                      backgroundImage: `url(${arrow})`,
+                    }}
+                    className="flex-1 px-4 py-2 bg-white focus:outline-none border-l border-gray-300 font-medium text-gray-800 hover:bg-gray-50 transition-colors appearance-none bg-no-repeat bg-[length:16px_16px] bg-[right_0.5rem_center] pr-8 [&::-ms-expand]:opacity-70 [&::-webkit-select-arrow]:opacity-70"
                     required
                   >
                     <option value="" disabled>
@@ -86,21 +90,24 @@ const CWForm = () => {
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
-                    className="flex-1 px-4 py-2 bg-white focus:outline-none"
+                    style={{ 
+                      backgroundImage: `url(${arrow})`,
+                    }}
+                    className="flex-1 px-4 py-2 bg-white focus:outline-none border-l border-gray-300 font-medium text-gray-800 hover:bg-gray-50 transition-colors appearance-none bg-no-repeat bg-[length:16px_16px] bg-[right_0.5rem_center] pr-8 [&::-ms-expand]:opacity-70 [&::-webkit-select-arrow]:opacity-70"
                     required
                   >
                     <option value="" disabled>
                       Select City
                     </option>
-                    <option value="new york">New York</option>
-                    <option value="san francisco">San Francisco</option>
-                    <option value="chicago">Chicago</option>
+                    <option value="Navi Mumbai">Navi Mumbai</option>
+                    <option value="Panvel">Panvel</option>
+                    <option value="Mumbai">Mumbai</option>
                     {/* …etc */}
                   </select>
                 </div>
 
                 {/* Row 3 */}
-                <div className="flex divide-x divide-gray-300 relative rounded-md overflow-hidden">
+                <div className="flex  relative rounded-md overflow-hidden">
                   <div className="bg-white px-4 py-2 font-semibold text-gray-700 flex-shrink-0 w-[80px] text-center">
                     Near
                   </div>
@@ -113,13 +120,13 @@ const CWForm = () => {
                     className="flex-1 px-4 py-2 bg-white focus:outline-none pr-10"
                     required
                   />
-                  <FaMapMarkerAlt className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+                  <FaMapMarkerAlt className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black-500 opacity-70 w-4 h-4" />
                 </div>
 
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="mt-2 bg-red-600 hover:bg-red-700 text-white font-medium py-3 rounded-md"
+                  className="mt-2 bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded-md"
                 >
                   Search
                 </button>

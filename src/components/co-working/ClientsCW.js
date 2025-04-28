@@ -25,6 +25,7 @@ const ClientsCW = () => {
   ];
 
   return (
+    
     <div>
       <section id="clients" className="text-center pb-10 px-5">
         <div className="my-10 text-center">

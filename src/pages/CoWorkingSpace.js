@@ -8,15 +8,17 @@ import WhyChooseUsWorking from "../components/co-working/WhyChooseUsWorking";
 import TestimonialsCW from "../components/co-working/TestimonialsCW";
 import FAQS from "../components/co-working/FAQS";
 import ClientsCW from "../components/co-working/ClientsCW";
+import HotProperties from "../components/co-working/HotProperties";
 
 const CoWorkingSpace = () => {
   return (
     <div>
       <Navbar />
       <CWHome />
+     <HotProperties/>
       <SpaceCards />
       <Process />
-      <WhyChooseUsWorking />
+     <WhyChooseUsWorking />
       <TestimonialsCW />
       <FAQS />
       <ClientsCW />
