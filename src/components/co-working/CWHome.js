@@ -2,7 +2,7 @@ import React from "react";
 import "./co-working.css";
 import CWForm from "./CWForm";
 
-const CWHome = () => {
+const CWHome = ({ onSpaceFilter }) => {
   return (
     <div className="">
       <div className="flex items-center w-full">
@@ -16,7 +16,7 @@ const CWHome = () => {
                 We are #1 Cospace
               </h2>
               <h1 className="heading-banner text-start text-6xl mb-5 leading-[65px] tracking-normal text-white">
-              Smart Spaces ,<span className="id-color"> Better Business  </span> with
+                Smart Spaces ,<span className="id-color"> Better Business  </span> with
                 <span className="id-color text-[#00C89A] mx-3 font-bold">
                   NextGen Infratech
                 </span>
@@ -76,7 +76,7 @@ const CWHome = () => {
               </div>
             </div>
 
-            <CWForm />
+            <CWForm onSpaceFilter={onSpaceFilter} />
           </div>
         </section>
       </div>

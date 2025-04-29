@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
 
-const SpaceCards = () => {
+const SpaceCards = ({ filteredSpaces = [] }) => {
   const [activeImages, setActiveImages] = useState({});
 
   // Define multiple images for each space type
@@ -63,6 +63,37 @@ const SpaceCards = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Space data
+  const spaceData = [
+    {
+      title: "Dedicated Desk",
+      description: "Flexible seating options designed for creative freelancers and those looking for a dynamic workspace",
+    },
+    {
+      title: "Private Cabins",
+      description: "For those who need privacy, our spacious, fully furnished cabins offer a focused work environment.",
+    },
+    {
+      title: "Meeting Room",
+      description: "Perfect for smaller discussions and collaborations, our meeting rooms provide a private, productive space.",
+    },
+    {
+      title: "Conference Room",
+      description: "Our conference rooms are fully equipped with high-speed internet, projectors, and other essential tools to ensure your meetings run smoothly.",
+    },
+    {
+      title: "Training Room",
+      description: "A specialized room equipped for team training, workshops, or seminars, providing a focused environment for learning and development.",
+    },
+    {
+      title: "Mini Cabin",
+      description: "Our Mini Cabins provide a private, cozy workspace perfect for individuals or small teams of up to 2 people, ensuring focused productivity.",
+    },
+  ];
+
+  // Use filtered spaces if provided, otherwise use all spaces
+  const spacesToDisplay = filteredSpaces.length > 0 ? filteredSpaces : spaceData;
+
   return (
     <section id="find-your-space" className="py-20">
       <div className="container mx-auto px-5">
@@ -73,45 +104,13 @@ const SpaceCards = () => {
           <div className="border-b-2 border-teal-500 w-16 mx-auto"></div>
         </div>
         <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 md:mx-5">
-          {/* Card Data */}
-          {[
-            {
-              title: "Dedicated Desk",
-              description:
-                "Flexible seating options designed for creative freelancers and those looking for a dynamic workspace",
-            },
-            {
-              title: "Private Cabins",
-              description:
-                "For those who need privacy, our spacious, fully furnished cabins offer a focused work environment.",
-            },
-            {
-              title: "Meeting Room",
-              description:
-                "Perfect for smaller discussions and collaborations, our meeting rooms provide a private, productive space.",
-            },
-            {
-              title: "Conference Room",
-              description:
-                "Our conference rooms are fully equipped with high-speed internet, projectors, and other essential tools to ensure your meetings run smoothly.",
-            },
-            {
-              title: "Training Room",
-              description:
-                "A specialized room equipped for team training, workshops, or seminars, providing a focused environment for learning and development.",
-            },
-            {
-              title: "Mini Cabin",
-              description:
-                "Our Mini Cabins provide a private, cozy workspace perfect for individuals or small teams of up to 2 people, ensuring focused productivity.",
-            },
-          ].map((space, index) => (
+          {spacesToDisplay.map((space, index) => (
             <div
               key={index}
               className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 group"
             >
               <div className="overflow-hidden relative h-64">
-                {spaceImages[space.title].map((imgSrc, imgIndex) => (
+                {spaceImages[space.title]?.map((imgSrc, imgIndex) => (
                   <img
                     key={imgIndex}
                     src={imgSrc}
@@ -122,7 +121,7 @@ const SpaceCards = () => {
                   />
                 ))}
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                  {spaceImages[space.title].map((_, dotIndex) => (
+                  {spaceImages[space.title]?.map((_, dotIndex) => (
                     <button
                       key={dotIndex}
                       onClick={() => setActiveImages(prev => ({

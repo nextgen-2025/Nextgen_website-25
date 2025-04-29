@@ -27,8 +27,8 @@ const properties = [
 const HotProperties = () => (
   <section className="py-8 px-4">
     <h2 className="text-3xl font-bold text-center">
-      <span className="text-blue-500">Hot </span>
-      <span className="text-green-500">Properties</span>
+      <span className="text-blue-500">Marketable </span>
+      <span className="text-green-500">Workrooms</span>
     </h2>
 
     <div className="mt-6 flex flex-wrap justify-center gap-6">
