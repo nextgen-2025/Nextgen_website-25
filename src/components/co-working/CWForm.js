@@ -91,19 +91,19 @@ const CWForm = ({ onSpaceFilter }) => {
 
   return (
     <div id="quote_form">
-      <div className="flex-col items-center justify-center px-5 py-2 md:py-10">
+      <div className="flex-col items-center justify-center px-2 sm:px-5 py-2 md:py-10">
         <div className="form-border" data-bgcolor="#ffffff">
-          <div className="flex items-center justify-end p-5">
+          <div className="flex items-center justify-center sm:justify-end p-2 sm:p-5">
             {/* Frosted glass backdrop */}
             <div className="bg-black bg-opacity-50" />
             {/* Form panel */}
-           <div className="relative bg-white bg-opacity-20 rounded-none shadow-lg w-[500px] p-10 flex flex-col gap-10  mr-12">
+           <div className="relative bg-white bg-opacity-20 rounded-none shadow-lg w-full sm:w-[450px] md:w-[500px] p-4 sm:p-10 flex flex-col gap-5 sm:gap-10 sm:mr-12">
               <form onSubmit={handleSubmit}>
                 
                 {/* Row 1 */}
-                <div className="px-4 py-3">
+                <div className="px-2 sm:px-4 py-2 sm:py-3">
                 <div className="flex divide-x divide-gray-300 rounded-md overflow-hidden">
-                  <div className="bg-white px-4 py-2 font-semibold text-gray-700 flex-shrink-0 w-[80px] text-center">
+                  <div className="bg-white px-2 sm:px-4 py-2 font-semibold text-gray-700 flex-shrink-0 w-[60px] sm:w-[80px] text-center">
                     Find
                   </div>
                   <select
@@ -113,7 +113,7 @@ const CWForm = ({ onSpaceFilter }) => {
                     style={{ 
                       backgroundImage: `url(${arrow})`,
                     }}
-                    className="flex-1 px-4 py-2 bg-white focus:outline-none border-l border-gray-300 font-medium text-gray-800 hover:bg-gray-50 transition-colors appearance-none bg-no-repeat bg-[length:16px_16px] bg-[right_0.5rem_center] pr-8 [&::-ms-expand]:opacity-70 [&::-webkit-select-arrow]:opacity-70"
+                    className="flex-1 px-2 sm:px-4 py-2 bg-white focus:outline-none border-l border-gray-300 font-medium text-sm sm:text-base text-gray-800 hover:bg-gray-50 transition-colors appearance-none bg-no-repeat bg-[length:16px_16px] bg-[right_0.5rem_center] pr-8 [&::-ms-expand]:opacity-70 [&::-webkit-select-arrow]:opacity-70"
                     required
                   >
                     <option value="" disabled>
@@ -130,9 +130,9 @@ const CWForm = ({ onSpaceFilter }) => {
                 </div>
 
                 {/* Row 2 */}
-                <div className="px-4 py-3">
+                <div className="px-2 sm:px-4 py-2 sm:py-3">
                 <div className="flex divide-x divide-gray-300 rounded-md overflow-hidden">
-                  <div className="bg-white px-4 py-2 font-semibold text-gray-700 flex-shrink-0 w-[80px] text-center">
+                  <div className="bg-white px-2 sm:px-4 py-2 font-semibold text-gray-700 flex-shrink-0 w-[60px] sm:w-[80px] text-center">
                     In
                   </div>
 
@@ -143,7 +143,7 @@ const CWForm = ({ onSpaceFilter }) => {
                     style={{ 
                       backgroundImage: `url(${arrow})`,
                     }}
-                    className="flex-1 px-4 py-2 bg-white focus:outline-none border-l border-gray-300 font-medium text-gray-800 hover:bg-gray-50 transition-colors appearance-none bg-no-repeat bg-[length:16px_16px] bg-[right_0.5rem_center] pr-8 [&::-ms-expand]:opacity-70 [&::-webkit-select-arrow]:opacity-70"
+                    className="flex-1 px-2 sm:px-4 py-2 bg-white focus:outline-none border-l border-gray-300 font-medium text-sm sm:text-base text-gray-800 hover:bg-gray-50 transition-colors appearance-none bg-no-repeat bg-[length:16px_16px] bg-[right_0.5rem_center] pr-8 [&::-ms-expand]:opacity-70 [&::-webkit-select-arrow]:opacity-70"
                     required
                   >
                     <option value="" disabled>
@@ -155,10 +155,11 @@ const CWForm = ({ onSpaceFilter }) => {
                   </select>
                 </div>
                 </div>
+
                 {/* Row 3 */}
-                <div className="px-4 py-3">
+                <div className="px-2 sm:px-4 py-2 sm:py-3">
                 <div className="flex divide-x relative rounded-md overflow-hidden">
-                  <div className="bg-white px-4 py-2 font-semibold text-gray-700 flex-shrink-0 w-[80px] text-center">
+                  <div className="bg-white px-2 sm:px-4 py-2 font-semibold text-gray-700 flex-shrink-0 w-[60px] sm:w-[80px] text-center">
                     Near
                   </div>
                   <input
@@ -167,17 +168,17 @@ const CWForm = ({ onSpaceFilter }) => {
                     value={formData.area}
                     onChange={handleChange}
                     placeholder="Area / Locality"
-                    className="flex-1 px-4 py-2 bg-white focus:outline-none pr-10"
+                    className="flex-1 px-2 sm:px-4 py-2 bg-white focus:outline-none pr-10 text-sm sm:text-base"
                     required
                   />
-                  <FaMapMarkerAlt className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black-500 opacity-70 w-4 h-4" />
+                  <FaMapMarkerAlt className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black-500 opacity-70 w-3 h-3 sm:w-4 sm:h-4" />
                 </div>
                 </div>
+
                 {/* Submit */}
                 <button
-                
                   type="submit"
-                  className="px-9 py-3 bg-green-600 hover:bg-green-700 text-white font-medium py-3  rounded-md"
+                  className="w-full sm:w-auto px-6 sm:px-9 py-2.5 sm:py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-md text-sm sm:text-base"
                 >
                   Search
                 </button>
