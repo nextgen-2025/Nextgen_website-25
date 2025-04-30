@@ -141,7 +141,7 @@
     bottom: 0;
     height: 54px;
     position: absolute;
-    right: 0;
+    left: 1px;  /* Changed from 'right: 0' to 'left: 15px' */
     width: 236px;
 }
 
@@ -383,6 +383,45 @@
   }
 
   .footer-call-to-action {
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-call-to-action {
+    margin-top: 0px;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  
+  .footer-content-column {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-social-links {
+    margin-top: 1rem;
+    left: 15px;  /* Added left positioning for mobile view */
+    right: auto;  /* Reset right positioning */
+  }
+  
+  .footer-copyright {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-content {
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .footer-content-column {
     margin-bottom: 0.8rem;
   }
 }

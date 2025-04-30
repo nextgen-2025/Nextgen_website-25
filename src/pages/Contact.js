@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../components/customcss/contact.css";
 import Navbar from "../components/navbar/Navbar";
-import { Link } from "react-router-dom";
+
 import axios from "axios";
 import Loader from "../components/loader/Loader";
 
@@ -11,7 +11,7 @@ const Contact = () => {
     email: "",
     number: "",
     message: "",
-  });
+  }); 
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -93,89 +93,75 @@ const Contact = () => {
       {isLoading && <Loader />}
       {!isLoading && (
         <>
-          <div className="bg-contact">
+          <div className="bg-contact min-h-screen">
             <Navbar />
-            <section
-              id="contact"
-              className="h-full w-full flex flex-col justify-center pt-20 md:pt-0"
-            >
-              <h1 className="section-header text-center my-0 mx-auto py-10 px-0 uppercase text-white trac tracking-[6px] font-poiret">
+            <section id="contact" className="container mx-auto px-4 py-16 md:py-24">
+              <h1 className="text-4xl md:text-5xl text-center text-white font-poiret tracking-[6px] uppercase mb-16">
                 Contact
               </h1>
 
-              <div className="contact-wrapper">
-                <form
-                  id="contact-form"
-                  className="form-horizontal flex flex-col"
+              <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                {/* Form Section */}
+                <form 
+                  id="contact-form" 
+                  className="space-y-8"
                   onSubmit={handleSubmit}
                 >
                   <div className="form-group">
-                    <div className="col-sm-12">
-                      <input
-                        type="text"
-                        className={`form-control border-[1px] border-[#e7e7e779] py-1.5 placeholder:px-1 caret-white rounded-md ${
-                          errors.name ? "border-red-500" : ""
-                        }`}
-                        id="name"
-                        placeholder="NAME"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                      />
-                      {errors.name && (
-                        <span className="text-red-500 flex">{errors.name}</span>
-                      )}
-                    </div>
+                    <input
+                      type="text"
+                      className={`w-full bg-transparent border-2 border-[#e7e7e779] text-white py-3 px-4 rounded-lg focus:outline-none focus:border-[#027b9a] transition-colors ${
+                        errors.name ? "border-red-500" : ""
+                      }`}
+                      placeholder="NAME"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                    {errors.name && (
+                      <span className="text-red-500 text-sm mt-1 block">{errors.name}</span>
+                    )}
                   </div>
 
                   <div className="form-group">
-                    <div className="col-sm-12">
-                      <input
-                        type="email"
-                        className={`form-control border-[1px] border-[#e7e7e779] caret-white py-1.5 placeholder:px-1 rounded-md ${
-                          errors.email ? "border-red-500" : ""
-                        }`}
-                        id="email"
-                        placeholder="EMAIL"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                      />
-                      {errors.email && (
-                        <span className="text-red-500">{errors.email}</span>
-                      )}
-                    </div>
+                    <input
+                      type="email"
+                      className={`w-full bg-transparent border-2 border-[#e7e7e779] text-white py-3 px-4 rounded-lg focus:outline-none focus:border-[#027b9a] transition-colors ${
+                        errors.email ? "border-red-500" : ""
+                      }`}
+                      placeholder="EMAIL"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                    {errors.email && (
+                      <span className="text-red-500 text-sm mt-1 block">{errors.email}</span>
+                    )}
                   </div>
 
                   <div className="form-group">
-                    <div className="col-sm-12">
-                      <input
-                        type="tel"
-                        className={`form-control border-[1px] border-[#e7e7e779] caret-white py-1.5 placeholder:px-1 rounded-md ${
-                          errors.number ? "border-red-500" : ""
-                        }`}
-                        id="number"
-                        placeholder="Number"
-                        name="number"
-                        value={formData.number}
-                        onChange={handleChange}
-                        required
-                      />
-                      {errors.number && (
-                        <span className="text-red-500 flex">
-                          {errors.number}
-                        </span>
-                      )}
-                    </div>
+                    <input
+                      type="tel"
+                      className={`w-full bg-transparent border-2 border-[#e7e7e779] text-white py-3 px-4 rounded-lg focus:outline-none focus:border-[#027b9a] transition-colors ${
+                        errors.number ? "border-red-500" : ""
+                      }`}
+                      placeholder="NUMBER"
+                      name="number"
+                      value={formData.number}
+                      onChange={handleChange}
+                      required
+                    />
+                    {errors.number && (
+                      <span className="text-red-500 text-sm mt-1 block">{errors.number}</span>
+                    )}
                   </div>
 
                   <textarea
-                    className={`form-control border-[1px] border-[#e7e7e779] caret-white placeholder:px-1 rounded-md ${
+                    className={`w-full bg-transparent border-2 border-[#e7e7e779] text-white py-3 px-4 rounded-lg focus:outline-none focus:border-[#027b9a] transition-colors min-h-[150px] ${
                       errors.message ? "border-red-500" : ""
                     }`}
-                    rows="6"
                     placeholder="MESSAGE"
                     name="message"
                     value={formData.message}
@@ -183,114 +169,104 @@ const Contact = () => {
                     required
                   ></textarea>
                   {errors.message && (
-                    <span className="text-red-500 flex">{errors.message}</span>
+                    <span className="text-red-500 text-sm mt-1 block">{errors.message}</span>
                   )}
 
                   {successMessage && (
-                    <div className="text-green-500">{successMessage}</div>
+                    <div className="text-green-500 text-center py-2">{successMessage}</div>
                   )}
                   {errorMessage && (
-                    <div className="text-red-500">{errorMessage}</div>
+                    <div className="text-red-500 text-center py-2">{errorMessage}</div>
                   )}
 
                   <button
-                    className="bg-[#027b9a] send-button"
-                    id="submit"
+                    className="w-full bg-[#027b9a] hover:bg-[#025f77] text-white py-4 rounded-lg transition-colors font-semibold tracking-wider"
                     type="submit"
                   >
-                    <div className="alt-send-button">
-                      <i className="fa fa-paper-plane text-white pt-2"></i>
-                      <span className="send-text text-white">SEND</span>
-                    </div>
+                    <i className="fa fa-paper-plane mr-2"></i>
+                    SEND
                   </button>
                 </form>
 
-                <div className="md:ml-[200px] mt-10 md:mt-0">
-                  <ul className="contact-list">
-                    <li className="list-item">
-                      <i className="fa fa-map-marker fa-2x text-white">
-                        <span className="contact-text place text-white">
-                          MBP, Mahape, Ghansoli
-                        </span>
-                      </i>
+                {/* Contact Info Section */}
+                <div className="text-white space-y-8">
+                  <ul className="space-y-6">
+                    <li className="flex items-center space-x-4">
+                      <div className="w-12 h-12 flex items-center justify-center bg-[#027b9a] rounded-full">
+                        <i className="fa fa-map-marker fa-lg"></i>
+                      </div>
+                      <span className="text-lg">MBP, Mahape, Ghansoli</span>
                     </li>
 
-                    <li className="list-item">
-                      <i className="fa fa-phone fa-2x text-white">
-                        <span className="contact-text phone text-white">
-                          <a
-                            href="tel:1-212-555-5555"
-                            title="Give me a call text-white"
-                          >
-                            +91 9930365555
-                          </a>
-                        </span>
-                      </i>
+                    <li className="flex items-center space-x-4">
+                      <div className="w-12 h-12 flex items-center justify-center bg-[#027b9a] rounded-full">
+                        <i className="fa fa-phone fa-lg"></i>
+                      </div>
+                      <a href="tel:+919930365555" className="text-lg hover:text-[#027b9a] transition-colors">
+                        +91 9930365555
+                      </a>
                     </li>
 
-                    <li className="list-item">
-                      <i className="fa fa-envelope fa-2x text-white">
-                        <span className="contact-text gmail">
-                          <Link to="" title="Send me an email">
-                            nextgeninfratech@gmail.com
-                          </Link>
-                        </span>
-                      </i>
+                    <li className="flex items-center space-x-4">
+                      <div className="w-12 h-12 flex items-center justify-center bg-[#027b9a] rounded-full">
+                        <i className="fa fa-envelope fa-lg"></i>
+                      </div>
+                      <a href="mailto:nextgeninfratech@gmail.com" className="text-lg hover:text-[#027b9a] transition-colors">
+                        nextgeninfratech@gmail.com
+                      </a>
                     </li>
                   </ul>
 
-                  <hr />
-                  <ul className="social-media-list">
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100086358938007"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="contact-icon"
-                    >
-                      <li>
-                        <i className="fa fa-facebook" aria-hidden="true"></i>
-                      </li>
-                    </a>
-                    <a
-                      href="https://youtu.be/Ur8BC49cEDc?si=QHApFFM1GkD4fsKa"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="contact-icon"
-                    >
-                      <li>
-                        <i className="fa fa-youtube" aria-hidden="true"></i>
-                      </li>
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/company/80077007/admin/notifications/all/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="contact-icon"
-                    >
-                      <li>
-                        <i className="fa fa-linkedin" aria-hidden="true"></i>
-                      </li>
-                    </a>
-                    <a
-                      href="https://www.instagram.com/nextgen.infratech/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="contact-icon"
-                    >
-                      <li>
-                        <i className="fa fa-instagram " aria-hidden="true"></i>
-                      </li>
-                    </a>
-                  </ul>
-                  <hr />
 
-                  <div className="copyright">
+                  <div className="pt-8 border-t border-[#e7e7e779]">
+                    <ul className="flex justify-start space-x-6 px-4 py-2">
+                      <li>
+                        <a
+                          href="https://www.facebook.com/profile.php?id=100086358938007"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="w-12 h-12 flex items-center justify-center bg-[#027b9a] rounded-full hover:bg-[#025f77] transition-colors"
+                        >
+                          <i className="fa fa-facebook fa-lg"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://youtu.be/Ur8BC49cEDc?si=QHApFFM1GkD4fsKa"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="w-12 h-12 flex items-center justify-center bg-[#027b9a] rounded-full hover:bg-[#025f77] transition-colors"
+                        >
+                          <i className="fa fa-youtube fa-lg"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/company/80077007/admin/notifications/all/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="w-12 h-12 flex items-center justify-center bg-[#027b9a] rounded-full hover:bg-[#025f77] transition-colors"
+                        >
+                          <i className="fa fa-linkedin fa-lg"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.instagram.com/nextgen.infratech/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="w-12 h-12 flex items-center justify-center bg-[#027b9a] rounded-full hover:bg-[#025f77] transition-colors"
+                        >
+                          <i className="fa fa-instagram fa-lg"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="text-center pt-8 text-sm tracking-wider">
                     &copy; ALL OF THE RIGHTS RESERVED
                   </div>
                 </div>
-                {/* <a href="https://www.google.com" target="_blank" rel="noreferrer">
-            sdddadas
-          </a> */}
               </div>
             </section>
           </div>

@@ -182,15 +182,6 @@ const Navbar = () => {
                 >
                   <li>
                     <Link
-                      to="/leaderships"
-                      className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
-                    >
-                      Leadership Team
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
                       // to="/it-services"
                       to="/it-services"
                       className="block py-2 px-4 text-gray-900 hover:bg-gray-100 border-b border-[#1b23360a] border-dashed"
@@ -214,7 +205,16 @@ const Navbar = () => {
                     >
                       Real Estate
                     </Link>
-                  </li>
+                    </li>
+                    <li>
+                      <Link
+                        to="/leaderships"
+                        className="block py-2 px-4 text-gray-900 hover:bg-gray-100 border-b border-[#1b23360a] border-dashed"
+                      >
+                        Leadership Team
+                      </Link>
+                    </li>
+                
                 </ul>
               </li>
 

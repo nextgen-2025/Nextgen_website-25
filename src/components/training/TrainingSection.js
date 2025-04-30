@@ -3,7 +3,7 @@ import trainingRoom from "../../assets/images/11.jpg";
 import dedicatedDesk from "../../assets/images/dedicatedDesk.jpg";
 import banner from "../../assets/banner.webp";
 import privateCabin from "../../assets/_6_08290-Enhanced-NR (1).jpg";
-import fourth from "../../assets/Dedicated Desk 3.jpg";
+import fourth from "../../assets/Dedicatedclassrooms.jpeg";
 import fifthimage from "../../assets/Picture2.png";
 import sixthimage from "../../assets/images/4.jpg";
 
@@ -28,8 +28,8 @@ const TrainingSection = () => {
         "Collaborative open desk environment for freelancers and teams with dedicated desk.",
     },
     {
-      image: trainingRoom,
-      title: "Training Rooms",
+      image: sixthimage,
+      title: "Conference Room",
       description:
         "Fully equipped training rooms for efficient learning and team discussions",
     },
@@ -40,17 +40,17 @@ const TrainingSection = () => {
     },
     {
       image: fourth,
-      title: "Meeting Room",
-      description: "Collaborate and brainstorm with your team.",
+      title: "Dedicated Classroom",
+      description: "Perfect for training sessions and workshops.",
     },
     {
-      image: sixthimage,
-      title: "Classroom",
+      image: trainingRoom,
+      title: "Training Rooms",
       description: "Ideal for workshops and training sessions.",
     },
     {
       image: fifthimage,
-      title: "Conference Room",
+      title: "Classroom",
       description: "Host meetings and presentations in style.",
     }
   ];

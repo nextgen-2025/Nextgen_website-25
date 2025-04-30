@@ -1,7 +1,10 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Popup = ({ isOpen, onClose, selectedSpace }) => {
+  const navigate = useNavigate();
+  
   if (!isOpen) return null;
 
   // Define multiple images for each space type
@@ -76,7 +79,13 @@ const Popup = ({ isOpen, onClose, selectedSpace }) => {
                   <span>Modern Amenities</span>
                 </div>
               </div>
-              <div className="mt-6">
+              <div className="mt-6 flex gap-4">
+                <button
+                  onClick={() => navigate('/contact')}
+                  className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Contact Us
+                </button>
                 <button
                   onClick={onClose}
                   className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -84,8 +93,11 @@ const Popup = ({ isOpen, onClose, selectedSpace }) => {
                   Close
                 </button>
               </div>
+
+
+              </div>
             </div>
-          </div>
+       
         )}
       </div>
     </div>
