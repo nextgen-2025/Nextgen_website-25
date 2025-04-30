@@ -47,7 +47,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                    <Link to="/leaderships">Leadership Team</Link>
+                    <Link to="/leaderships">Leadership Tecam</Link>
                   </li>
                   <li className="menu-item menu-item-type-post_type menu-item-object-page">
                     <Link to="/contact">Contact</Link>
@@ -198,7 +198,7 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-          </div>
+          </div>  
           <div className="footer-copyright">
             <div className="footer-copyright-wrapper">
               <p className="footer-copyright-text">

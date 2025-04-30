@@ -2,9 +2,9 @@ const WhyChooseUsWorking = () => {
   return (
     <section
       id="why-choose-us"
-      className="flex justify-center items-center mt-10"
+      className="flex justify-center items-center mt-10 w-full"
     >
-      <div className="choose-container">
+      <div className="choose-container w-full">
         <div>
           <div className="my-10 text-center">
             <h2 className="text-3xl font-heading mb-5">
@@ -12,31 +12,31 @@ const WhyChooseUsWorking = () => {
             </h2>
             <div className="border-b-2 border-teal-500 w-16 mx-auto"></div>
           </div>
-          <div className="flex flex-col lg:flex-row items-start mx-3 md:mx-24 mt-8">
-            <div className="grid grid-cols-2 gap-2">
+          <div className="flex flex-col lg:flex-row items-start w-full px-3 md:px-24 mt-8">
+            <div className="grid grid-cols-2 gap-2 w-full lg:w-1/3">
               <img
                 src="./chooseus/5.jpg"
-                className="lazy img-fluid animated-image md:w-[800px] h-[190px] md:h-[215px] object-cover"
+                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover"
                 alt=""
               />
               <img
                 src="./chooseus/2.jpg"
-                className="lazy img-fluid animated-image md:w-[800px] h-[190px] md:h-[215px] object-cover"
+                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover"
                 alt=""
               />
               <img
                 src="./chooseus/3.jpg"
-                className="lazy img-fluid animated-image md:w-[800px] h-[190px] md:h-[215px] object-cover"
+                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover"
                 alt=""
               />
               <img
                 src="./chooseus/4.jpg"
-                className="lazy img-fluid animated-image md:w-[800px] h-[190px] md:h-[215px] object-cover"
+                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover"
                 alt=""
               />
             </div>
 
-            <div className="lg:ml-10 mt-5 lg:mt-0 mx-2 md:mx-0">
+            <div className="lg:ml-10 mt-5 lg:mt-0 mx-2 md:mx-0 lg:w-1/2">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="choose-us-text">
                   <h4 className="text-lg font-semibold text-start">
