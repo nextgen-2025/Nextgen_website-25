@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const images = [
   {
@@ -15,6 +16,7 @@ const images = [
 
 const Process = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();  // Add this line
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -63,12 +65,8 @@ const Process = () => {
             <h3 className="md:text-lg font-semibold">Seats Available</h3>
           </div>
           <button
-            onClick={() =>
-              document
-                .getElementById("quote_form")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-500 transition-colors"
+            onClick={() => navigate('/contact')}  // Changed this line
+            className="bg-blue-600 text-white font-bold py-3 px-5 rounded hover:bg-blue-500 transition-colors"
           >
             Book Now
           </button>

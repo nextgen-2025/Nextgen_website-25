@@ -3,6 +3,12 @@ import "./co-working.css";
 import CWForm from "./CWForm";
 
 const CWHome = ({ onSpaceFilter }) => {
+  // Function to open WhatsApp with your number
+  const openWhatsApp = () => {
+    // The phone number from your footer - adding the "+" is important
+    window.open("https://wa.me/+919930365555", '_blank');
+  };
+
   return (
     <div className="w-full min-h-screen">
       <div className="flex items-center w-full">
@@ -22,9 +28,12 @@ const CWHome = ({ onSpaceFilter }) => {
                 </span>
               </h1>
 
-              <span className="pulse-button mb-8"> 
+              <button 
+                className="pulse-button mb-8"
+                onClick={openWhatsApp}
+              > 
                 <i className="fa fa-whatsapp px-1"></i>Whatsapp us 
-              </span>
+              </button>
 
               <p className="text-start text-base sm:text-lg leading-7 mb-5 font-light text-[#F8F9FA] max-w-2xl">
                 Flexible, Modern, and Productive Co-working Spaces in the Heart
@@ -70,7 +79,7 @@ const CWHome = ({ onSpaceFilter }) => {
               </div>
             </div>
 
-            <CWForm onSpaceFilter={onSpaceFilter} />
+            <CWForm/>
           </div>
         </section>
       </div>

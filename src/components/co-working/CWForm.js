@@ -4,7 +4,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import arrow from "../../assets/aroowog.png";
 import Popup from "./Popup";
 
-const CWForm = ({ onSpaceFilter }) => {
+const CWForm = () => {
   const [formData, setFormData] = useState({
     type: "",
     city: "",
@@ -12,7 +12,6 @@ const CWForm = ({ onSpaceFilter }) => {
   });
   const [status, setStatus] = useState("");
   const [statusType, setStatusType] = useState("success");
-  const [filteredSpaces, setFilteredSpaces] = useState([]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedSpace, setSelectedSpace] = useState(null);
 
@@ -47,12 +46,6 @@ const CWForm = ({ onSpaceFilter }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((p) => ({ ...p, [name]: value }));
-    
-    if (name === "type") {
-      const filtered = spaceData.filter(space => space.title.toLowerCase() === value.toLowerCase());
-      setFilteredSpaces(filtered);
-      onSpaceFilter(filtered);
-    }
   };
 
   const handleSubmit = async (e) => {
@@ -185,15 +178,7 @@ const CWForm = ({ onSpaceFilter }) => {
                 </div>
 
                 {/* Status message */}
-                {status && (
-                  <p
-                    className={`mt-2 text-center ${
-                      statusType === "success" ? "text-green-200" : "text-red-200"
-                    }`}
-                  >
-                    {status}
-                  </p>
-                )}
+                
               </form>
             </div>
           </div>

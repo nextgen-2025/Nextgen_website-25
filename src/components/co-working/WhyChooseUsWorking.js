@@ -12,86 +12,87 @@ const WhyChooseUsWorking = () => {
             </h2>
             <div className="border-b-2 border-teal-500 w-16 mx-auto"></div>
           </div>
-          <div className="flex flex-col lg:flex-row items-start w-full px-3 md:px-24 mt-8">
-            <div className="grid grid-cols-2 gap-2 w-full lg:w-1/3">
+          <div className="flex flex-col lg:flex-row items-start justify-between w-full px-3 md:px-24 mt-8">
+            <div className="grid grid-cols-2 gap-4 w-full lg:w-[40%]">
               <img
                 src="./chooseus/5.jpg"
-                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover"
+                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover rounded-lg shadow-md"
                 alt=""
               />
               <img
                 src="./chooseus/2.jpg"
-                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover"
+                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover rounded-lg shadow-md"
                 alt=""
               />
               <img
                 src="./chooseus/3.jpg"
-                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover"
+                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover rounded-lg shadow-md"
                 alt=""
               />
               <img
                 src="./chooseus/4.jpg"
-                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover"
+                className="lazy img-fluid animated-image w-full h-[190px] md:h-[215px] object-cover rounded-lg shadow-md"
                 alt=""
               />
             </div>
 
-            <div className="lg:ml-10 mt-5 lg:mt-0 mx-2 md:mx-0 lg:w-1/2">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="choose-us-text">
-                  <h4 className="text-lg font-semibold text-start">
+            <div className="mt-5 lg:mt-0 lg:ml-0 w-full lg:w-[50%] h-full flex items-center">
+            <div className="grid md:grid-cols-2 gap-4 h-full min-h-[480px]">
+
+                <div className="choose-us-text text-left">
+                  <h4 className="text-lg font-semibold mb-1">
                     Modern Amenities
                   </h4>
-                  <p className="text-gray-600 text-justify">
+                  <p className="text-gray-600">
                     Enjoy fully equipped, ergonomically designed workspaces with
                     all the modern comforts to enhance productivity and comfort.
                   </p>
                 </div>
-                <div className="choose-us-text">
-                  <h4 className="text-lg font-semibold text-start">
+                <div className="choose-us-text text-left">
+                  <h4 className="text-lg font-semibold mb-1">
                     24/7 Secure Access
                   </h4>
-                  <p className="text-gray-600 text-justify">
+                  <p className="text-gray-600">
                     Work on your own terms with round-the-clock access, secured
                     by top-notch security systems to ensure your safety at all
                     times.
                   </p>
                 </div>
-                <div className="choose-us-text">
-                  <h4 className="text-lg font-semibold text-start">
+                <div className="choose-us-text text-left">
+                  <h4 className="text-lg font-semibold mb-1">
                     Housekeeping Service
                   </h4>
-                  <p className="text-gray-600 text-justify">
+                  <p className="text-gray-600">
                     Focus on your work while we take care of cleanliness. Our
                     dedicated housekeeping team ensures a spotless and
                     professional environment.
                   </p>
                 </div>
-                <div className="choose-us-text">
-                  <h4 className="text-lg font-semibold text-start">
+                <div className="choose-us-text text-left">
+                  <h4 className="text-lg font-semibold mb-1">
                     Community Events
                   </h4>
-                  <p className="text-gray-600 text-justify">
+                  <p className="text-gray-600">
                     Join a vibrant network of like-minded professionals through
                     regular community events that foster collaboration and
                     growth.
                   </p>
                 </div>
-                <div className="choose-us-text">
-                  <h4 className="text-lg font-semibold text-start">
+                <div className="choose-us-text text-left">
+                  <h4 className="text-lg font-semibold mb-1">
                     Prime Location
                   </h4>
-                  <p className="text-gray-600 text-justify">
-                    Situated in Navi Mumbai’s key business hubs, our office
+                  <p className="text-gray-600">
+                    Situated in Navi Mumbai's key business hubs, our office
                     spaces offer easy access to transportation, dining, and
-                    commercial centers.
+                    commercials.
                   </p>
                 </div>
-                <div className="choose-us-text">
-                  <h4 className="text-lg font-semibold text-start">
+                <div className="choose-us-text text-left">
+                  <h4 className="text-lg font-semibold mb-1">
                     High-Speed Internet
                   </h4>
-                  <p className="text-gray-600 text-justify">
+                  <p className="text-gray-600">
                     Stay connected with lightning-fast internet that ensures
                     uninterrupted workflow and seamless virtual communication.
                   </p>

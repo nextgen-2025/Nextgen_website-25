@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const SpaceCards = ({ filteredSpaces = [] }) => {
+const SpaceCards = () => {
   const [activeImages, setActiveImages] = useState({});
 
   // Define multiple images for each space type
@@ -91,8 +91,8 @@ const SpaceCards = ({ filteredSpaces = [] }) => {
     },
   ];
 
-  // Use filtered spaces if provided, otherwise use all spaces
-  const spacesToDisplay = filteredSpaces.length > 0 ? filteredSpaces : spaceData;
+  // Always show all spaces
+  const spacesToDisplay = spaceData;
 
   return (
     <section id="find-your-space" className="py-20">
@@ -114,7 +114,7 @@ const SpaceCards = ({ filteredSpaces = [] }) => {
                   <img
                     key={imgIndex}
                     src={imgSrc}
-                    alt={`${space.title} - Image ${imgIndex + 1}`}
+                    alt={`${space.title} - ${imgIndex + 1}`}
                     className={`absolute w-full h-full object-cover transition-opacity duration-500 ${
                       activeImages[space.title] === imgIndex ? 'opacity-100' : 'opacity-0'
                     }`}
@@ -140,24 +140,24 @@ const SpaceCards = ({ filteredSpaces = [] }) => {
               <div className="p-6">
                 <div className="flex justify-between items-center mb-4">
                   <h4 className="text-xl font-semibold text-gray-800">{space.title}</h4>
-                  <a href="#quote_form">
+                  <Link to="/contact">
                     <span className="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg cursor-pointer hover:bg-blue-500 transition-colors shadow-md hover:shadow-lg">
                       Get Quote
                     </span>
-                  </a>
+                  </Link>
                 </div>
                 <p className="h-24 mb-4 text-gray-600 text-start leading-relaxed">
                   {space.description}
                 </p>
                 <ul className="ul-style-2 list-none space-y-3">
                   <li className="flex items-center text-gray-700">
-                    <span className="text-green-500 mr-2">✓</span> High Speed Internet
+                    <span className="text-green-500 mr-2"></span> High Speed Internet
                   </li>
                   <li className="flex items-center text-gray-700">
-                    <span className="text-green-500 mr-2">✓</span> Free Tea & Coffee
+                    <span className="text-green-500 mr-2"></span> Free Tea & Coffee
                   </li>
                   <li className="flex items-center text-gray-700">
-                    <span className="text-green-500 mr-2">✓</span> Modern Amenities
+                    <span className="text-green-500 mr-2"></span> Modern Amenities
                   </li>
                 </ul>
               </div>

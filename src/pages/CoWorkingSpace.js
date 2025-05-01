@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/home/Footer";
 import CWHome from "../components/co-working/CWHome";
@@ -11,18 +11,12 @@ import ClientsCW from "../components/co-working/ClientsCW";
 import HotProperties from "../components/co-working/HotProperties";
 
 const CoWorkingSpace = () => {
-  const [filteredSpaces, setFilteredSpaces] = useState([]);
-
-  const handleSpaceFilter = (spaces) => {
-    setFilteredSpaces(spaces);
-  };
-
   return (
     <div>
       <Navbar />
-      <CWHome onSpaceFilter={handleSpaceFilter} />
+      <CWHome />
       <HotProperties />
-      <SpaceCards filteredSpaces={filteredSpaces} />
+      <SpaceCards />
       <Process />
       <WhyChooseUsWorking />
       <TestimonialsCW />

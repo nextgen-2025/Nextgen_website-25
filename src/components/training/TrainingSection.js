@@ -107,14 +107,14 @@ const TrainingSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+1234567890"
+                href="tel:+919930365555"
                 className="inline-flex items-center gap-2 bg-green-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-600 transition duration-300"
               >
                 <Phone className="w-5 h-5" />
                 Call Us
               </a>
               <a
-                href="mailto:info@example.com"
+                href="mailto:nextgeninfratech@gmail.com"
                 className="inline-flex items-center gap-2 border-2 border-green-500 text-green-500 font-semibold py-2 px-6 rounded-full hover:bg-green-500 hover:text-white transition duration-300"
               >
                 <Mail className="w-5 h-5" />
