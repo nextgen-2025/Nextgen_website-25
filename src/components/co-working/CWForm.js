@@ -1,6 +1,7 @@
 import { faCity } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaCity } from "react-icons/fa";
 import arrow from "../../assets/aroowog.png";
 import Popup from "./Popup";
 
@@ -124,7 +125,7 @@ const CWForm = () => {
 
                 {/* Row 2 */}
                 <div className="w-full py-2">
-                <div className="flex divide-x divide-gray-300 rounded-md overflow-hidden">
+                <div className="flex divide-x divide-gray-300 rounded-md overflow-hidden relative">
                   <div className="bg-white px-3 py-2 font-semibold text-gray-700 flex-shrink-0 w-[60px] sm:w-[80px] text-center">
                     In
                   </div>
@@ -132,10 +133,11 @@ const CWForm = () => {
                     name="city"
                     value="Navi Mumbai"
                     onChange={handleChange}
-                    className="flex-1 px-3 py-2 bg-white focus:outline-none border-l border-gray-300 font-medium text-sm sm:text-base text-gray-800 hover:bg-gray-50 transition-colors appearance-none bg-no-repeat bg-[length:16px_16px] bg-[right_0.5rem_center] pr-8"
+                    className="flex-1 px-3 py-2 bg-white focus:outline-none border-l border-gray-300 font-medium text-sm sm:text-base text-gray-800 hover:bg-gray-50 transition-colors appearance-none bg-no-repeat bg-[length:16px_16px] bg-[right_0.5rem_center] pr-10"
                     required
                   >
                   </input>
+                  <FaCity className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black-500 opacity-70 w-3 h-3 sm:w-4 sm:h-4" />
                 </div>
                 </div>
 
