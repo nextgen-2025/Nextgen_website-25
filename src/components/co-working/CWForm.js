@@ -7,7 +7,7 @@ import Popup from "./Popup";
 const CWForm = () => {
   const [formData, setFormData] = useState({
     type: "",
-    city: "",
+    city: "Navi Mumbai",
     area: "Ghansoli",
   });
   const [status, setStatus] = useState("");
@@ -70,7 +70,7 @@ const CWForm = () => {
 
     if (res.ok) {
       setStatus("Message sent successfully!");
-      setFormData({ type: "", city: "", area: "Ghansoli" });
+      setFormData({ type: "", city: "Navi Mumbai", area: "Ghansoli" });
     } else {
       setStatus("There was an error. Please try again.");
       setStatusType("error");
@@ -128,23 +128,14 @@ const CWForm = () => {
                   <div className="bg-white px-3 py-2 font-semibold text-gray-700 flex-shrink-0 w-[60px] sm:w-[80px] text-center">
                     In
                   </div>
-                  <select
+                  <input
                     name="city"
-                    value={formData.city}
+                    value="Navi Mumbai"
                     onChange={handleChange}
-                    style={{ 
-                      backgroundImage: `url(${arrow})`,
-                    }}
                     className="flex-1 px-3 py-2 bg-white focus:outline-none border-l border-gray-300 font-medium text-sm sm:text-base text-gray-800 hover:bg-gray-50 transition-colors appearance-none bg-no-repeat bg-[length:16px_16px] bg-[right_0.5rem_center] pr-8"
                     required
                   >
-                    <option value="" disabled>
-                      Select City
-                    </option>
-                    <option value="Navi Mumbai">Navi Mumbai</option>
-                    <option value="Panvel">Panvel</option>
-                    <option value="Mumbai">Mumbai</option>
-                  </select>
+                  </input>
                 </div>
                 </div>
 
@@ -160,7 +151,7 @@ const CWForm = () => {
                     value={formData.area}
                     onChange={handleChange}
                     placeholder="Area / Locality"
-                    className="flex-1 px-3 py-2 bg-white focus:outline-none pr-10 text-sm sm:text-base"
+                    className="flex-1 px-3 py-2 bg-white  focus:outline-none pr-10 text-sm font-medium text-gray-800 sm:text-base"
                     required
                   />
                   <FaMapMarkerAlt className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black-500 opacity-70 w-3 h-3 sm:w-4 sm:h-4" />
@@ -176,9 +167,6 @@ const CWForm = () => {
                     Search
                   </button>
                 </div>
-
-                {/* Status message */}
-                
               </form>
             </div>
           </div>
