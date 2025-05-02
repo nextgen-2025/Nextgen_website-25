@@ -16,13 +16,9 @@ const ClientsCW = () => {
     "./Clients/Zenlayer.png",
   ];
 
-  // Split logos into 4 rows
-  const rows = [
-    logos.slice(0, 3),
-    logos.slice(3, 6),
-    logos.slice(6, 9),
-    logos.slice(9, 12)
-  ];
+  // Split logos into 2 rows of 6 logos each
+  const firstRow = logos.slice(0, 6);
+  const secondRow = logos.slice(6, 12);
 
   return (
     <div className="w-full py-4">
@@ -35,42 +31,75 @@ const ClientsCW = () => {
           <div className="border-b-2 border-teal-500 w-16 mx-auto"></div>
         </div>
         <div className="mt-6">
-          {rows.map((row, rowIndex) => (
+          {/* First row - left to right */}
+          <div className="overflow-hidden whitespace-nowrap mb-0 relative w-full">
             <div
-              key={`row-${rowIndex}`}
-              className="overflow-hidden whitespace-nowrap mb-2 relative w-full"
+              className="inline-flex space-x-8 md:space-x-12 lg:space-x-16"
+              style={{
+                animation: "marquee-left 15s linear infinite",
+              }}
             >
-              <div className="inline-flex space-x-4 md:space-x-8 animate-marquee-left" style={{animationDuration: "30s"}}>
-                {row.map((logo, index) => (
-                  <div
-                    key={`logo-${rowIndex}-${index}`}
-                    className="flex items-center justify-center h-30 sm:h-28 md:h-32 lg:h-36"
-                  >
-                    <img
-                      src={logo}
-                      alt={`Client Logo ${rowIndex * 3 + index + 1}`}
-                      className="w-40 sm:w-44 md:w-50 lg:w-65 h-auto max-h-full object-contain"
-                    />
-                  </div>
-                ))}
-                {/* Duplicate logos for seamless loop */}
-                {row.map((logo, index) => (
-                  <div
-                    key={`logo-${rowIndex}-${index}-duplicate`}
-                    className="flex items-center justify-center h-24 sm:h-28 md:h-32 lg:h-36"
-                  >
-                    <img
-                      src={logo}
-                      alt={`Client Logo ${rowIndex * 3 + index + 1}`}
-                      className="w-40 sm:w-44 md:w-48 lg:w-56 h-auto max-h-full object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
+              {firstRow.map((logo, index) => (
+                <div
+                  key={`logo-first-${index}`}
+                  className="flex items-center justify-center h-44 sm:h-40 md:h-48 lg:h-56"
+                >
+                  <img
+                    src={logo}
+                    alt={`Client Logo ${index + 1}`}
+                    className="w-64 sm:w-60 md:w-72 lg:w-80 h-auto max-h-full object-contain"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Second row - right to left */}
+          <div className="overflow-hidden whitespace-nowrap mb-6 relative w-full">
+            <div
+              className="inline-flex space-x-8 md:space-x-12 lg:space-x-16"
+              style={{
+                animation: "marquee-right 15s linear infinite",
+                animationDelay: "0s",
+              }}
+            >
+              {secondRow.map((logo, index) => (
+                <div
+                  key={`logo-second-${index}`}
+                  className="flex items-center justify-center h-44 sm:h-40 md:h-48 lg:h-56"
+                >
+                  <img
+                    src={logo}
+                    alt={`Client Logo ${index + 7}`}
+                    className="w-64 sm:w-60 md:w-72 lg:w-80 h-auto max-h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* Inline CSS for animations */}
+      <style jsx>{`
+        @keyframes marquee-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        @keyframes marquee-right {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+      `}</style>
     </div>
   );
 };

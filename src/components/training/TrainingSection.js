@@ -64,7 +64,7 @@ const TrainingSection = () => {
             <h3 className="text-2xl font-bold text-gray-800 text-center mb-10">
               Our Training Rooms & Workspaces
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto justify-items-center">
               {workspaces.map((space, index) => (
                 <Suspense key={index} fallback={<div className="h-[300px] bg-gray-100 animate-pulse rounded-xl"></div>}>
                   <div
@@ -75,6 +75,7 @@ const TrainingSection = () => {
                       ${index === 3 ? "col-span-2" : ""}
                       ${index % 5 === 0 ? "col-span-2 row-span-1" : ""}
                       ${index % 6 === 0 ? "col-span-2 row-span-1" : ""}
+                      w-full h-full
                     `}
                   >
                     <img
@@ -106,12 +107,16 @@ const TrainingSection = () => {
               We're here to help!
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="tel:+919930365555"
-                className="inline-flex items-center gap-2 bg-green-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-600 transition duration-300"
-              >
-                <Phone className="w-5 h-5" />
-                Call Us
+              <a 
+                href="tel:+919930365555" 
+                className="inline-flex items-center gap-2 bg-green-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 z-30" 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.location.href = "tel:+919930365555";
+                }}
+              > 
+                <Phone className="w-5 h-5" /> 
+                Call Us 
               </a>
               <a
                 href="mailto:nextgeninfratech@gmail.com"
