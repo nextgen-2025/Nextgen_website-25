@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./co-working.css";
 import CWForm from "./CWForm";
 
 const CWHome = ({ onSpaceFilter }) => {
+  // Add useEffect to scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Function to open WhatsApp with your number
   const openWhatsApp = () => {
     // The phone number from your footer - adding the "+" is important

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import "../components/customcss/contact.css";
 import Navbar from "../components/navbar/Navbar";
 import axios from "axios";
-import Loader from "../components/loader/Loader";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -78,19 +77,10 @@ const Contact = () => {
     }
   };
 
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
+ 
   return (
     <>
-      {isLoading && <Loader />}
-      {!isLoading && (
+      
         <>
           <div className="bg-contact min-h-screen">
             <Navbar />
@@ -272,7 +262,6 @@ const Contact = () => {
             </section>
           </div>
         </>
-      )}
     </>
   );
 };

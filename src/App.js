@@ -18,11 +18,13 @@ import Gallery from "./pages/Gallery";
 import BlogPage from "./pages/BlogPage";
 import BlogPageDetails from "./components/blogs/BlogPageDetails";
 import Traning from "./pages/Traning";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
