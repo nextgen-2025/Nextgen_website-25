@@ -141,7 +141,7 @@ const SpaceCards = () => {
                 <div className="flex justify-between items-center mb-4">
                   <h4 className="text-xl font-semibold text-gray-800">{space.title}</h4>
                   <Link to="/contact">
-                    <span className="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg cursor-pointer hover:bg-blue-500 transition-colors shadow-md hover:shadow-lg">
+                    <span className="bg-blue-600 text-white font-bold py-1 sm:py-2 px-2 sm:px-4 text-sm sm:text-base rounded-lg cursor-pointer hover:bg-blue-500 transition-colors shadow-md hover:shadow-lg whitespace-nowrap">
                       Get Quote
                     </span>
                   </Link>

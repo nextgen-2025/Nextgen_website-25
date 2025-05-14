@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../components/customcss/contact.css";
 import Navbar from "../components/navbar/Navbar";
-
 import axios from "axios";
 import Loader from "../components/loader/Loader";
 
@@ -104,7 +103,7 @@ const Contact = () => {
                 {/* Form Section */}
                 <form 
                   id="contact-form" 
-                  className="space-y-8"
+                  className="space-y-5"
                   onSubmit={handleSubmit}
                 >
                   <div className="form-group">
@@ -180,7 +179,7 @@ const Contact = () => {
                   )}
 
                   <button
-                    className="w-full bg-[#027b9a] hover:bg-[#025f77] text-white py-4 rounded-lg transition-colors font-semibold tracking-wider"
+                    className="w-full bg-[#027b9a] hover:bg-[#025f77] text-white py-2 sm:py-3 md:py-4 rounded-lg transition-colors font-semibold tracking-wider text-sm sm:text-base md:text-lg mt-2 mb-8"
                     type="submit"
                   >
                     <i className="fa fa-paper-plane mr-2"></i>
@@ -261,11 +260,13 @@ const Contact = () => {
                         </a>
                       </li>
                     </ul>
+                    
+                    <div className="text-left pl-4 pt-4 text-sm tracking-wider">
+                    ©2024. | NextGen Infratech | All rights reserved.
+                    </div>
                   </div>
-
-                  <div className="text-center pt-8 text-sm tracking-wider">
-                    &copy; ALL OF THE RIGHTS RESERVED
-                  </div>
+                  
+                  {/* Remove the original copyright div that was here */}
                 </div>
               </div>
             </section>

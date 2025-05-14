@@ -13,7 +13,7 @@ import DigitalMarketing from "./pages/DigitalMarketing";
 import DMServicesDetails from "./components/digital-marketing/DMServicesDetails";
 import RealEstate from "./pages/RealEstate";
 import "./components/customcss/fonts.css";
-import { Careers } from "./pages/Careers";
+import Careers from "./pages/Careers";
 import Gallery from "./pages/Gallery";
 import BlogPage from "./pages/BlogPage";
 import BlogPageDetails from "./components/blogs/BlogPageDetails";

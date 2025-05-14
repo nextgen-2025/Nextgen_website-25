@@ -1,8 +1,10 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/home/Footer";
 import CWHome from "../components/co-working/CWHome";
 import SpaceCards from "../components/co-working/SpaceCards";
+import Loader from "../components/loader/Loader";
 import Process from "../components/co-working/Process";
 import WhyChooseUsWorking from "../components/co-working/WhyChooseUsWorking";
 import TestimonialsCW from "../components/co-working/TestimonialsCW";
@@ -11,18 +13,33 @@ import ClientsCW from "../components/co-working/ClientsCW";
 import HotProperties from "../components/co-working/HotProperties";
 
 const CoWorkingSpace = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div>
-      <Navbar />
-      <CWHome />
-      <HotProperties />
-      <SpaceCards />
-      <Process />
-      <WhyChooseUsWorking />
-      <TestimonialsCW />
-      <FAQS />
-      <ClientsCW />
-      <Footer />
+      {isLoading && <Loader />}
+      {!isLoading && (
+        <>
+          <Navbar />
+          <CWHome />
+          <HotProperties />
+          <SpaceCards />
+          <Process />
+          <WhyChooseUsWorking />
+          <TestimonialsCW />
+          <FAQS />
+          <ClientsCW />
+          <Footer />
+        </>
+      )}{" "}
     </div>
   );
 };

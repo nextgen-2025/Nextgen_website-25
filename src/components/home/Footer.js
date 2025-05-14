@@ -39,12 +39,10 @@ const Footer = () => {
                     <Link to="/teams">Team</Link>
                   </li>
                   <li className="menu-item menu-item-type-post_type_archive menu-item-object-customer">
-                    <Link to="/aboutus">About</Link>
+                    <Link to="/about">About</Link>
                   </li>
                   <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                    <Link rel="noopener noreferrer" to="/careers">
-                      Careers
-                    </Link>
+                    <Link to="/careers">Careers</Link>
                   </li>
                   <li className="menu-item menu-item-type-post_type menu-item-object-page">
                     <Link to="/leaderships">Leadership Tecam</Link>
