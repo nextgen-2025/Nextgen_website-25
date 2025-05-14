@@ -18,10 +18,10 @@ const CWHome = ({ onSpaceFilter }) => {
         >
           <div className="sec-body flex flex-col lg:flex-row justify-around items-center w-full px-4 md:px-8">
             <div className="sec-heading w-full lg:w-[50%] lg:mx-4 px-2 md:px-4">
-              <h2 className="uppercase text-start text-[#00C89A] text-base sm:text-lg my-3 font-Manrope">
+              <h2 className="uppercase text-start text-[#00C89A] text-base sm:text-lg my-3 mt-6 md:mt-10 lg:mt-14 font-Manrope">
                 We are #1 Cospace
               </h2>
-              <h1 className="heading-banner text-start text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-5 leading-tight lg:leading-[65px] tracking-normal text-white">
+              <h1 className="heading-banner text-start text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl mb-5 leading-tight lg:leading-[55px] tracking-normal text-white">
                 Smart Spaces,<span className="id-color"> Better Business </span> with
                 <span className="id-color text-[#00C89A] mx-3 font-bold">
                   NextGen Infratech
@@ -35,21 +35,21 @@ const CWHome = ({ onSpaceFilter }) => {
                 <i className="fa fa-whatsapp px-1"></i>Whatsapp us 
               </button>
 
-              <p className="text-start text-base sm:text-lg leading-7 mb-5 font-light text-[#F8F9FA] max-w-2xl">
+              <p className="text-start text-sm sm:text-base md:text-base lg:text-lg leading-6 lg:leading-7 mb-5 font-light text-[#F8F9FA] max-w-2xl">
                 Flexible, Modern, and Productive Co-working Spaces in the Heart
                 of Navi Mumbai
               </p>
 
-              <div className="row text-white flex flex-row justify-between items-center gap-4 w-full mt-10 sm:mt-20 hero-cnt">
+              <div className="row text-white flex flex-row justify-between items-center gap-4 w-full mt-10 sm:mt-16 hero-cnt">
                 <div
                   className="wow fadeInRight animated flex-1"
                   data-wow-delay="1.1s"
                 >
                   <div className="de_count text-left">
-                    <h3 className="row_h3 text-4xl sm:text-5xl lg:text-6xl">
+                    <h3 className="row_h3 text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl">
                       <span>4k</span>+
                     </h3>
-                    <h5 className="color-id text-sm sm:text-base">Work Stations Available</h5>
+                    <h5 className="color-id text-xs sm:text-sm">Work Stations Available</h5>
                   </div>
                 </div>
 
@@ -58,10 +58,10 @@ const CWHome = ({ onSpaceFilter }) => {
                   data-wow-delay="1.4s"
                 >
                   <div className="de_count text-left">
-                    <h3 className="row_h3 text-4xl sm:text-5xl lg:text-6xl">
+                    <h3 className="row_h3 text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl">
                       <span>25</span>+
                     </h3>
-                    <h5 className="color-id text-sm sm:text-base">Happy Customers</h5>
+                    <h5 className="color-id text-xs sm:text-sm">Happy Customers</h5>
                   </div>
                 </div>
 
@@ -70,10 +70,10 @@ const CWHome = ({ onSpaceFilter }) => {
                   data-wow-delay="1.7s"
                 >
                   <div className="">
-                    <h3 className="row_h3 text-4xl sm:text-5xl lg:text-6xl">
+                    <h3 className="row_h3 text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl">
                       <span>7</span>
                     </h3>
-                    <h5 className="color-id text-sm sm:text-base">Year Experiences</h5>
+                    <h5 className="color-id text-xs sm:text-sm">Year Experiences</h5>
                   </div>
                 </div>
               </div>

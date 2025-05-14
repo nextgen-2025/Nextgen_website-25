@@ -45,7 +45,7 @@ const Footer = () => {
                     <Link to="/careers">Careers</Link>
                   </li>
                   <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                    <Link to="/leaderships">Leadership Tecam</Link>
+                    <Link to="/leaderships">Leadership Team</Link>
                   </li>
                   <li className="menu-item menu-item-type-post_type menu-item-object-page">
                     <Link to="/contact">Contact</Link>
