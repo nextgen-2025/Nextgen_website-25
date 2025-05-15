@@ -15,6 +15,7 @@ import ClientsLogoStatic from "../components/home/ClientsLogoStatic";
 import Loader from "../components/loader/Loader";
 import BlogSection from "../components/blogs/BlogCard";
 import TestimonialsNew from "../components/home/TestimonialsNew";
+import FloatingContact from "../components/common/FloatingContact";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,8 +48,9 @@ const Home = () => {
           <ClientsLogoStatic />
           <ContactFrom />
           <CallSection />
+          <FloatingContact />
           <Footer />
-        
+
         </>
       )}
     </div>
