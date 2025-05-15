@@ -10,7 +10,7 @@ import Footer from "../components/home/Footer";
 // import Testimonial from "../components/home/Testimonials";
 import CallSection from "../components/home/CallSection";
 import About from "../components/home/AboutHome";
-import BackToTop from "../components/BackToTop/BackToTop";
+
 import ClientsLogoStatic from "../components/home/ClientsLogoStatic";
 import Loader from "../components/loader/Loader";
 import BlogSection from "../components/blogs/BlogCard";
@@ -48,7 +48,7 @@ const Home = () => {
           <ContactFrom />
           <CallSection />
           <Footer />
-          <BackToTop />
+        
         </>
       )}
     </div>

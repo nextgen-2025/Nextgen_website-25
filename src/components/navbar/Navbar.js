@@ -95,7 +95,7 @@ const Navbar = () => {
             id="navbar-sticky"
           >
             <ul
-              className={`flex flex-col p-4 md:p-0 mt-4 ${textColor} font-extralight border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700`}
+              className={`flex flex-col p-4 md:p-0 mt-4 ${textColor} font-extralight border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent`}
             >
               <li>
                 <Link
@@ -112,7 +112,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeaveAbout}
               >
                 <p
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
+                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
                 >
                   About
                   <span>
@@ -162,7 +162,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeaveServices}
               >
                 <p
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
+                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
                 >
                   Services
                   <span>
@@ -221,7 +221,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/coworking"
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
+                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
                 >
                   Co-Working Space
                 </Link>
@@ -229,7 +229,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/training"
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
+                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
                 >
                   Training
                 </Link>
@@ -237,7 +237,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/blog"
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
+                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
                 >
                  Blogs
                 </Link>
@@ -246,7 +246,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/careers"
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
+                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
                 >
                   Careers
                 </Link>
@@ -254,7 +254,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/contact"
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
+                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
                 >
                   Contact
                 </Link>
@@ -266,7 +266,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => (window.location.href = "tel:+919930365555")}
-              className="hidden md:hidden lg:block btn btn-anim text-white bg-[#28aa4a] hover:bg-[#3eb85e] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 p-0 md:py-2 text-center h-9 dark:bg-blue-600 dark:hover:bg-[#28aa4a] dark:focus:ring-[#28aa4a]"
+              className="hidden md:hidden lg:block btn btn-anim text-white bg-[#28aa4a] hover:bg-[#3eb85e] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 p-0 md:py-2 text-center h-9"
             >
               <i className="fa fa-phone"></i> <span>+91 9930365555</span>
             </button>

@@ -19,6 +19,7 @@ import BlogPage from "./pages/BlogPage";
 import BlogPageDetails from "./components/blogs/BlogPageDetails";
 import Traning from "./pages/Traning";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingContact from "./components/common/FloatingContact";
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
           <Route path="/blog-details/:id" element={<BlogPageDetails />}></Route>
           <Route path="/training" element={<Traning />}></Route>
         </Routes>
+        <FloatingContact />
       </Router>
     </div>
   );
