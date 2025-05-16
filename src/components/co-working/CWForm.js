@@ -1,5 +1,3 @@
-import { faCity } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { FaMapMarkerAlt, FaCity } from "react-icons/fa";
 import arrow from "../../assets/aroowog.png";
@@ -11,8 +9,8 @@ const CWForm = () => {
     city: "Navi Mumbai",
     area: "Ghansoli",
   });
-  const [status, setStatus] = useState("");
-  const [statusType, setStatusType] = useState("success");
+  const [setStatus] = useState("");
+  const [setStatusType] = useState("success");
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedSpace, setSelectedSpace] = useState(null);
 

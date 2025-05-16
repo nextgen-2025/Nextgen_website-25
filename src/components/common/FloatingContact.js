@@ -1,8 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import supportImage from '../../assets/support.png'; // Adjust path as needed
 
 const FloatingContact = () => {
+  const [showButton, setShowButton] = useState(false);
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Only apply delay on home page
+    const isHomePage = location.pathname === '/' || location.pathname === '';
+    
+    if (isHomePage) {
+      // Set a timeout to show the button after animation (adjust time as needed)
+      const timer = setTimeout(() => {
+        setShowButton(true);
+      }, 3000); // 3 seconds delay - adjust based on your animation duration
+      
+      return () => clearTimeout(timer);
+    } else {
+      // Show immediately on other pages
+      setShowButton(true);
+    }
+  }, [location.pathname]);
+  
+  if (!showButton) return null;
+  
   return (
     <div className="fixed bottom-8 right-8 flex flex-row items-center z-50">
       <Link 
