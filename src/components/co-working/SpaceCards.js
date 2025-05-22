@@ -46,7 +46,7 @@ const SpaceCards = () => {
       initialActiveImages[title] = 0;
     });
     setActiveImages(initialActiveImages);
-  }, []);
+  }, [spaceImages]);
 
   // Auto-rotate images
   useEffect(() => {
@@ -61,7 +61,7 @@ const SpaceCards = () => {
     }, 2000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  });
 
   // Space data
   const spaceData = [

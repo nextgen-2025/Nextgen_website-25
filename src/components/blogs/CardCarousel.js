@@ -9,8 +9,8 @@ const CardCarousel = () => {
   const cards = [
     {
       id: 1,
-      image: "/banner.jpg", // Keep the same image URL
-      category: "Office Space", // Updated category
+      image: "/banner.jpg",
+      category: "Office Space",
       author: "Kanchan Gosavi",
       date: "July 7, 2024",
       description:
@@ -18,8 +18,8 @@ const CardCarousel = () => {
     },
     {
       id: 2,
-      image: "/blog-banner.jpg", // Keep the same image URL
-      category: "Coworking", // Updated category
+      image: "/blog-banner.jpg",
+      category: "Coworking",
       author: "Kanchan Gosavi",
       date: "June 30, 2024",
       description:
@@ -27,8 +27,8 @@ const CardCarousel = () => {
     },
     {
       id: 3,
-      image: "/Banner-vedio-poster.png", // Keep the same image URL
-      category: "IT Services", // Updated category
+      image: "/11.jpg",
+      category: "IT Services",
       author: "Kanchan Gosavi",
       date: "August 1, 2024",
       description:
