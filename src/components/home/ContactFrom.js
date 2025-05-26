@@ -10,6 +10,7 @@ const ContactFrom = () => {
   });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,31 +30,42 @@ const ContactFrom = () => {
     e.preventDefault();
     setError("");
     setSuccess("");
+    setIsSubmitting(true);
 
     const validationError = validateForm();
     if (validationError) {
       setError(validationError);
+      setIsSubmitting(false);
       return;
     }
 
     try {
-      const response = await fetch("https://formspree.io/f/xnnqnvdg", {
+      const response = await fetch("http://localhost:8080/api/inquiry", {
         method: "POST",
         headers: {
-          Accept: "application/json",
           "Content-Type": "application/json",
+          "Accept": "application/json"
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.tel,
+          message: formData.message
+        }),
       });
 
       if (response.ok) {
         setSuccess("Your message has been sent successfully!");
-        setFormData({ name: "", tel: "", email: "", message: "" }); // Clear form
+        setFormData({ name: "", tel: "", email: "", message: "" });
       } else {
-        setError("There was an error sending your message. Please try again.");
+        const data = await response.json();
+        setError(data.message || "Failed to send message");
       }
     } catch (error) {
-      setError("There was an error sending your message. Please try again.");
+      console.error("Error sending inquiry:", error);
+      setError("Failed to connect to the server. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -163,16 +175,24 @@ const ContactFrom = () => {
                       className="form-control rounded-2xl mt-1 w-full bg-transparent bg-opacity-60 border-[0.1px] border-white focus:outline-none focus:border-white text-white min-h-[100px] px-3 pt-3 placeholder:text-white placeholder:font-thin placeholder:text-base"
                     ></textarea>
                   </div>
-                  {error && <div className="text-red-500 mb-4">{error}</div>}
+                  {error && <div className="text-red-500 mb-4">Error: {error}</div>}
                   {success && (
                     <div className="text-green-500 mb-4">{success}</div>
                   )}
                   <div>
                     <button
                       type="submit"
-                      className="border-2 border-white text-white bg-transparent rounded-full py-1.5 px-10 text-lg font-medium transition duration-300 hover:bg-white hover:text-black mt-6 mb-3 font-Manrope"
+                      disabled={isSubmitting}
+                      className={`border-2 border-white text-white bg-transparent rounded-full py-1.5 px-10 text-lg font-medium transition duration-300 hover:bg-white hover:text-black mt-6 mb-3 font-Manrope ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                     >
-                      Submit
+                      {isSubmitting ? (
+                        <>
+                          <i className="fa fa-spinner fa-spin mr-2"></i>
+                          Sending...
+                        </>
+                      ) : (
+                        'Submit'
+                      )}
                     </button>
                   </div>
                 </form>

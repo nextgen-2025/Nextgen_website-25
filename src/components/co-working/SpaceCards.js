@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 
 const SpaceCards = () => {
   const [activeImages, setActiveImages] = useState({});
 
-  // Define multiple images for each space type
-  const spaceImages = {
+  // Memoize the spaceImages object
+  const spaceImages = useMemo(() => ({
     "Dedicated Desk": [
       "./space-cards/c1.jpg",
       "./space-cards/Dedicated Desk 5.jpg",
@@ -15,7 +15,6 @@ const SpaceCards = () => {
       "./space-cards/c3.jpg",
       "./space-cards/Private Office.jpg",
       "./space-cards/Cabin 2.jpg",
-      
     ],
     "Meeting Room": [
       "./space-cards/c5.jpg",
@@ -37,7 +36,7 @@ const SpaceCards = () => {
       "./space-cards/Cabin 2.jpg",
       "./space-cards/Private Office.jpg",
     ]
-  };
+  }), []); // Empty dependency array since this object never changes
 
   // Initialize active images
   useEffect(() => {
