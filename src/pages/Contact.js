@@ -54,7 +54,7 @@ const Contact = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const response = await fetch("http://localhost:8080/api/inquiry", {
+        const response = await fetch("https//nextgen-backend-2025-production-f2de.up.railway.app/api/inquiry", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
