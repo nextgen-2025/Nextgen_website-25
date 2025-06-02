@@ -27,14 +27,14 @@ const Process = () => {
   }, []);
 
   return (
-    <div>
-      <div className="flex flex-col lg:flex-row justify-around items-start md:items-center md:my-10 mx-4 md:mx-0">
-        <h1 className="text-2xl md:text-[50px] md:leading-[60px] font-heading py-2 lg:py-0">
+    <div className="bg-gradient-to-r from-gray-900 to-gray-800">
+      <div className="flex flex-col lg:flex-row justify-around items-start md:items-center py-8 px-10 bg-gradient-to-r from-gray-900 to-gray-800 ">
+        <h1 className="text-2xl md:text-[50px] md:leading-[60px] font-heading py-2 lg:py-0 text-teal-400 text-left">
           24/7 Workspaces,
           <br />
-          for Every Schedule
+          <span className="text-white">for Every Schedule</span> 
         </h1>
-        <p className="lg:w-[50%] pb-5 md:pb-0 text-start text-xl font-thin md:px-3">
+        <p className="lg:w-[50%] pb-5 md:pb-0 text-left text-xl text-gray-300 md:px-3">
           No matter when you work, NextGen Infratech is here for you. Our day
           and night process options ensure that your team has access to premium
           office spaces, offering flexibility and productivity at any hour.
@@ -42,7 +42,7 @@ const Process = () => {
       </div>
       <div
         id="process"
-        className="relative  w-[95%] h-[100vh] mx-auto md:h-screen overflow-hidden"
+        className="relative  w-[85%] h-[100vh] mx-auto md:h-screen overflow-hidden"
       >
         <img
           id="shift-image"
@@ -66,7 +66,7 @@ const Process = () => {
           </div>
           <button
             onClick={() => navigate('/contact')}  // Changed this line
-            className="bg-blue-600 text-white font-bold py-3 px-5 rounded hover:bg-blue-500 transition-colors"
+            className="bg-teal-700 text-white font-bold py-3 px-5 rounded hover:bg-teal-500 transition-colors"
           >
             Book Now
           </button>

@@ -15,7 +15,7 @@ const CWHome = ({ onSpaceFilter }) => {
   };
 
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-screen ">
       <div className="flex items-center w-full">
         <section
           id="home"
@@ -23,12 +23,12 @@ const CWHome = ({ onSpaceFilter }) => {
         >
           <div className="sec-body flex flex-col lg:flex-row justify-around items-center w-full px-4 md:px-8">
             <div className="sec-heading w-full lg:w-[50%] lg:mx-4 px-2 md:px-4">
-              <h2 className="uppercase text-start text-[#00C89A] text-base sm:text-lg my-3 mt-6 md:mt-10 lg:mt-14 font-Manrope">
-                We are #1 Cospace
+              <h2 className="uppercase text-start text-teal-400 font-bold text-base sm:text-lg my-3 mt-6 md:mt-10 lg:mt-14">
+                We are #1 Co-space
               </h2>
               <h1 className="heading-banner text-start text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl mb-5 leading-tight lg:leading-[55px] tracking-normal text-white">
                 Smart Spaces,<span className="id-color"> Better Business </span> with
-                <span className="id-color text-[#00C89A] mx-3 font-bold">
+                <span className="id-color text-teal-400 mx-3 font-bold">
                   NextGen Infratech
                 </span>
               </h1>
@@ -40,7 +40,7 @@ const CWHome = ({ onSpaceFilter }) => {
                 <i className="fa fa-whatsapp px-1"></i>Whatsapp us 
               </button>
 
-              <p className="text-start text-sm sm:text-base md:text-base lg:text-lg leading-6 lg:leading-7 mb-5 font-light text-[#F8F9FA] max-w-2xl">
+              <p className="text-start text-sm sm:text-base font-semibold text-white md:text-base lg:text-lg leading-6 lg:leading-7 mb-5 max-w-2xl">
                 Flexible, Modern, and Productive Co-working Spaces in the Heart
                 of Navi Mumbai
               </p>

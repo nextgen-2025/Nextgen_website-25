@@ -52,3 +52,12 @@ code {
   scrollbar-color: var(--scroll-thumb-color) var(--scroll-track);
   /* Set colors for Firefox */
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
+*{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}

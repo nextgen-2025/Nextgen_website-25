@@ -45,15 +45,18 @@ const TestimonialsNew = () => {
   }, []);
 
   return (
-    <section className="bg-gray-50 testimonial-area2">
+    <section className="bg-[#131A26] testimonial-area2 py-16">
       <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-0 xl:py-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
           <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right lg:px-5">
-            <h2 className="text-4xl font-bold tracking-tight text-green-500 sm:text-4xl text-start font-Manrope">
-              Don't just take our word for it...
+            <h2 className="text-teal-400 font-semibold text-lg mb-3 tracking-wide text-start">
+              CLIENT TESTIMONIALS
             </h2>
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-4xl text-start mb-6">
+              Don't just take our word for it...
+            </h1>
 
-            <p className="mt-4 text-white text-start text-lg font-Manrope">
+            <p className="mt-4 text-gray-300 text-start text-lg">
               Our clients have shared their experiences with us, and we couldn't
               be prouder of their kind words.
             </p>
@@ -62,7 +65,7 @@ const TestimonialsNew = () => {
               <button
                 aria-label="Previous slide"
                 id="keen-slider-previous-desktop"
-                className="rounded-full border border-green-600 p-3 text-green-600 transition hover:bg-green-600 hover:text-white"
+                className="rounded-full border border-teal-500 p-3 text-teal-500 transition hover:bg-teal-500 hover:text-white transform hover:scale-110 duration-300"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +86,7 @@ const TestimonialsNew = () => {
               <button
                 aria-label="Next slide"
                 id="keen-slider-next-desktop"
-                className="rounded-full border border-green-600 p-3 text-green-600 transition hover:bg-green-600 hover:text-white"
+                className="rounded-full border border-teal-500 p-3 text-teal-500 transition hover:bg-teal-500 hover:text-white transform hover:scale-110 duration-300"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -111,9 +114,9 @@ const TestimonialsNew = () => {
             >
               {/* Slide 1 */}
               <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12">
+                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 hover:scale-[1.02] sm:p-8 lg:p-12">
                   <div>
-                    <div className="flex gap-0.5 text-green-500">
+                    <div className="flex gap-0.5 text-teal-400">
                       {[...Array(5)].map((_, index) => (
                         <svg
                           key={index}
@@ -128,24 +131,23 @@ const TestimonialsNew = () => {
                     </div>
 
                     <div className="mt-4">
-                      <p className="text-2xl font-bold text-green-600 sm:text-3xl font-Manrope text-start">
+                      <p className="text-2xl font-bold text-teal-400 sm:text-3xl text-start">
                         Yeasin Arafat
                       </p>
 
-                      <p className="mt-4 leading-relaxed text-gray-700 text-start font-Manrope">
+                      <p className="mt-4 leading-relaxed text-gray-300 text-start">
                         As a freelancer, finding a space that fuels my
                         creativity was essential. This coworking space has
                         exceeded my expectations! The vibrant atmosphere and
                         supportive community have helped me stay motivated and
                         inspired. I love the networking events and workshops
                         that allow me to connect with other amazing women in
-                        business. It’s more than just a workspace; it’s a place
+                        business. It's more than just a workspace; it's a place
                         where I can thrive!
                       </p>
                     </div>
-                  </div>
-
-                  <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6 font-Manrope">
+                  </div> 
+                  <footer className="mt-4 text-sm font-medium text-teal-300 sm:mt-6">
                     &mdash; Designer, LLCG Team
                   </footer>
                 </blockquote>
@@ -153,9 +155,9 @@ const TestimonialsNew = () => {
 
               {/* Slide 2 */}
               <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12">
+                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 hover:scale-[1.02] sm:p-8 lg:p-12">
                   <div>
-                    <div className="flex gap-0.5 text-green-500">
+                    <div className="flex gap-0.5 text-teal-400">
                       {[...Array(5)].map((_, index) => (
                         <svg
                           key={index}
@@ -170,23 +172,23 @@ const TestimonialsNew = () => {
                     </div>
 
                     <div className="mt-4">
-                      <p className="text-2xl font-bold text-green-600 sm:text-3xl text-start font-Manrope">
+                      <p className="text-2xl font-bold text-teal-400 sm:text-3xl text-start">
                         Anjali Gupta
                       </p>
 
-                      <p className="mt-4 leading-relaxed text-gray-700 text-start font-Manrope">
+                      <p className="mt-4 leading-relaxed text-gray-300 text-start">
                         I started my own marketing agency, and working from home
                         was isolating. This coworking space has transformed my
                         work life! The professional environment helps me focus,
-                        and I’ve made incredible connections with other female
+                        and I've made incredible connections with other female
                         entrepreneurs. Plus, the amenities are fantastic! I
-                        can’t imagine going back to my home office. It’s truly a
+                        can't imagine going back to my home office. It's truly a
                         hub for collaboration and support.
                       </p>
                     </div>
                   </div>
 
-                  <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6 font-Manrope">
+                  <footer className="mt-4 text-sm font-medium text-teal-300 sm:mt-6">
                     &mdash; CTO
                   </footer>
                 </blockquote>
@@ -194,9 +196,9 @@ const TestimonialsNew = () => {
 
               {/* Slide 3 */}
               <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12">
+                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 hover:scale-[1.02] sm:p-8 lg:p-12">
                   <div>
-                    <div className="flex gap-0.5 text-green-500">
+                    <div className="flex gap-0.5 text-teal-400">
                       {[...Array(5)].map((_, index) => (
                         <svg
                           key={index}
@@ -211,14 +213,14 @@ const TestimonialsNew = () => {
                     </div>
 
                     <div className="mt-4">
-                      <p className="text-2xl font-bold text-green-600 sm:text-3xl text-start font-Manrope">
+                      <p className="text-2xl font-bold text-teal-400 sm:text-3xl text-start">
                         John Smith
                       </p>
 
-                      <p className="mt-4 leading-relaxed text-gray-700 text-start font-Manrope">
+                      <p className="mt-4 leading-relaxed text-gray-300 text-start">
                         Joining this coworking space was one of the best
-                        decisions I’ve made for my startup. The atmosphere is
-                        electric, and I’m surrounded by like-minded
+                        decisions I've made for my startup. The atmosphere is
+                        electric, and I'm surrounded by like-minded
                         professionals who are eager to share ideas. The
                         resources available, from meeting rooms to tech support,
                         have been invaluable in helping me grow my business. It
@@ -228,17 +230,17 @@ const TestimonialsNew = () => {
                     </div>
                   </div>
 
-                  <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6 font-Manrope">
+                  <footer className="mt-4 text-sm font-medium text-teal-300 sm:mt-6">
                     &mdash; Developer, Tech Co
                   </footer>
                 </blockquote>
               </div>
 
-              {/* Slide 3 */}
+              {/* Slide 4 */}
               <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12">
+                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 hover:scale-[1.02] sm:p-8 lg:p-12">
                   <div>
-                    <div className="flex gap-0.5 text-green-500">
+                    <div className="flex gap-0.5 text-teal-400">
                       {[...Array(5)].map((_, index) => (
                         <svg
                           key={index}
@@ -253,16 +255,16 @@ const TestimonialsNew = () => {
                     </div>
 
                     <div className="mt-4">
-                      <p className="text-2xl font-bold text-green-600 sm:text-3xl text-start font-Manrope">
+                      <p className="text-2xl font-bold text-teal-400 sm:text-3xl text-start">
                         Priya Patel
                       </p>
 
-                      <p className="mt-4 leading-relaxed text-gray-700 text-start font-Manrope">
+                      <p className="mt-4 leading-relaxed text-gray-300 text-start">
                         I was tired of working from coffee shops and needed a
                         more focused environment. This coworking space provides
                         just that! The layout is designed for productivity, and
-                        the networking opportunities have opened doors I didn’t
-                        even know existed. I’ve formed valuable partnerships
+                        the networking opportunities have opened doors I didn't
+                        even know existed. I've formed valuable partnerships
                         with other members, and the collaborative spirit here is
                         contagious. I highly recommend it to anyone looking to
                         take their work to the next level!
@@ -270,7 +272,7 @@ const TestimonialsNew = () => {
                     </div>
                   </div>
 
-                  <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6 font-Manrope">
+                  <footer className="mt-4 text-sm font-medium text-teal-300 sm:mt-6">
                     &mdash; Manager, Business Inc
                   </footer>
                 </blockquote>

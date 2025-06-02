@@ -5,6 +5,8 @@ import BlogPageCards from "../components/blogs/BlogPageCards";
 import SideSection from "../components/blogs/SideSection";
 
 const BlogPage = () => {
+
+   
   return (
     <div>
       <>

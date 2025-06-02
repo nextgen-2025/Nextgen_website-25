@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import Marquee from "react-fast-marquee";
 
 const ClientsLogoStatic = () => {
   const logos = [
@@ -11,40 +12,75 @@ const ClientsLogoStatic = () => {
     "./Clients/finmech.png",
     "./Clients/pilrim.png",
     "./Clients/eduonix.png",
-    // "./Clients/casita.png",
     "./Clients/vindya.png",
-    // "./Clients/myoperator.png",
-    // "./Clients/Zenlayer.png",
   ];
+
+  // Duplicate logos for seamless looping
+  const allLogos = [...logos, ...logos];
+  
+  const marqueeRef = useRef(null);
+  
+  useEffect(() => {
+    const marqueeAnimation = () => {
+      if (marqueeRef.current) {
+        if (marqueeRef.current.scrollLeft >= marqueeRef.current.scrollWidth / 2) {
+          marqueeRef.current.scrollLeft = 0;
+        } else {
+          marqueeRef.current.scrollLeft += 1;
+        }
+      }
+    };
+    
+    const animationId = setInterval(marqueeAnimation, 20);
+    
+    return () => clearInterval(animationId);
+  }, []);
+
   return (
-    <div className="overflow-hidden h-fit relative bg-white w-full">
-      <div>
-        <div className="my-5">
-          <h1 className="text-[#28aa4a] font-bold text-5xl py-5 font-lato">Clients</h1>
-          <h3 className="text-[#28aa4a] font-bold text-3xl font-lato">
-            Worked With NextGen Infratech
-          </h3>
+    <div className="overflow-hidden relative bg-fixed bg-gradient-to-r from-gray-900 to-gray-800 w-full py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-10">
+          <h2 className="text-teal-400 font-semibold text-lg mb-3 tracking-wide">
+            OUR TRUSTED PARTNERS
+          </h2> 
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Clients Who Trust NextGen Infratech
+          </h1>
         </div>
-        <div className="">
-          <div className="grid grid-cols-2 gap-0 md:grid-cols-3 lg:grid-cols-5 justify-items-center ">
+        
+        <div className="relative overflow-hidden">
+          {/* Gradient overlay for left edge */}
+          <div className="absolute left-0 top-0 h-full w-16 z-10 bg-gradient-to-r from-[#131A26] to-transparent"></div>
+          
+          {/* Marquee container */}
+          <div>
+          <Marquee
+            gradient={false}
+            speed={40}
+            pauseOnHover={true}
+            className="overflow-hidden"
+          >
             {logos.map((logo, index) => (
-              <div
-                key={`logo-${index}`}
-                className={`flex items-center justify-center ${
-                  index === logos.length - 1 ? "" : ""
-                }`}
-                // col-span-2 md:col-span1
-              >
+              <div key={index} className="mx-4 md:mx-8">
                 <img
                   src={logo}
-                  alt={`Client Logo ${index + 1}`}
-                  className="h-36 md:h-48"
+                  alt={`Client ${index + 1}`}
+                  className="h-16 md:h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             ))}
-          </div>
+          </Marquee>
+        </div>
+          
+          {/* Gradient overlay for right edge */}
         </div>
       </div>
+      
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </div>
   );
 };

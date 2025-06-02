@@ -5,7 +5,6 @@ import MissionVison from "../components/about/MissionVison";
 import CTA from "../components/about/CTA";
 import CompanyLeaders from "../components/about/CompanyLeaders";
 import FullScreenImageSections from "../components/about/FullScreenImageSections";
-import CompanyImages from "../components/about/CompanyImages";
 import AboutBanner from "../components/about/AboutBanner";
 
 
@@ -20,7 +19,7 @@ const About = () => {
           <AboutSection />
           <MissionVison />
           <CompanyLeaders />
-          <CompanyImages />
+          
           <FullScreenImageSections />
           <CTA />
           <Footer />

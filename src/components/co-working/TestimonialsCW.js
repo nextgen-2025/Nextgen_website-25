@@ -110,10 +110,10 @@ const TestimonialsCW = () => {
   };
 
   return (
-    <section id="testimonials" className="py-12 font-sans">
+    <section id="testimonials" className="py-12 bg-gradient-to-r from-gray-900 to-gray-800">
       <div className="container mx-auto">
         <div className="my-10 text-center">
-          <h2 className="text-3xl font-heading mb-5">Testimonials</h2>
+          <h2 className="text-3xl font-heading mb-5 text-white font-semibold">Testimonials</h2>
           <div className="border-b-2 border-teal-500 w-16 mx-auto"></div>
         </div>
         <div className="flex flex-col items-center">

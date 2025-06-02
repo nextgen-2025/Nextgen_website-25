@@ -56,12 +56,11 @@ const TrainingSection = () => {
   ];
 
   return (
-    <div className="bg-white-50 py-3">
-      <div className="container mx-auto px-4 lg:px-8">
-        <TrainingFeatures />
-        <div className="bg-gray-50 py-16">
+    <div className="bg-white-50 py-3 ">
+      <div className="container mx-auto px-4 lg:px-8 bg-gradient-to-r from-gray-900 to-gray-800 relative">
+        <div className="bg-gray-50 py-16 bg-gradient-to-r from-gray-900 to-gray-800 relative">
           <div className="container mx-auto px-4 lg:px-8">
-            <h3 className="text-2xl font-bold text-gray-800 text-center mb-10">
+            <h3 className="text-2xl font-bold text-teal-400  text-center mb-10">
               Our Training Rooms & Workspaces
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto justify-items-center">
@@ -97,37 +96,7 @@ const TrainingSection = () => {
             </div>
           </div>
         </div>
-        <div className="bg-green-50 py-16">
-          <div className="container mx-auto px-4 lg:px-8 text-center">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              Ready to Get Started?
-            </h3>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Reach out to us directly for any queries, details, or assistance.
-              We're here to help!
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href="tel:+919930365555" 
-                className="inline-flex items-center gap-2 bg-green-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 z-30" 
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.location.href = "tel:+919930365555";
-                }}
-              > 
-                <Phone className="w-5 h-5" /> 
-                Call Us 
-              </a>
-              <a
-                href="mailto:nextgeninfratech@gmail.com"
-                className="inline-flex items-center gap-2 border-2 border-green-500 text-green-500 font-semibold py-2 px-6 rounded-full hover:bg-green-500 hover:text-white transition duration-300"
-              >
-                <Mail className="w-5 h-5" />
-                Email Us
-              </a>
-            </div>
-          </div>
-        </div>
+        <TrainingFeatures />
       </div>
     </div>
   );

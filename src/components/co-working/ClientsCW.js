@@ -40,7 +40,7 @@ const ClientsCW = () => {
                 <img
                   src={logo}
                   alt={`Client ${index + 1}`}
-                  className="h-16 md:h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="h-20 md:h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             ))}

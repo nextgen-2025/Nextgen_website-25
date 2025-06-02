@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const ContactFrom = () => {
+const ContactFrom = ({ 
+  tagline = "LET'S CONNECT",
+  heading = "Ready to discuss your project?",
+  description = "Talk with our experts about real estate, digital marketing, co-working spaces, and IT services to build the perfect solution!"
+}) => {
   const [formData, setFormData] = useState({
     name: "",
     tel: "",
@@ -45,7 +49,7 @@ const ContactFrom = () => {
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
-        },
+        }, 
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
@@ -70,137 +74,131 @@ const ContactFrom = () => {
   };
 
   return (
-    <div className="contact-bg relative bg-center bg-cover bg-fixed md:min-h-[70vh] md:h-fit">
-      <div className="h-full bg-black bg-opacity-50 p-4 flex justify-center items-center md:min-h-[70vh] md:h-fit">
-        <div className="flex flex-col lg:flex-row items-start">
-          <div className="text-white flex flex-col items-start mt-5 lg:ml-20">
-            <h1 className="font-thin text-xl font-Manrope">Let's Talk</h1>
-            <h3 className="text-start font-bold text-5xl my-3 font-lato">
-              Ready to discuss your next project?
+    <div className="relative bg-gradient-to-r from-gray-900 to-gray-800">
+      <div className="h-full p-4 flex justify-center items-center">
+        <div className="flex flex-col lg:flex-row items-center max-w-7xl mx-auto w-full py-8">
+          <div className="text-white flex flex-col items-start justify-center mt-5 lg:ml-20 lg:w-1/2">
+            <h2 className="text-teal-400 font-semibold text-lg tracking-wide">{tagline}</h2>
+            <h3 className="text-4xl md:text-5xl font-semibold my-7 text-left">
+              {heading}
             </h3>
-            <p className="text-start text-base my-3 text-white font-Manrope">
-              Talk with our experts about real estate, digital marketing,
-              co-working spaces, and IT services to build the perfect solution!
+            <p className="text-xl text-left text-gray-300">
+              {description}
             </p>
             <Link
               to="/contact"
-              className="button-txt flex items-center border-2 text-white bg-transparent rounded-full py-1.5 px-10 text-lg font-medium transition duration-300 hover:bg-white hover:text-black mt-6 font-Manrope"
+              className="bg-teal-500 hover:bg-teal-600 px-10 py-3 my-10 rounded-lg transition-all duration-300 text-white flex items-center gap-2 font-medium"
             >
               Get Started
               <svg
-                height="16px"
-                version="1.1"
-                viewBox="0 0 18 18"
-                width="18px"
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                className="ml-2 svg-icon hover-icon"
               >
-                <title />
-                <desc />
-                <defs />
-                <g
-                  fill="none"
-                  fillRule="evenodd"
-                  id="Page-1"
-                  stroke="none"
-                  strokeWidth="1"
-                >
-                  <g
-                    fill="#ffffff"
-                    className="icon-color"
-                    id="Core"
-                    transform="translate(-339.000000, -297.000000)"
-                  >
-                    <g
-                      id="launch"
-                      transform="translate(339.000000, 297.000000)"
-                    >
-                      <path
-                        d="M16,16 L2,16 L2,2 L9,2 L9,0 L2,0 C0.9,0 0,0.9 0,2 L0,16 C0,17.1 0.9,18 2,18 L16,18 C17.1,18 18,17.1 18,16 L18,9 L16,9 L16,16 L16,16 Z M11,0 L11,2 L14.6,2 L4.8,11.8 L6.2,13.2 L16,3.4 L16,7 L18,7 L18,0 L11,0 L11,0 Z"
-                        id="Shape"
-                      />
-                    </g>
-                  </g>
-                </g>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
               </svg>
             </Link>
           </div>
-          <div className="md:container flex flex-col md:mt-4 mt-12">
-            <div className="text-start md:pl-[132px] tracking-tighter">
-              <h2 className="text-white text-4xl font-bold mb-5 font-lato">
+          <div className="lg:w-1/2 flex flex-col md:mt-4 mt-12 px-4 lg:px-8">
+            <div className="mb-8">
+              <h2 className="text-teal-400 text-4xl font-bold">
                 Get In Touch
               </h2>
             </div>
-            <div className="flex justify-center">
-              <div className="w-full max-w-lg">
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-1 flex items-center">
-                    <div className="flex flex-col flex-1 mr-2">
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="Name"
-                        className="form-control rounded-2xl mt-1 w-full h-12 bg-transparent bg-opacity-60 border-[0.1px] border-white focus:outline-none focus:border-white text-white px-3 placeholder:text-white placeholder:font-thin placeholder:text-base"
-                      />
-                    </div>
-                    <div className="flex flex-col flex-1">
-                      <input
-                        type="tel"
-                        name="tel"
-                        value={formData.tel}
-                        onChange={handleChange}
-                        placeholder="Phone"
-                        className="form-control mt-1 w-full h-12 bg-transparent bg-opacity-60 rounded-2xl border-[0.1px] border-white focus:outline-none focus:border-white text-white px-3 placeholder:text-white placeholder:font-thin placeholder:text-base"
-                      />
-                    </div>
+            <div className="w-full max-w-lg mx-auto">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Name"
+                    className="w-full h-12 bg-gray-800 bg-opacity-50 rounded-lg border border-teal-400/30 focus:border-teal-400 focus:ring-2 focus:ring-teal-400/20 text-white px-4 transition-all duration-300 placeholder:text-gray-400"
+                  />
+                  <input
+                    type="tel"
+                    name="tel"
+                    value={formData.tel}
+                    onChange={handleChange}
+                    placeholder="Phone"
+                    className="w-full h-12 bg-gray-800 bg-opacity-50 rounded-lg border border-teal-400/30 focus:border-teal-400 focus:ring-2 focus:ring-teal-400/20 text-white px-4 transition-all duration-300 placeholder:text-gray-400"
+                  />
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Email"
+                  className="w-full h-12 bg-gray-800 bg-opacity-50 rounded-lg border border-teal-400/30 focus:border-teal-400 focus:ring-2 focus:ring-teal-400/20 text-white px-4 transition-all duration-300 placeholder:text-gray-400"
+                />
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Message"
+                  className="w-full min-h-[120px] bg-gray-800 bg-opacity-50 rounded-lg border border-teal-400/30 focus:border-teal-400 focus:ring-2 focus:ring-teal-400/20 text-white p-4 transition-all duration-300 placeholder:text-gray-400"
+                ></textarea>
+                {error && (
+                  <div className="text-red-400 text-sm font-medium p-3 bg-red-400/10 rounded-lg">
+                    {error}
                   </div>
-                  <div className="flex flex-col mb-1">
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Email"
-                      className="form-control mt-1 w-full h-12 bg-transparent bg-opacity-60 border-[0.1px] rounded-2xl border-white focus:outline-none focus:border-white text-white px-3 placeholder:text-white placeholder:font-thin placeholder:text-base"
-                    />
+                )}
+                {success && (
+                  <div className="text-teal-400 text-sm font-medium p-3 bg-teal-400/10 rounded-lg">
+                    {success}
                   </div>
-                  <div className="flex flex-col mb-1">
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Message"
-                      className="form-control rounded-2xl mt-1 w-full bg-transparent bg-opacity-60 border-[0.1px] border-white focus:outline-none focus:border-white text-white min-h-[100px] px-3 pt-3 placeholder:text-white placeholder:font-thin placeholder:text-base"
-                    ></textarea>
-                  </div>
-                  {error && <div className="text-red-500 mb-4">Error: {error}</div>}
-                  {success && (
-                    <div className="text-green-500 mb-4">{success}</div>
+                )}
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`w-full bg-teal-500 hover:bg-teal-600 text-white rounded-lg py-3 px-6 font-medium transition-all duration-300 flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5 mr-2" viewBox="0 0 24 24">
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
+                      </svg>
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Message'
                   )}
-                  <div>
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className={`border-2 border-white text-white bg-transparent rounded-full py-1.5 px-10 text-lg font-medium transition duration-300 hover:bg-white hover:text-black mt-6 mb-3 font-Manrope ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <i className="fa fa-spinner fa-spin mr-2"></i>
-                          Sending...
-                        </>
-                      ) : (
-                        'Submit'
-                      )}
-                    </button>
-                  </div>
-                </form>
-              </div>
+                </button>
+              </form>
             </div>
           </div>
         </div>
       </div>
+      <style>{`
+        .animate-spin {
+          animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
     </div>
   );
 };

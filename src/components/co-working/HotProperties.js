@@ -40,10 +40,10 @@ const HotProperties = () => {
   }, []);
 
   return (
-    <section className="py-8 px-4">
-      <h2 className="text-3xl font-bold text-center">
-        <span className="text-blue-500">Marketable </span>
-        <span className="text-green-500">Workrooms</span>
+    <section className="py-8 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
+      <h2 className="text-4xl font-bold text-center">
+        <span className="text-white font-bold">Marketable </span>
+        <span className="text-teal-400 font-bold">Workrooms</span>
       </h2>
 
       <div className="mt-6 flex flex-wrap justify-center gap-6">

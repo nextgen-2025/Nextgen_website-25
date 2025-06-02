@@ -31,21 +31,21 @@ const TrainingBanner = () => {
   }, []);
 
   return (
-    <div>
+    <div className="bg-gradient-to-r from-gray-900 to-gray-800">
       {/* Banner Section */}
-      <div className="aboutus-bnr-cont flex justify-center bg-center bg-fixed relative overflow-hidden w-full h-[40vh] md:h-[60vh] rounded-b-[60px]">
+      <div className="aboutus-bnr-cont flex justify-center bg-center bg-fixed relative overflow-hidden w-full h-[40vh] md:h-[60vh] rounded-b-[60px] ">
         <div className="text-white flex flex-col justify-center items-center mx-auto mt-10 md:mt-0">
-          <h1 className="text-4xl md:text-[60px] font-bold drop-in font-lato">
+          <h1 className="text-4xl md:text-[60px] font-bold drop-in">
             Training and WorkSpace
           </h1>
-          <p className="font-Manrope mx-2 md:mx-0 text-xl md:text-2xl text-center text-white py-4 font-thin drop-in-2">
+          <p className=" mx-2 md:mx-0 text-xl md:text-2xl text-center text-white py-4 drop-in-2">
             Your Partner in Innovative IT Infrastructure Solutions
           </p>
           <Link
             to="/contact"
             className="drop-in-3 btn-abt flex items-center justify-center w-fit bg-[#24aa4a] px-5 py-2 rounded-3xl"
           >
-            <span className="hover-text font-Manrope">Be a Part of Team</span>
+            <span className="hover-text">Be a Part of Team</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 128 128"

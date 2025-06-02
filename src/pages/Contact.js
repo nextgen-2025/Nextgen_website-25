@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import "../components/customcss/contact.css";
 import Navbar from "../components/navbar/Navbar";
+import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +13,6 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,45 +50,30 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
-    setIsSubmitting(true);
 
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const response = await fetch("https://nextgen-backend-2025-production-f2de.up.railway.app/api/inquiry", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            phone: formData.number,
-            message: formData.message
-          }),
-        });
+        const response = await axios.post(
+          "https://formspree.io/f/xnnqnvdg",
+          formData
+        );
 
-        if (response.ok) {
+        // Check response status
+        if (response.status === 200) {
           setSuccessMessage("Form submitted successfully!");
           setErrorMessage("");
+          // Reset form
           setFormData({ name: "", email: "", number: "", message: "" });
           setErrors({});
-        } else {
-          const data = await response.json();
-          setErrorMessage(data.message || "There was an error submitting the form.");
-          setSuccessMessage("");
         }
       } catch (error) {
-        setErrorMessage("Failed to connect to the server. Please try again later.");
+        setErrorMessage("There was an error submitting the form.");
         setSuccessMessage("");
-      } finally {
-        setIsSubmitting(false);
       }
     } else {
       setErrors(validationErrors);
       setSuccessMessage("");
       setErrorMessage("");
-      setIsSubmitting(false);
     }
   };
 
@@ -183,21 +168,11 @@ const Contact = () => {
                 )}
 
                 <button
-                  className={`w-full bg-[#027b9a] hover:bg-[#025f77] text-white py-2 sm:py-2.5 md:py-3 rounded-lg transition-colors font-semibold tracking-wider text-xs sm:text-sm md:text-base mt-2 mb-4 md:mb-6 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className="w-full bg-[#027b9a] hover:bg-[#025f77] text-white py-2 sm:py-2.5 md:py-3 rounded-lg transition-colors font-semibold tracking-wider text-xs sm:text-sm md:text-base mt-2 mb-4 md:mb-6"
                   type="submit"
-                  disabled={isSubmitting}
                 >
-                  {isSubmitting ? (
-                    <>
-                      <i className="fa fa-spinner fa-spin mr-2"></i>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <i className="fa fa-paper-plane mr-2"></i>
-                      SEND
-                    </>
-                  )}
+                  <i className="fa fa-paper-plane mr-2"></i>
+                  SEND
                 </button>
               </form>
 

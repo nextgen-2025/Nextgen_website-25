@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const FAQS = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -6,24 +7,49 @@ const FAQS = () => {
   const faqs = [
     {
       question: "What types of memberships are available?",
-      answer:
-        "We offer a range of membership options, monthly subscriptions, and long-term leases. Each package is designed to fit different needs and preferences.",
+      answer: "We offer flexible membership options including:",
+      details: [
+        "Daily/Weekly hot desk passes",
+        "Monthly dedicated desk memberships",
+        "Private cabin leases",
+        "Virtual office packages",
+        "Meeting room packages"
+      ]
     },
     {
       question: "Are the workspaces fully furnished?",
-      answer:
-        "Yes, all our office spaces come fully furnished with ergonomic chairs, desks, and high-speed internet. Additional amenities such as printers and meeting room equipment are also available.",
+      answer: "Yes, all our office spaces come equipped with:",
+      details: [
+        "Ergonomic chairs and adjustable desks",
+        "High-speed fiber internet",
+        "Modern meeting room facilities",
+        "Printing and scanning equipment",
+        "Storage solutions"
+      ]
     },
     {
       question: "Is parking available at your locations?",
-      answer:
-        "Yes, we provide convenient parking options at most of our locations. For specific details, please contact our office.",
+      answer: "Yes, we provide comprehensive parking solutions:",
+      details: [
+        "Dedicated parking spots for monthly members",
+        "Visitor parking spaces",
+        "Secure bicycle storage",
+        "24/7 parking access",
+        "EV charging stations"
+      ]
     },
     {
       question: "What amenities are included?",
-      answer:
-        "Our spaces include high-speed Wi-Fi, printing services, conference room access, and more.",
-    },
+      answer: "Our spaces include premium amenities:",
+      details: [
+        "High-speed Wi-Fi (1 Gbps)",
+        "Fully equipped conference rooms",
+        "Pantry with complimentary beverages",
+        "24/7 access and security",
+        "Cleaning and maintenance services",
+        "Business address and mail handling"
+      ]
+    }
   ];
 
   const toggleAccordion = (index) => {
@@ -31,12 +57,12 @@ const FAQS = () => {
   };
 
   return (
-    <div className="container mx-auto pt-12">
-      <div id="faq" className="mb-12">
-        <div className="text-center mb-8">
-          <h2 className="font-heading text-4xl mb-5">FAQ's</h2>
-          <div className="border-b-2 border-teal-500 w-16 mx-auto"></div>
-          <p className="text-gray-700 md:text-2xl py-2 md:py-0">
+    <div className="bg-gray-50 py-16 bg-gradient-to-r from-gray-900 to-gray-800">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-semibold mb-4 text-white">FAQ's</h2>
+          <div className="h-1 w-20 bg-teal-500 mx-auto mb-6"></div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             At NextGen Infratech, we understand that choosing the right
             coworking space is a big decision. To help you make an informed
             choice, we have compiled answers to some of the most frequently
@@ -44,92 +70,122 @@ const FAQS = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
-          <div className="md:min-h-[300px] mr-3 md:mr-0">
-            <div className="our-faqs-images">
-              <div className="our-faqs-images-row">
-                <div className="pb-1">
-                  <div className="faq-img faqs-img-1">
-                    <figure className="image-anime reveal">
-                      <img src="./faq/1.jpg" alt="" />
-                    </figure>
-                  </div>
-                </div>
-                <div className="pb-1">
-                  <div className="faq-img-1 faqs-img-2">
-                    <figure className="image-anime reveal">
-                      <img src="./faq/2.jpg" alt="" />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-start lg:justify-around">
-                <div className="">
-                  <div className="faq-img faqs-img-1">
-                    <figure className="image-anime reveal">
-                      <img src="./faq/3.jpg" alt="" />
-                    </figure>
-                  </div>
-                </div>
-                <div className="">
-                  <div className="faq-img-1 faqs-img-2">
-                    <figure className="image-anime reveal">
-                      <img src="./faq/4.jpg" alt="" />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-
-              <div className="our-faqs-bulitup">
-                <img src="./nextgen-profile-logo.jpg" alt="" />
-              </div> 
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
+          {/* FAQ Images Grid */}
+          <div className="lg:w-1/2">
+            <div className="grid grid-cols-2 gap-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="aspect-square overflow-hidden rounded-lg shadow-lg"
+              >
+                <img
+                  src="./faq/1.jpg"
+                  alt="Office Space"
+                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="aspect-square overflow-hidden rounded-lg shadow-lg"
+              >
+                <img
+                  src="./faq/2.jpg"
+                  alt="Meeting Room"
+                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="aspect-square overflow-hidden rounded-lg shadow-lg"
+              >
+                <img
+                  src="./faq/3.jpg"
+                  alt="Workspace"
+                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="aspect-square overflow-hidden rounded-lg shadow-lg"
+              >
+                <img
+                  src="./faq/4.jpg"
+                  alt="Amenities"
+                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                />
+              </motion.div>
             </div>
           </div>
 
-          <div className="w-full lg:w-[60%] h-auto">
-            <div>
+          {/* FAQ Accordion */}
+          <div className="lg:w-1/2 text-left">
+            <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="md:py-2">
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-lg shadow-md overflow-hidden"
+                >
                   <button
-                    className="flex justify-between items-center w-full p-4 text-left bg-white focus:outline-none"
+                    className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                     onClick={() => toggleAccordion(index)}
                   >
-                    <span className="text-2xl md:text-3xl font-extralight">
+                    <span className="text-xl font-semibold text-gray-900">
                       {faq.question}
                     </span>
-                    <span className="text-gray-600">
-                      {openIndex === index ? "-" : "+"}
-                    </span>
+                    <motion.span
+                      animate={{ rotate: openIndex === index ? 180 : 0 }}
+                      className="text-teal-500"
+                    >
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </motion.span>
                   </button>
-                  <div
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                      openIndex === index ? "max-h-40" : "max-h-0"
-                    }`}
-                  >
-                    <p className="p-4 text-gray-700 text-start">{faq.answer}</p>
-                  </div>
-                  {/* Border under the answer */}
-                  <div
-                    className={`border-b border-gray-300 transition-all duration-300 ease-in-out ${
-                      openIndex === index ? "block" : "hidden"
-                    }`}
-                  ></div>
-                </div>
+                  <AnimatePresence>
+                    {openIndex === index && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="px-6 pb-4"
+                      >
+                        <p className="text-gray-600 mb-3">{faq.answer}</p>
+                        <ul className="list-disc list-inside space-y-2 text-gray-600 pl-4">
+                          {faq.details.map((detail, i) => (
+                            <li key={i}>{detail}</li>
+                          ))}
+                        </ul>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
               ))}
             </div>
           </div>
         </div>
       </div>
-      <style>{`
-        .faq-img img {
-          width: 200px;
-        }
-
-        .faq-img-1 img {
-          width: 170px;
-        }
-      `}</style>
     </div>
   );
 };

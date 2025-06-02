@@ -1,42 +1,65 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SpaceCards = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if we should scroll to the workspace section
+    if (location.state?.scrollTo === 'find-your-space') {
+      const element = document.getElementById('find-your-space');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        
+        // If a specific space type was selected, scroll it into view
+        if (location.state?.selectedType) {
+          setTimeout(() => {
+            const spaceElement = document.querySelector(`[data-space-type="${location.state.selectedType}"]`);
+            if (spaceElement) {
+              spaceElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }, 500); // Small delay to ensure main section is scrolled first
+        }
+      }
+    }
+  }, [location.state?.scrollTo, location.state?.selectedType]);
+
   const [activeImages, setActiveImages] = useState({});
 
-  // Memoize the spaceImages object
+  // Wrap spaceImages in useMemo to prevent recreation on every render
   const spaceImages = useMemo(() => ({
     "Dedicated Desk": [
       "./space-cards/c1.jpg",
-      "./space-cards/Dedicated Desk 5.jpg",
-      "./space-cards/Dedicated Desk.jpg"
+      "./space-cards/Dedicated Desk 5.webp",
+      "./space-cards/Dedicated Desk.webp"
     ],
     "Private Cabins": [
       "./space-cards/c3.jpg",
-      "./space-cards/Private Office.jpg",
-      "./space-cards/Cabin 2.jpg",
+      "./space-cards/Private Office.webp",
+      "./space-cards/Cabin 2.webp",
+      
     ],
     "Meeting Room": [
       "./space-cards/c5.jpg",
-      "./space-cards/Training Room.jpg",
-      "./space-cards/_6_08245-Enhanced-NR (1).jpg"  
+      "./space-cards/Training Room.webp",
+      "./space-cards/_6_08245-Enhanced-NR (1).webp"  
     ],
     "Conference Room": [
       "./space-cards/c2.jpg",
-      "./space-cards/Cabin 2.jpg",
-      "./space-cards/Private Office.jpg",
+      "./space-cards/Cabin 2.webp",
+      "./space-cards/Private Office.webp",
     ],
     "Training Room": [
       "./space-cards/c4.jpg",
-      "./space-cards/Flexi Desk 2.jpg",
-      "./space-cards/Training Room.jpg"
+      "./space-cards/Flexi Desk 2.webp",
+      "./space-cards/Training Room.webp"
     ],
     "Mini Cabin": [
       "./space-cards/c6.jpg",
-      "./space-cards/Cabin 2.jpg",
-      "./space-cards/Private Office.jpg",
+      "./space-cards/Cabin 2.webp",
+      "./space-cards/Private Office.webp",
     ]
-  }), []); // Empty dependency array since this object never changes
+  }), []);
 
   // Initialize active images
   useEffect(() => {
@@ -94,10 +117,10 @@ const SpaceCards = () => {
   const spacesToDisplay = spaceData;
 
   return (
-    <section id="find-your-space" className="py-20">
+    <section id="find-your-space" className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
       <div className="container mx-auto px-5">
         <div className="mb-10 text-center">
-          <h2 className="text-3xl font-heading mb-5">
+          <h2 className="text-3xl font-heading text-white font-semibold mb-5">
             Find Your Ideal Workspace
           </h2>
           <div className="border-b-2 border-teal-500 w-16 mx-auto"></div>
@@ -106,6 +129,7 @@ const SpaceCards = () => {
           {spacesToDisplay.map((space, index) => (
             <div
               key={index}
+              data-space-type={space.title}
               className="flex flex-col bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 group"
             >
               <div className="overflow-hidden relative h-64">
