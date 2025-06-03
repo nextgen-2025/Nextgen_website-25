@@ -75,10 +75,10 @@ const ContactFrom = ({
 
   return (
     <div className="relative bg-gradient-to-r from-gray-900 to-gray-800">
-      <div className="h-full p-4 flex justify-center items-center">
-        <div className="flex flex-col lg:flex-row items-center max-w-7xl mx-auto w-full py-8">
-          <div className="text-white flex flex-col items-start justify-center mt-5 lg:ml-20 lg:w-1/2">
-            <h2 className="text-teal-400 font-semibold text-lg tracking-wide">{tagline}</h2>
+      <div className="flex justify-center items-center">
+        <div className="flex flex-col lg:flex-row items-center px-4 mx-auto w-full py-8">
+          <div className=" text-white flex flex-col items-start justify-center mt-5 lg:ml-20 lg:w-1/2">
+            <span className="text-teal-400 font-semibold text-lg tracking-wide">{tagline}</span>
             <h3 className="text-4xl md:text-5xl font-semibold my-7 text-left">
               {heading}
             </h3>

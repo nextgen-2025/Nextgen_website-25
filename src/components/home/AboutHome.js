@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  FaMapMarkerAlt,
-  FaCity,
-  FaArrowRight,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
 const About = () => {
@@ -45,101 +40,91 @@ const About = () => {
     }
   };
 
-  const openWhatsApp = () => {
-    window.open("https://wa.me/+919930365555", "_blank");
-  };
-
   return (
-    <div className="w-full min-h-screen bg-gradient-to-r from-gray-900 to-gray-800 relative p-4">
+    <section className="w-full bg-gradient-to-r from-gray-900 to-gray-800 relative py-6" aria-label="About NextGen Infratech">
       <div className="absolute inset-0 bg-opacity-20 bg-black z-0">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       </div>
-      <div className="container mx-auto px-14 max-w-[1400px] relative z-10 text-left">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 p-4">
-          {/* Left Content Section */}
-          <div className="w-full lg:w-1/2 text-white">
-            <h2 className="text-teal-400 font-semibold text-lg mb-3 tracking-wide">
-              COMPREHENSIVE BUSINESS SOLUTIONS
-            </h2>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Transform Your Business with{" "}
-              <span className="text-teal-400">NextGen Infratech</span>
-            </h1>
+      <div className="container mx-auto px-10 max-w-[1400px] relative z-10 text-left">
+  <div className="flex flex-col lg:flex-row items-center justify-between gap-8 p-4">
+    
+    {/* Left Content Section */}
+    <div className="w-full lg:w-1/2 text-white">
+      <span className="inline-block text-teal-400 font-semibold text-lg mb-3 tracking-wide" role="text">
+        COMPLETE BUSINESS SOLUTIONS
+      </span>
 
-            <p className="text-gray-300 text-lg mb-8 max-w-2xl">
-              Experience our full suite of services including co-working spaces,
-              IT solutions, digital marketing expertise, professional training,
-              and real estate services - all designed to elevate your business
-              in Navi Mumbai and beyond.
-            </p>
+      <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        Empower Your Growth with{" "}
+        <span className="text-teal-400">NextGen Infratech</span>
+      </h2>
 
-            <div className="flex flex-wrap gap-6 mb-10">
-              <div className="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700 flex-1 min-w-[150px]">
-                <h3 className="text-3xl font-bold text-white">
-                  4k<span className="text-teal-400">+</span>
-                </h3>
-                <p className="text-gray-400 text-sm">Work Stations</p>
-              </div>
+      <p className="text-gray-300 text-lg mb-8 max-w-2xl leading-normal">
+        Unlock your business potential with our all-in-one solutions—premium co-working spaces, IT services, digital marketing, professional training, and real estate consulting. Based in Mahape, Navi Mumbai, we help startups and enterprises thrive with scalable, modern infrastructure and expert support.
+      </p>
 
-              <div className="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700 flex-1 min-w-[150px]">
-                <h3 className="text-3xl font-bold text-white">
-                  25<span className="text-teal-400">+</span>
-                </h3>
-                <p className="text-gray-400 text-sm">Happy Clients</p>
-              </div>
-
-              <div className="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700 flex-1 min-w-[150px]">
-                <h3 className="text-3xl font-bold text-white">
-                  7<span className="text-teal-400">+</span>
-                </h3>
-                <p className="text-gray-400 text-sm">Years Experience</p>
-              </div>
-            </div>
+      <div className="flex flex-wrap gap-2 mb-10" role="group" aria-label="Company Highlights">
+        {[
+          { count: "4k", label: "Workstations" },
+          { count: "25", label: "Happy Clients" },
+          { count: "7", label: "Years of Experience" },
+        ].map((stat, index) => (
+          <div
+            key={`stat-${index}`}
+            className="bg-gray-800 bg-opacity-50 px-4 py-2 rounded-md border border-gray-600"
+            role="text"
+            aria-label={`${stat.count}+ ${stat.label}`}
+          >
+            <h3 className="text-2xl font-bold text-white">
+              {stat.count}
+              <span className="text-teal-400">+</span>
+            </h3>
+            <p className="text-gray-400 text-sm">{stat.label}</p>
           </div>
-
-          {/* Right Form Section */}
-          <div className="w-full lg:w-5/12">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-2xl border border-gray-700">
-              <h3 className="text-2xl font-bold text-white mb-6">
-                Find Your Ideal Services
-              </h3>
-
-              <form onSubmit={handleSubmit} className="space-y-5 py-4">
-                <div className="space-y-4">
-                  {/* Space Type */}
-                  <div>
-                    <label className="block text-gray-300 mb-2 text-sm">
-                      Services
-                    </label>
-                    <select
-                      name="type"
-                      value={formData.type}
-                      onChange={handleChange}
-                      className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
-                      required
-                    >
-                      <option value="">Select Space Type</option>
-                      <option value="Dedicated Desk">Co-Working Space</option>
-                      <option value="Private Cabins">Training</option>
-                      <option value="Training Room">Real Estate</option>
-                      <option value="Conference Room">IT Sevices</option>
-                      <option value="Meeting Room">Digital Marketing</option>
-                    </select>
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-teal-500 hover:bg-teal-600 text-white py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium"
-                >
-                  Explore Services <FaArrowRight />
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
+
+    {/* Right Form Section */}
+    <div className="w-full lg:w-5/12">
+      <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-2xl border border-gray-700">
+        <h3 className="text-2xl font-bold text-white mb-6">Get Started with the Right Service</h3>
+        <form onSubmit={handleSubmit} className="space-y-5 py-4" role="form" aria-label="Service Selection Form">
+          <div className="space-y-4">
+            <div>
+              <label htmlFor="service-type" className="block text-gray-300 mb-2 text-sm">Select a Service</label>
+              <select
+                id="service-type"
+                name="type"
+                value={formData.type}
+                onChange={handleChange}
+                className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                required
+                aria-label="Select Service Type"
+              >
+                <option value="">-- Choose a Service --</option>
+                <option value="Coworking">Co-Working Spaces</option>
+                <option value="Training">Professional Training</option>
+                <option value="RealEstate">Real Estate Services</option>
+                <option value="ITServices">IT Services</option>
+                <option value="Marketing">Digital Marketing</option>
+              </select>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-teal-500 hover:bg-teal-600 text-white py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium"
+          >
+            Explore Services <FaArrowRight />
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </section>
   );
 };
 

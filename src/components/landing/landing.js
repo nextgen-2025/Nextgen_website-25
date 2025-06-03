@@ -1,20 +1,27 @@
-import React, { useState } from "react";
-import {
-  FaMapMarkerAlt,
-  FaCity,
-  FaArrowRight,
-  FaWhatsapp,
-} from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Landing = () => {
-  const navigate = useNavigate();
-  const openWhatsApp = () => {
-    window.open("https://wa.me/+919930365555", "_blank");
-  };
+  const spaceImages = [
+    {
+      src: "./space-cards/c1.jpg",
+      alt: "NextGen Infratech Modern Coworking Space in Mahape - Professional Work Environment",
+      type: "main"
+    },
+    {
+      src: "./space-cards/Private Office.webp",
+      alt: "Private Cabin Workspace in Navi Mumbai - Fully Furnished Office Space",
+      type: "secondary"
+    },
+    {
+      src: "./space-cards/Training Room.webp",
+      alt: "Professional Training and Conference Room in Mahape - Corporate Meeting Space",
+      type: "secondary"
+    }
+  ];
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-r from-gray-900 to-gray-800 relative p-8">
+    <section className="w-full min-h-screen bg-gradient-to-r from-gray-900 to-gray-800 relative pt-8">
       <div className="absolute inset-0 bg-opacity-20 bg-black z-0">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       </div>
@@ -23,58 +30,61 @@ const Landing = () => {
         <div className="flex flex-col lg:flex-row items-center justify-evenly">
           {/* Left Content Section */}
           <div className="w-full lg:w-1/2 text-white max-w-[600px] text-left p-4">
-            <h2 className="text-teal-400 font-semibold text-lg mb-3 tracking-wide">
-              PREMIUM CO-WORKING SPACES
-            </h2>
+            <span className="inline-block text-teal-400 font-semibold text-lg mb-3 tracking-wide uppercase">
+              Coworking Spaces in Mahape, Navi Mumbai
+            </span>
+
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Elevate Your Work Experience with{" "}
+              Empower Your Business at{" "}
               <span className="text-teal-400">NextGen Infratech</span>
             </h1>
 
-            <p className="text-gray-300 text-lg mb-8 max-w-2xl">
-              Discover flexible, modern, and productive co-working spaces
-              designed for professionals, startups, and enterprises in the heart
-              of Navi Mumbai.
+            <p className="text-gray-300 text-lg mb-8 max-w-2xl leading-normal ">
+              Welcome to NextGen Infratech, your trusted partner in providing
+              dynamic coworking spaces, cutting-edge digital marketing services,
+              and strategic real estate solutions in Mahape, Navi Mumbai. Our
+              mission is to foster growth and innovation by offering flexible,
+              affordable, and professional environments tailored to your
+              business needs.
             </p>
 
-            <button
-              onClick={openWhatsApp}
-              className="flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+            <a
+              href="https://wa.me/+919930365555"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <FaWhatsapp size={20} />
-              Contact Us
-            </button>
+              Chat on WhatsApp
+            </a>
           </div>
-
-          {/* Right Images Section */}
-          <div className="w-full lg:w-5/12 space-y-6">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-              <img
-                src="./space-cards/c1.jpg"
-                alt="Modern Coworking Space"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="flex gap-6">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 flex-1">
+          <div className="w-full lg:w-5/12 space-y-4">
+            {/* Main Image */}
+            {spaceImages.filter(img => img.type === "main").map((image, index) => (
+              <div key={`main-${index}`} className="relative rounded-lg overflow-hidden shadow-2xl transform transition-transform duration-300">
                 <img
-                  src="./space-cards/Private Office.webp"
-                  alt="Private Office Space"
-                  className="w-full h-48 object-cover"
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-64 object-cover"
                 />
               </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 flex-1">
-                <img
-                  src="./space-cards/Training Room.webp"
-                  alt="Training Room"
-                  className="w-full h-48 object-cover"
-                />
-              </div>
+            ))}
+            {/* Secondary Images */}
+            <div className="flex gap-4">
+              {spaceImages.filter(img => img.type === "secondary").map((image, index) => (
+                <div key={`secondary-${index}`} className="relative rounded-lg overflow-hidden shadow-2xl transform transition-transform duration-300 flex-1">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

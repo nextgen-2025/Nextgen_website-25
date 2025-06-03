@@ -28,11 +28,11 @@ const BlogCard = ({ images, category, shortDescription, title, blog }) => {
       
       {/* Card Content */}
       <div className="p-6 flex flex-col justify-between flex-grow space-y-4">
-        <h4 className="text-xl font-semibold text-white leading-snug group-hover:text-teal-400 transition-colors duration-300">
+        <h4 className="text-xl font-semibold text-white text-left leading-snug group-hover:text-teal-400 transition-colors duration-300">
           {title}
         </h4>
 
-        <p className="text-sm text-gray-300 leading-relaxed">
+        <p className="text-sm text-left text-gray-300 leading-relaxed">
           {shortDescription}
         </p>
 

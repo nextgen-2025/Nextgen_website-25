@@ -49,8 +49,7 @@ const ClientsLogoStatic = () => {
         </div>
         
         <div className="relative overflow-hidden">
-          {/* Gradient overlay for left edge */}
-          <div className="absolute left-0 top-0 h-full w-16 z-10 bg-gradient-to-r from-[#131A26] to-transparent"></div>
+        
           
           {/* Marquee container */}
           <div>
@@ -61,11 +60,11 @@ const ClientsLogoStatic = () => {
             className="overflow-hidden"
           >
             {logos.map((logo, index) => (
-              <div key={index} className="mx-4 md:mx-8">
+              <div key={index} className="mx-4 md:mx-6">
                 <img
                   src={logo}
                   alt={`Client ${index + 1}`}
-                  className="h-16 md:h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="h-16 md:h-28 w-auto object-fill grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             ))}
