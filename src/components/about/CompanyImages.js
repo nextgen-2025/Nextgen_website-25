@@ -34,14 +34,14 @@ const CompanyImages = () => {
         <h1 className="heading">Horizontal Scroll</h1>
       </section> */}
       <section className="horizontal-section">
-        <h1 className="heading text-6xl md:text-9xl font-extrabold text-white">
+        <h2 className="heading text-6xl md:text-9xl font-extrabold text-white">
           What we Offer
-        </h1>
+        </h2>
       </section>
       <section className="horizontal-section">
-        <h1 className="heading text-6xl md:text-9xl font-extrabold text-white">
+        <h2 className="heading text-6xl md:text-9xl font-extrabold text-white">
           Co-Working Space
-        </h1>
+        </h2>
       </section>
       <section className="horizontal-section">
         <h1 className="heading text-6xl md:text-9xl font-extrabold text-white">

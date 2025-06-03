@@ -45,8 +45,8 @@ const TestimonialsNew = () => {
   }, []);
 
   return (
-    <section className="bg-[#131A26] testimonial-area2 py-16">
-      <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-0 xl:py-24">
+    <section className="bg-[#131A26] testimonial-area2 py-10">
+      <div className="mx-auto max-w-[1340px] px-4 py-12  sm:px-6 lg:me-0 lg:py-14 lg:pe-0 lg:ps-0 xl:py-20">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
           <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right lg:px-5">
             <h2 className="text-teal-400 font-semibold text-lg mb-3 tracking-wide text-start">
@@ -114,7 +114,7 @@ const TestimonialsNew = () => {
             >
               {/* Slide 1 */}
               <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 hover:scale-[1.02] sm:p-8 lg:p-12">
+                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 sm:p-8 lg:p-12">
                   <div>
                     <div className="flex gap-0.5 text-teal-400">
                       {[...Array(5)].map((_, index) => (
@@ -155,7 +155,7 @@ const TestimonialsNew = () => {
 
               {/* Slide 2 */}
               <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 hover:scale-[1.02] sm:p-8 lg:p-12">
+                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 sm:p-8 lg:p-12">
                   <div>
                     <div className="flex gap-0.5 text-teal-400">
                       {[...Array(5)].map((_, index) => (
@@ -196,7 +196,7 @@ const TestimonialsNew = () => {
 
               {/* Slide 3 */}
               <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 hover:scale-[1.02] sm:p-8 lg:p-12">
+                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 sm:p-8 lg:p-12">
                   <div>
                     <div className="flex gap-0.5 text-teal-400">
                       {[...Array(5)].map((_, index) => (
@@ -238,7 +238,7 @@ const TestimonialsNew = () => {
 
               {/* Slide 4 */}
               <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 hover:scale-[1.02] sm:p-8 lg:p-12">
+                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 sm:p-8 lg:p-12">
                   <div>
                     <div className="flex gap-0.5 text-teal-400">
                       {[...Array(5)].map((_, index) => (

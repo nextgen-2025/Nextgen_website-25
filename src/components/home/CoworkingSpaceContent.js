@@ -31,60 +31,90 @@ const CoworkingSpaceContent = () => {
   ];
 
   return (
-    <div className="bg-[#131A26] text-white py-8">
+    <section className="bg-[#131A26] text-white pt-8" aria-label="Coworking Spaces">
       <div className="container mx-auto px-16">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-teal-400 font-semibold text-lg mb-3 tracking-wide">
+          <span className="text-teal-400 font-semibold text-lg mb-3 tracking-wide block">
             PREMIUM COWORKING SPACES
-          </h2>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Your Perfect Workspace Solution
-          </h1>
+          </h2>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
             Experience the future of work with our state-of-the-art coworking spaces designed for productivity and collaboration.
           </p>
         </div>
 
         {/* Workspace Options */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16 px-16">
+        <section className="grid md:grid-cols-3 gap-8 mb-16 px-16" aria-label="Available Workspace Options">
           {spaces.map((space, index) => (
-            <div key={index} className="bg-gray-800 rounded-xl overflow-hidden transition-transform hover:scale-105">
-              <img src={space.image} alt={space.title} className="w-full h-48 object-cover" />
+            <article 
+              key={index} 
+              className="bg-gray-800 rounded-xl overflow-hidden transition-transform hover:scale-105"
+              aria-labelledby={`space-title-${index}`}
+            >
+              <img 
+                src={space.image} 
+                alt={`${space.title} - ${space.description}`} 
+                className="w-full h-48 object-cover" 
+              />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{space.title}</h3>
+                <h3 id={`space-title-${index}`} className="text-xl font-semibold mb-2">{space.title}</h3>
                 <p className="text-gray-300 mb-4">{space.description}</p>
                 <Link 
                   to="/coworking" 
                   className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors"
+                  aria-label={`Learn more about ${space.title}`}
                 >
                   Learn more
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Link>
               </div>
-            </div>
+            </article>
           ))}
-        </div>
+        </section>
 
         {/* Amenities Grid */}
-        <div className="grid md:grid-cols-3 gap-8 px-16">
-          {amenities.map((amenity, index) => (
-            <div key={index} className="flex items-start p-6 bg-gray-800 bg-opacity-50 rounded-lg">
-              <div className="text-teal-400 text-2xl mr-4">
-                {amenity.icon}
+        <section className="" aria-label="Workspace Amenities">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">Premium Amenities</h3>
+            <p className="text-gray-300 max-w-2xl mx-auto">Everything you need for a productive workday</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 px-16">
+            {amenities.map((amenity, index) => (
+              <div 
+                key={index} 
+                className="group relative overflow-hidden p-8 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-teal-500 transition-all duration-300"
+                role="article"
+                aria-labelledby={`amenity-title-${index}`}
+              >
+                <div className="absolute top-0 right-0 w-24 h-24 bg-teal-500 opacity-5 rounded-full transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500" />
+                <div className="relative flex flex-col items-center z-10">
+                  <div className="text-teal-400 text-3xl mb-6 transform group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
+                    {amenity.icon}
+                  </div>
+                  <div>
+                    <h3 
+                      id={`amenity-title-${index}`} 
+                      className="text-xl font-semibold mb-3 group-hover:text-teal-400 transition-colors duration-300"
+                    >
+                      {amenity.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                      {amenity.description}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-2">{amenity.title}</h3>
-                <p className="text-gray-300">{amenity.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </section>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <Link
             to="/coworking"
             className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg inline-flex items-center gap-2 transition-colors"
@@ -96,7 +126,7 @@ const CoworkingSpaceContent = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

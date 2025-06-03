@@ -10,7 +10,7 @@ const DMBanner = ({ onVideoLoad }) => {
     >
       <div className="flex flex-col md:items-start px-10 mb-8 md:mb-5">
         <div>
-          <h1 className="text-[#28aa4a] text-start text-6xl font-extrabold font-lato">
+          <h1 className="text-[#28aa4a] text-start text-6xl font-bold">
             Digital Marketing
           </h1>
         </div>

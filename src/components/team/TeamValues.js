@@ -1,57 +1,50 @@
 import React from "react";
 
+const values = [
+  { label: "Integrity", icon: "./values-img-t/1.png" },
+  { label: "Collaboration", icon: "./values-img-t/2.png" },
+  { label: "Innovation", icon: "./values-img-t/3.png" },
+  { label: "Diversity", icon: "./values-img-t/4.png" },
+  { label: "Excellence", icon: "./values-img-t/5.png" },
+  { label: "Sustainability", icon: "./values-img-t/6.png" },
+];
+
 const TeamValues = () => {
   return (
-    <section className="teamvalues-bg bg-fixed text-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-5xl md:text-6xl text-[#28aa4a] font-bold text-center py-10">
+    <section className="bg-[#141C2B] bg-fixed text-white py-20 px-4 md:px-12">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl md:text-6xl text-[#ffff] font-bold text-center mb-16">
           Our Values & Mission
         </h2>
-        <div className="grid lg:grid-cols-2 gap-8 pb-20">
-          {/* Mission Section */}
-          <div className="bg-white bg-opacity-10 rounded-lg p-6 shadow-lg">
-            <h3 className="text-5xl md:text-3xl font-thin mb-4 font-lato">Our Mission</h3>
-            <p className="text-gray-200 font-Manrope">
+
+        <div className="grid lg:grid-cols-2 gap-10">
+          {/* Mission */}
+          <div className="bg-white bg-opacity-10 rounded-2xl p-8 shadow-lg backdrop-blur-sm">
+            <h3 className="text-2xl text-teal-400 font-light mb-4 font-lato">Our Mission</h3>
+            <p className="text-gray-200 font-Manrope leading-relaxed">
               We strive to empower our community through innovative solutions
               and collaborative efforts, fostering an environment of creativity
               and growth.
             </p>
           </div>
 
-          {/* Values Section */}
-          <div className="bg-white bg-opacity-10 rounded-lg p-6 shadow-lg">
-            <h3 className="text-5xl md:text-3xl font-thin mb-4 font-lato">Our Values</h3>
-            <ul className="list-disc list-inside text-gray-50 grid grid-cols-2 md:grid-cols-3 gap-5 col-span-2 font-Manrope">
-              <li className="flex items-center">
-                <img src="./values-img-t/1.png" alt="integrity" width="50" />
-                <span>Integrity</span>
-              </li>
-              <li className="flex items-center">
-                <img src="./values-img-t/2.png" alt="integrity" width="50" />
-                <span>Collaboration</span>
-              </li>
-              <li className="flex items-center">
-                <img src="./values-img-t/3.png" alt="integrity" width="50" />
-                <span>Innovation</span>
-              </li>
-              <li className="flex items-center col-span-1">
-                <img src="./values-img-t/4.png" alt="integrity" width="50" />
-                <span>Diversity</span>
-              </li>
-              <li className="flex items-center col-span-1">
-                <img src="./values-img-t/5.png" alt="integrity" width="50" />
-                <span>Excellence</span>
-              </li>
-              <li className="flex items-center col-span-1">
-                <img src="./values-img-t/6.png" alt="integrity" width="50" />
-                <span>Sustainability</span>
-              </li>
-            </ul>
-            {/* <img
-              src="https://via.placeholder.com/150"
-              alt="Values"
-              className="mt-4 rounded-md shadow-lg"
-            /> */}
+          {/* Values */}
+          <div className="bg-white bg-opacity-10 rounded-2xl p-8 shadow-lg backdrop-blur-sm">
+            <h3 className="text-2xl  text-teal-400 font-light mb-6 font-lato">Our Values</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+              {values.map((value, idx) => (
+                <div key={idx} className="flex items-center space-x-3">
+                  <img
+                    src={value.icon}
+                    alt={value.label}
+                    width="40"
+                    height="40"
+                    className="shrink-0"
+                  />
+                  <span className="text-gray-100 font-Manrope">{value.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

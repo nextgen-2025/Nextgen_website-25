@@ -4,14 +4,16 @@ import logo from "../../assets/nextgen.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="bg-gradient-to-r from-gray-900 to-gray-800 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
           {/* Company Info */}
           <div className="space-y-8">
             <Link to="/" className="block">
-              <img src={logo} alt="logo" className="h-20 w-auto" />
+              <img src={logo} alt="NextGen Infratech Logo" className="h-20 w-auto" />
             </Link>
             <p className="text-gray-300 text-left leading-relaxed">
               Welcome to Nextgen Infratech Solutions! With 20+ years of
@@ -19,7 +21,7 @@ const Footer = () => {
               to help you succeed.
             </p>
             {/* Social Links */}
-            <div className="flex space-x-6">
+            <div className="flex space-x-8">
               {[
                 {
                   name: "LinkedIn",
@@ -59,8 +61,8 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-6 text-left">
-            <h3 className="text-teal-400 text-xl font-bold">Quick Links</h3>
+          <div className="space-y-8 text-left pl-0 md:pl-4">
+            <h3 className="text-teal-400 text-xl font-bold mb-6">Quick Links</h3>
             <ul className="space-y-4">
               {[
                 { name: "Home", href: "/" },
@@ -85,9 +87,9 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-6 text-left">
-            <h3 className="text-teal-400 text-xl font-bold">Let's Connect</h3>
-            <div className="space-y-4 text-left">
+          <div className="space-y-8 text-left pl-0 md:pl-4">
+            <h3 className="text-teal-400 text-xl font-bold mb-6">Let's Connect</h3>
+            <div className="space-y-6">
               <a
                 href="https://wa.me/9930365555"
                 className="inline-flex items-center space-x-2 text-gray-300 hover:text-teal-400 transition-colors duration-300"
@@ -112,10 +114,10 @@ const Footer = () => {
           </div>
 
           {/* Address */}
-          <div className="space-y-6 text-left">
-            <h3 className="text-teal-400 text-xl font-bold">Location</h3>
+          <div className="space-y-8 text-left pl-0 md:pl-4">
+            <h3 className="text-teal-400 text-xl font-bold mb-6">Location</h3>
             <div className="text-gray-300 space-y-4">
-              <p className="leading-relaxed text-left">
+              <p className="leading-relaxed">
                 Nextgen House Building No. 306,
                 <br />
                 Vishesh Reality Project LLP,
@@ -131,9 +133,9 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-16 pt-8 border-t border-gray-700/50">
+        <div className="mt-16 pt-6 border-t border-gray-700/50">
           <p className="text-center text-gray-400 font-Manrope text-sm">
-            ©2024 NextGen Infratech. All rights reserved.
+            ©{currentYear} NextGen Infratech. All rights reserved.
           </p>
         </div>
       </div>

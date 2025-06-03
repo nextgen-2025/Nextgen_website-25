@@ -62,10 +62,10 @@ const ITServicesCards = () => {
     <div className="pt-2">
       <div className="pb-5">
         <div className="">
-          <h1 className="text-[#28aa4a] text-5xl font-extrabold font-lato">
+          <h1 className="text-[#28aa4a] text-5xl font-semibold">
             IT Services We Offer
           </h1>
-          <p className="text-[#28aa4a] text-2xl font-thin py-3 font-Manrope">
+          <p className="text-[#28aa4a] text-2xl  py-3">
             Smart Solutions for Smart Businesses
           </p>
         </div>
@@ -97,7 +97,7 @@ const ITServicesCards = () => {
                 <h4 className="text-start text-lg font-semibold cursor-pointer">
                   <Link
                     to={`/it-services/${service.id}`}
-                    className="relative z-50 text-[#28aa4a] font-lato"
+                    className="relative z-50 text-[#28aa4a]"
                   >
                     {service.title}
                   </Link>
@@ -107,7 +107,7 @@ const ITServicesCards = () => {
                 </p>
                 <Link
                   to={`/it-services/${service.id}`}
-                  className="font-lato relative z-50 mt-4 flex justify-start cursor-pointer text-[#28aa4a] group-hover:font-bold"
+                  className="relative z-50 mt-4 flex justify-start cursor-pointer text-[#28aa4a] group-hover:font-bold"
                 >
                   Read More
                   <svg
