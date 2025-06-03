@@ -36,13 +36,13 @@ const REProjects = () => {
         className="absolute right-0 top-0 h-full"
       />
       <div>
-        <h2 className="text-[#28aa4a] font-Manrope text-xl font-semibold">
+        <h2 className="text-[#28aa4a]  text-xl font-semibold">
           Our Projects
         </h2>
-        <h1 className="font-Manrope font-extrabold text-gray-900 text-5xl py-2">
+        <h2 className="font-extrabold text-gray-900 text-5xl py-2">
           Explore Our Landmark Developments
-        </h1>
-        <p className="font-Manrope md:w-[750px] mx-auto py-2">
+        </h2>
+        <p className="md:w-[750px] mx-auto py-2">
           Our projects, such as Balaji Symphony, Evara, and Avante, reflect our
           commitment to quality, innovation, and customer satisfaction
         </p>
@@ -62,7 +62,7 @@ const REProjects = () => {
               <h3 className="mb-2 transition-transform duration-300 ease-in-out transform translate-y-4 group-hover:translate-y-0 font-Manrope text-2xl font-extrabold tracking-wider text-white">
                 {card.title}
               </h3>
-              <p className="text-white mb-4 transition-transform duration-300 ease-in-out transform translate-y-4 group-hover:translate-y-0 text-justify font-Manrope px-7 py-3 text-lg">
+              <p className="text-white mb-4 transition-transform duration-300 ease-in-out transform translate-y-4 group-hover:translate-y-0 text-left px-7 py-3 text-md">
                 {card.description}
               </p>
               {/* <button className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 transition-transform duration-300 ease-in-out transform translate-y-4 group-hover:translate-y-0">
@@ -70,7 +70,7 @@ const REProjects = () => {
               </button> */}
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 transition-transform duration-300 ease-in-out transform translate-y-0 group-hover:-translate-y-full group-hover:hidden img-projects-re">
-              <h3 className="font-Manrope text-2xl font-extrabold tracking-wider text-white">
+              <h3 className="text-2xl font-extrabold tracking-wider text-white">
                 {card.title}
               </h3>
             </div>

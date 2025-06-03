@@ -28,12 +28,12 @@ const REServices = () => {
   return (
     <div className="flex flex-col items-center justify-center my-10">
       <div className="mx-4 md:mx-0">
-        <h2 className="text-[#28aa4a] font-Manrope text-xl font-semibold">
+        <h2 className="text-[#28aa4a]  text-xl font-bold">
           Our Services
         </h2>
-        <h1 className="font-Manrope font-extrabold text-gray-900 text-3xl md:text-5xl py-2">
+        <h2 className="font-extrabold text-gray-900 text-3xl md:text-5xl py-2">
           Elevating Your Real Estate Experience
-        </h1>
+        </h2>
         <p className="font-Manrope md:w-[750px] mx-auto py-2">
           {" "}
           Discover our comprehensive services: from modern co-working

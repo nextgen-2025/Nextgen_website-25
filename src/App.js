@@ -5,10 +5,8 @@ import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
-import Leaderships from "./pages/Leaderships";
 import ITServices from "./pages/ITServices";
 import CoWorkingSpace from "./pages/CoWorkingSpace";
-import ITServicesCardDetails from "./components/itservices/ITServicesCardDetails";
 import DigitalMarketing from "./pages/DigitalMarketing";
 import DMServicesDetails from "./components/digital-marketing/DMServicesDetails";
 import RealEstate from "./pages/RealEstate";
@@ -31,12 +29,9 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/teams" element={<Team />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/leaderships" element={<Leaderships />}></Route>
+         
           <Route path="/it-services" element={<ITServices />}></Route>
-          <Route
-            path="/it-services/:id"
-            element={<ITServicesCardDetails />}
-          ></Route>
+         
           <Route path="/coworking" element={<CoWorkingSpace />}></Route>
           <Route
             path="/digtal-marketing"

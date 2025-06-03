@@ -63,9 +63,9 @@ const DMSevices = () => {
     <div className="py-10">
       <div className="pb-10 flex items-center justify-center">
         <div className="">
-          <h1 className="text-[#28aa4a] text-4xl font-semibold">
+          <h2 className="text-[#28aa4a] text-4xl font-semibold">
             Digital Marketing Services We Offer
-          </h1>
+          </h2>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-10 justify-items-center lg:mx-20">

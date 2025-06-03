@@ -206,15 +206,7 @@ const Navbar = () => {
                       Real Estate
                     </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="/leaderships"
-                        className="block py-2 px-4 text-gray-900 hover:bg-gray-100 border-b border-[#1b23360a] border-dashed"
-                      >
-                        Leadership Team
-                      </Link>
-                    </li>
-                
+                    
                 </ul>
               </li>
 
@@ -421,14 +413,7 @@ const Navbar = () => {
                         Real Estate
                       </Link>
                     </li>
-                    <li className="">
-                      <Link
-                        to="/leaderships"
-                        className="block text-2xl py-2 px-4 text-gray-600 font-thin  hover:bg-gray-100 border-b border-[#1b23360a] border-dashed"
-                      >
-                        Leadership Team
-                      </Link>
-                    </li>
+                    
                   </div>
                 )}
               </ul>

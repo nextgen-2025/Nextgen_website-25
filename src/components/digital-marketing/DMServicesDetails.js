@@ -49,9 +49,9 @@ const ITServicesCardDetails = () => {
         <div className="md:pb-0 flex items-center justify-between ">
           <div className="flex flex-col items-start mx-2 md:px-10 md:mb-0">
             <div>
-              <h1 className="font-lato text-[#28aa4a] text-start md:text-center text-4xl md:text-6xl font-extrabold">
+              <h2 className="font-lato text-[#28aa4a] text-start md:text-center text-4xl md:text-6xl font-extrabold">
                 {service.title}
-              </h1>
+              </h2>
             </div>
             <div>
               <nav aria-label="breadcrumb" className="w-max">
@@ -127,9 +127,9 @@ const ITServicesCardDetails = () => {
           </div>
 
           <div className="bg-slate-50 p-3 mx-5 md:w-[25%] relative md:left-10 mt-10 md:mt-0">
-            <h1 className="text-start pl-4 font-bold text-lg font-lato">
+            <h2 className="text-start pl-4 font-bold text-lg font-lato">
               All Services
-            </h1>
+            </h2>
             <ul>
               {[
                 { id: 1, title: "SEO" },

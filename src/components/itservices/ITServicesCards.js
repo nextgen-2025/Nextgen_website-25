@@ -62,9 +62,9 @@ const ITServicesCards = () => {
     <div className="pt-2">
       <div className="pb-5">
         <div className="">
-          <h1 className="text-[#28aa4a] text-5xl font-semibold">
+          <h2 className="text-[#28aa4a] text-5xl font-semibold">
             IT Services We Offer
-          </h1>
+          </h2>
           <p className="text-[#28aa4a] text-2xl  py-3">
             Smart Solutions for Smart Businesses
           </p>

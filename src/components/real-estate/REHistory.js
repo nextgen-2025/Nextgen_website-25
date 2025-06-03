@@ -37,12 +37,12 @@ export const REHistory = () => {
 
       <div className="md:w-[85%] md:ml-20 mx-4 md:mx-0 flex flex-col md:gap-5 py-2">
         <div>
-          <h2 className="font-Manrope text-[#28aa4a] font-bold text-start pt-5">
+          <h2 className=" text-[#28aa4a] font-bold text-start pt-5">
             Our History
           </h2>
-          <h1 className="pt-2 font-Manrope font-semibold text-4xl md:text-[65px] leading-[66px] tracking-wide text-start">
+          <h2 className="pt-2  font-semibold text-4xl md:text-[65px] leading-[66px] tracking-wide text-start">
             Building Legacies for 25 Years
-          </h1>
+          </h2>
         </div>
         <p className="text-justify md:w-[94%] text-[17px] text-gray-700 tracking-wide">
           With over 25 years of experience, Vishesh Group has established itself
