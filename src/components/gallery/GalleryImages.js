@@ -20,6 +20,7 @@ const GalleryImages = () => {
     { src: "/gallery/17.jpeg", alt: "Managing Director" },
     { src: "/gallery/18.jpeg", alt: "Managing Director" },
     { src: "/gallery/19.jpeg", alt: "Digital Marketig Manager" },
+    {src:"/gallery/6.jpeg", alt: "Meet" },
   ];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,10 +51,10 @@ const GalleryImages = () => {
   };
 
   return (
-    <div>
-      <div className="max-w-[1440px] my-3 mx-auto grid gap-3 grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
+    <div className="bg-[#171F2D]">
+      <div className="max-w-[1440px] py-8 mx-auto grid gap-3 grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
         {images.map((image, index) => {
-          let gridClass = "";
+          let gridClass = ""
 
           if (index === 0) {
             gridClass =
@@ -74,7 +75,7 @@ const GalleryImages = () => {
                 <div className="relative h-full">
                   {/* Hover effect for background and showing alt text */}
                   <div className="absolute inset-0 z-10 bg-black/50 opacity-0 transform translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out flex items-center justify-center">
-                    <p className="text-white text-lg font-bold font-Manrope tracking-wider">
+                    <p className="text-white text-lg font-bold tracking-wider">
                       {image.alt}
                     </p>
                   </div>

@@ -34,21 +34,19 @@ const TeamBanner = () => {
       {" "}
       {/* <!-- about us banner --> */}
       <div
-        className="team-bnr-cont flex justify-center bg-center bg-fixed relative overflow-hidden w-full h-[40vh] md:h-[60vh] pt-10 md:pt-0 rounded-b-[60px]
-    "
-      >
-        <div className="text-white flex flex-col justify-center items-center mx-auto">
-          <h1 className="text-4xl md:text-6xl md:text-[80px] font-bold drop-in font-lato">
+        className="team-bnr-cont flex justify-center bg-center bg-fixed relative overflow-hidden w-full h-[40vh] md:h-[60vh] pt-10 md:pt-0">
+        <div className="text-white flex flex-col justify-center items-center mx-auto mt-10">
+          <h1 className="text-4xl md:text-6xl md:text-[80px] font-bold drop-in font">
             Meet Our Team
           </h1>
-          <p className="mx-2 md:mx-0 text-xl md:text-3xl text-center text-white py-4 font-thin drop-in-2 font-Manrope">
+          <p className="mx-2 md:mx-0 text-xl md:text-3xl text-center text-white py-4 drop-in-2">
             Building Success Through Teamwork
           </p>
           <Link
             to="/careers"
-            className="drop-in-3 btn-abt flex items-center justify-center w-fit bg-[#24aa4a] px-5 py-2 rounded-3xl"
+            className="drop-in-3 btn-abt flex items-center justify-center w-fit bg-[#0D9488] px-5 py-2 rounded-3xl"
           >
-            <span className="hover-text font-Manrope">Be a Part of Team</span>
+            <span className="hover-text">Be a Part of Team</span>
             <svg
               version="1.1"
               id="icons_1_"

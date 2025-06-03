@@ -4,10 +4,10 @@ const ITServicesSummury = () => {
   return (
     <div className="flex justify-between itser-summ my-5">
       <div className="flex flex-col items-start max-w-3xl p-6 lg:ml-20">
-        <h2 className="text-3xl md:text-5xl font-thin text-[#28aa4a] mb-4 font-lato">
+        <h2 className="text-3xl md:text-5xl font-semibold text-[#28aa4a] mb-4">
           IT Services Overview
         </h2>
-        <p className="mb-6 text-justify lg:text-start text-lg font-light">
+        <p className="mb-6 text-justify lg:text-start text-lg">
           At Nextgen Infratech Solutions, we deliver comprehensive IT services
           designed to boost your business's operational efficiency. Our Network
           Services ensure reliable connectivity, while our Server Management
@@ -15,7 +15,7 @@ const ITServicesSummury = () => {
           to safeguard your critical information and implement robust Security
           Services to protect against cyber threats.
         </p>
-        <p className="text-justify lg:text-start text-lg font-light">
+        <p className="text-justify lg:text-start text-lg ">
           Our expert Web Development solutions are customized to enhance your
           online presence, and our dedicated 24/7 IT Support minimizes downtime
           and keeps your operations seamless. Whether you're a small startup or
@@ -23,7 +23,7 @@ const ITServicesSummury = () => {
           driving your success.
         </p>
 
-        <p className="mt-6 text-start text-lg font-light">
+        <p className="mt-6 text-start text-lg ">
           Whether you’re a small startup or an established enterprise, our IT
           services are tailored to fit your needs and drive success.
         </p>

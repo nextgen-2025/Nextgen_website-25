@@ -63,7 +63,7 @@ const DMSevices = () => {
     <div className="py-10">
       <div className="pb-10 flex items-center justify-center">
         <div className="">
-          <h1 className="text-[#28aa4a] text-4xl font-extrabold font-lato">
+          <h1 className="text-[#28aa4a] text-4xl font-semibold">
             Digital Marketing Services We Offer
           </h1>
         </div>
@@ -95,7 +95,7 @@ const DMSevices = () => {
                 <h4 className="text-start text-lg font-semibold cursor-pointer">
                   <Link
                     to={`/digtal-marketing/${service.id}`}
-                    className="relative z-50 text-[#28aa4a] font-Manrope"
+                    className="relative z-50 text-[#28aa4a]"
                   >
                     {service.title}
                   </Link>
@@ -105,7 +105,7 @@ const DMSevices = () => {
                 </p>
                 <Link
                   to={`/digtal-marketing/${service.id}`}
-                  className="font-Manrope relative z-50 mt-4 flex justify-start cursor-pointer text-[#28aa4a] group-hover:font-bold"
+                  className="relative z-50 mt-4 flex justify-start cursor-pointer text-[#28aa4a] group-hover:font-bold"
                 >
                   Read More
                   <svg

@@ -21,7 +21,7 @@ const About = () => {
           <CompanyLeaders />
           
           <FullScreenImageSections />
-          <CTA />
+          
           <Footer />
         </>
     </div>
