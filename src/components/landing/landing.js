@@ -21,7 +21,7 @@ const Landing = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen bg-gradient-to-r from-gray-900 to-gray-800 relative pt-8">
+    <section className="w-full bg-gradient-to-r from-gray-900 to-gray-800 relative pt-8 ">
       <div className="absolute inset-0 bg-opacity-20 bg-black z-0">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       </div>
