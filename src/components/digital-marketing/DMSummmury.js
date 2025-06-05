@@ -11,7 +11,7 @@ const DMSummmury = () => {
             Digital Marketing
           </h2>
           <div className="lg:mx-8">
-            <p className="mb-6 text-lg font-light text-justify">
+            <p className="mb-6 text-lg text-justify">
               At Nextgen Infratech Solutions, we offer a range of digital
               marketing services to enhance your business's online presence. Our
               Search Engine Optimization (SEO) strategies ensure improved
@@ -20,7 +20,7 @@ const DMSummmury = () => {
               engaging Social Media Marketing, we foster connections and build
               community around your brand.
             </p>
-            <p className="text-justify text-lg font-light">
+            <p className="text-justify text-lg">
               Our Content Marketing services focus on creating valuable content
               to attract and retain customers, aligning with their interests and
               needs. We provide effective Email Marketing campaigns to nurture

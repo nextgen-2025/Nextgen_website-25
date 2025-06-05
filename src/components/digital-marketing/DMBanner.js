@@ -17,11 +17,11 @@ const DMBanner = ({ onVideoLoad }) => {
         <div>
           <nav aria-label="breadcrumb" className="w-max py-2">
             <ol className="flex w-full flex-wrap items-center rounded-md px-1 py-2">
-              <li className="flex cursor-pointer items-center text-lg font-thin text-white transition-colors duration-300 hover:text-[#28aa4a]">
+              <li className="flex cursor-pointer items-center text-lg text-white transition-colors duration-300 hover:text-[#28aa4a]">
                 <Link to="/">Home</Link>
                 <span className="pointer-events-none mx-2 text-white">/</span>
               </li>
-              <li className="flex cursor-pointer items-center text-lg font-thin text-white transition-colors duration-300 hover:text-[#28aa4a]">
+              <li className="flex cursor-pointer items-center text-lg text-white transition-colors duration-300 hover:text-[#28aa4a]">
                 <Link href="/digtal-marketing">Digital Marketing</Link>
               </li>
             </ol>

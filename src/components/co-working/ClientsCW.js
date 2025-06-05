@@ -21,7 +21,7 @@ const ClientsCW = () => {
     <div className="w-full py-4">
       <section id="clients" className="text-center pb-6 px-3 w-full">
         <div className="my-10 text-center">
-          <h3 className="text-3xl font-heading mb-5">
+          <h3 className="text-3xl font-semibold mb-5">
             Trusted by <br className="hidden md:block" />
             Leading Businesses
           </h3>

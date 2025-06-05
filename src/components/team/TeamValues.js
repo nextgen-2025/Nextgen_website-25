@@ -20,8 +20,8 @@ const TeamValues = () => {
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Mission */}
           <div className="bg-white bg-opacity-10 rounded-2xl p-8 shadow-lg backdrop-blur-sm">
-            <h3 className="text-2xl text-teal-400 font-light mb-4 font-lato">Our Mission</h3>
-            <p className="text-gray-200 font-Manrope leading-relaxed">
+            <h3 className="text-2xl text-teal-400 mb-4">Our Mission</h3>
+            <p className="text-gray-200 leading-relaxed">
               We strive to empower our community through innovative solutions
               and collaborative efforts, fostering an environment of creativity
               and growth.
@@ -30,7 +30,7 @@ const TeamValues = () => {
 
           {/* Values */}
           <div className="bg-white bg-opacity-10 rounded-2xl p-8 shadow-lg backdrop-blur-sm">
-            <h3 className="text-2xl  text-teal-400 font-light mb-6 font-lato">Our Values</h3>
+            <h3 className="text-2xl  text-teal-400 mb-6">Our Values</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {values.map((value, idx) => (
                 <div key={idx} className="flex items-center space-x-3">
@@ -41,7 +41,7 @@ const TeamValues = () => {
                     height="40"
                     className="shrink-0"
                   />
-                  <span className="text-gray-100 font-Manrope">{value.label}</span>
+                  <span className="text-gray-100">{value.label}</span>
                 </div>
               ))}
             </div>

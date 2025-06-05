@@ -45,135 +45,62 @@ const testimonials = [
 
 const TestimonialsCW = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  let cardsToShow;
-
-  if (window.innerWidth < 768) {
-    cardsToShow = 1; // Show 1 card for screen widths below 768px
-  } else if (window.innerWidth >= 768 && window.innerWidth < 900) {
-    cardsToShow = 2; // Show 2 cards for screen widths between 768px and 900px
-  } else {
-    cardsToShow = 3; // Show 3 cards for screen widths above 900px
-  }
-  const testimonialRef = useRef(null);
-  let autoSlideInterval = useRef(null);
-  let startX = useRef(0);
-  let isDragging = useRef(false);
-
-  const displayedTestimonials = [];
-  for (let i = 0; i < cardsToShow; i++) {
-    const index = (currentIndex + i) % testimonials.length;
-    displayedTestimonials.push(testimonials[index]);
-  }
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-  };
+  const autoSlideInterval = useRef(null);
 
   useEffect(() => {
-    autoSlideInterval.current = setInterval(nextTestimonial, 3000);
+    autoSlideInterval.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 2) % testimonials.length);
+    }, 6000);
     return () => clearInterval(autoSlideInterval.current);
   }, []);
 
-  const handleMouseDown = (event) => {
-    event.preventDefault();
-    startX.current = event.clientX;
-    isDragging.current = true;
-    clearInterval(autoSlideInterval.current);
-
-    const handleMouseMove = (e) => {
-      if (!isDragging.current) return;
-
-      const moveX = e.clientX - startX.current;
-      const threshold = 50; // Minimum drag distance to trigger a slide
-
-      if (moveX > threshold) {
-        setCurrentIndex(
-          (prevIndex) =>
-            (prevIndex - 1 + testimonials.length) % testimonials.length
-        );
-        isDragging.current = false;
-      } else if (moveX < -threshold) {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-        isDragging.current = false;
-      }
-    };
-
-    const handleMouseUp = () => {
-      isDragging.current = false;
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUp);
-      autoSlideInterval.current = setInterval(nextTestimonial, 3000);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseup", handleMouseUp);
+  const getVisibleCards = () => {
+    return testimonials.slice(currentIndex, currentIndex + 2).concat(
+      testimonials.length - currentIndex < 2
+        ? testimonials.slice(0, 2 - (testimonials.length - currentIndex))
+        : []
+    );
   };
 
+  const visibleCards = getVisibleCards();
+
   return (
-    <section id="testimonials" className="py-12 bg-gradient-to-r from-gray-900 to-gray-800">
-      <div className="container mx-auto">
-        <div className="my-10 text-center">
-          <h2 className="text-3xl font-heading mb-5 text-white font-semibold">Testimonials</h2>
-          <div className="border-b-2 border-teal-500 w-16 mx-auto"></div>
+    <section className="bg-gray-900 py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-semibold text-white">What Our Members Say</h2>
+          <div className="w-16 h-1 bg-teal-400 mx-auto mt-4 rounded"></div>
         </div>
-        <div className="flex flex-col items-center">
-          <div
-            ref={testimonialRef}
-            className="relative w-full overflow-hidden cursor-grab"
-            onMouseDown={handleMouseDown}
-          >
-            <div className="flex justify-center gap-5 transition-transform duration-300">
-              {displayedTestimonials.map((testi, index) => (
-                <div
-                  key={index}
-                  className="item flex-none w-full md:w-[32%] bg-white border border-[#28aa4a] rounded-lg shadow-lg p-6"
-                >
-                  <div className="profile flex items-center mb-4">
-                    <img
-                      src={testi.img}
-                      alt={testi.name}
-                      className="rounded-full w-12 h-12 object-cover"
-                    />
-                    <div className="information pl-4">
-                      <div className="stars flex">
-                        {[...Array(5)].map((_, i) => (
-                          <i
-                            key={i}
-                            className={`fa fa-star ${
-                              i < testi.stars
-                                ? "text-yellow-500"
-                                : "text-gray-300"
-                            }`}
-                          ></i>
-                        ))}
-                      </div>
-                      <p className="text-lg font-semibold">{testi.name}</p>
-                      <span className="text-sm text-gray-500">
-                        {testi.role}
-                      </span>
-                    </div>
-                  </div>
-                  <p className="mb-4 text-gray-700 italic text-center">
-                    "{testi.feedback}"
-                  </p>
-                  <div className="icon text-center">
-                    <i className="fa fa-quote-right text-[#28aa4b6e] text-2xl"></i>
-                  </div>
-                </div>
-              ))}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {visibleCards.map((testi, i) => (
+            <div
+              key={i}
+              className="bg-gray-800 rounded-2xl p-8 border-2 border-teal-400 shadow-xl transition hover:shadow-2xl"
+            >
+              <div className="flex items-center mb-4 space-x-2 text-teal-400 text-xl">
+                {Array.from({ length: testi.stars }).map((_, j) => (
+                  <span key={j}>★</span>
+                ))}
+              </div>
+              <h3 className="text-xl font-bold text-teal-400 mb-2">{testi.name}</h3>
+              <p className="text-gray-300 leading-relaxed mb-4">"{testi.feedback}"</p>
+              <p className="text-teal-300 text-right font-semibold">— {testi.role}</p>
             </div>
-          </div>
-          <div className="flex mt-4">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full mx-1 ${
-                  currentIndex === index ? "bg-[#28aa4a]" : "bg-gray-300"
-                }`}
-              ></button>
-            ))}
-          </div>
+          ))}
+        </div>
+
+        {/* Dots Navigation */}
+        <div className="flex justify-center mt-6 space-x-3">
+          {Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, i) => (
+            <button
+              key={i}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentIndex === i * 2 ? "bg-teal-400 scale-110" : "bg-gray-600"
+              }`}
+              onClick={() => setCurrentIndex(i * 2)}
+            />
+          ))}
         </div>
       </div>
     </section>

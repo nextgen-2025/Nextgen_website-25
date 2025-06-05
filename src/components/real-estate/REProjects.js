@@ -39,7 +39,7 @@ const REProjects = () => {
         <h2 className="text-[#28aa4a]  text-xl font-semibold">
           Our Projects
         </h2>
-        <h2 className="font-extrabold text-gray-900 text-5xl py-2">
+        <h2 className="font-semibold text-gray-900 text-5xl py-2">
           Explore Our Landmark Developments
         </h2>
         <p className="md:w-[750px] mx-auto py-2">
@@ -59,7 +59,7 @@ const REProjects = () => {
               className="w-full h-full object-cover transition-transform duration-300 ease-in-out "
             />
             <div className="absolute inset-0 bg-[#0000009f] bg-opacity-75 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 flex flex-col justify-start py-10 items-center text-center">
-              <h3 className="mb-2 transition-transform duration-300 ease-in-out transform translate-y-4 group-hover:translate-y-0 font-Manrope text-2xl font-extrabold tracking-wider text-white">
+              <h3 className="mb-2 transition-transform duration-300 ease-in-out transform translate-y-4 group-hover:translate-y-0 font-Manrope text-2xl font-semibold tracking-wider text-white">
                 {card.title}
               </h3>
               <p className="text-white mb-4 transition-transform duration-300 ease-in-out transform translate-y-4 group-hover:translate-y-0 text-left px-7 py-3 text-md">
@@ -70,7 +70,7 @@ const REProjects = () => {
               </button> */}
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 transition-transform duration-300 ease-in-out transform translate-y-0 group-hover:-translate-y-full group-hover:hidden img-projects-re">
-              <h3 className="text-2xl font-extrabold tracking-wider text-white">
+              <h3 className="text-2xl font-semibold tracking-wider text-white">
                 {card.title}
               </h3>
             </div>

@@ -113,10 +113,10 @@ const REBanner = () => {
               <h2 className="text-[#28aa4a] font-bold text-lg md:text-xl">
                 {slide.title}
               </h2>
-              <h3 className="carousel-subtitle text-5xl md:text-7xl text-white font-bold">
+              <h3 className="carousel-subtitle text-2xl md:text-5xl text-white font-bold">
                 {slide.subtitle}
               </h3>
-              <p className="text-white text-lg md:text-xl font-light  tracking-wider">
+              <p className="text-white text-lg md:text-xl tracking-wider">
                 {slide.tagline}
               </p>
               <Link
