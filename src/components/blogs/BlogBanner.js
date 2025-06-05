@@ -8,19 +8,12 @@ const BlogBanner = () => {
           Collaborative <span className="text-[#28aa4a] font-bold">Spaces</span>:
           Inspiring Ideas, Connections, and Growth
         </h1>
-<<<<<<< HEAD
-        <div className="lg:text-xl lg:mx-44 my-2">
-          Step into the ultimate hub for creativity and innovation! Explore
-          curated content to inspire, connect, and empower professionals
-          worldwide.
-=======
         <div className="font-thin font-Manrope lg:text-xl lg:mx-44 my-2">
           <p>
             Step into the ultimate hub for creativity and innovation! Explore
             curated content to inspire, connect, and empower professionals
             worldwide.
           </p>
->>>>>>> Saksham
         </div>
       </div>
     </div>
