@@ -1,48 +1,43 @@
-import React, { useEffect } from "react";
-import "./aboutus.css";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import React from "react";
 
-// Register GSAP plugins
-// import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
-// gsap.registerPlugin(MorphSVGPlugin);
-gsap.registerPlugin(ScrollTrigger);
+
+export const InfoCard = ({ title, heading, description }) => (
+  <div className="bg-gray-800 bg-opacity-60 p-8 rounded-xl border border-gray-700 shadow-md">
+    <h2 className="text-teal-400 text-sm font-medium mb-2 uppercase tracking-widest">
+      {title}
+    </h2>
+    <h3 className="text-white text-3xl font-semibold mb-4">
+      {heading}
+    </h3>
+    <p className="text-gray-300 text-lg">
+      {description}
+    </p>
+  </div>
+);
+
+
 
 const MissionVision = () => {
-  useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1 });
-    const shapebase = document.getElementById("shape01");
-
-    if (shapebase) {
-      tl.to(shapebase, { duration: 4, morphSVG: "#shape02", ease: "none" })
-        .to(shapebase, { duration: 4, morphSVG: "#shape03", ease: "none" })
-        .to(shapebase, { duration: 4, morphSVG: "#shape01", ease: "none" });
-    }
-
-    const liquid = document.querySelector("#liquid");
-    if (!liquid) return;
-
-    const liquidRects = liquid.getBoundingClientRect();
-    const liquidX = liquidRects.left + liquidRects.width / 2;
-    const liquidY = liquidRects.top + liquidRects.height / 2;
-
-    const handleMouseMove = (event) => {
-      liquid.style.transform = `rotate(${Math.atan2(
-        event.clientY - liquidY,
-        event.clientX - liquidX
-      )}rad)`;
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+  const cardData = [
+    {
+      title: "Our Mission",
+      heading: "Empowering Business Growth",
+      description:
+        "To empower businesses with innovative and reliable technology solutions that drive efficiency, enhance productivity, and foster growth. We are committed to delivering exceptional service and support, ensuring our clients can navigate the digital landscape with confidence.",
+    },
+    {
+      title: "Our Vision",
+      heading: "Leading the Future",
+      description:
+        "To be a leading provider of cutting-edge IT solutions, recognized for our commitment to quality, innovation, and customer satisfaction. We aspire to transform industries through technology, making advanced solutions accessible to businesses of all sizes while promoting a culture of continuous improvement and sustainability.",
+    },
+  ];
 
   return (
-    <section className="relative bg-gradient-to-r from-gray-900 to-gray-800 py-20 overflow-hidden">
-      <div id="liquid" className="absolute top-0 left-0 right-0 flex justify-center opacity-30">
+    <section className="relative bg-gradient-to-r from-gray-900 to-gray-800 py-24 overflow-hidden">
+      <div
+        className="absolute top-2 left-0 right-0 flex justify-center opacity-30"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="537.92521"
@@ -70,29 +65,14 @@ const MissionVision = () => {
 
       <div className="container mx-auto px-6 max-w-7xl z-10 relative">
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="bg-gray-800 bg-opacity-60 p-8 rounded-xl border border-gray-700 shadow-md mission">
-            <h2 className="text-teal-400 text-sm font-medium mb-2 uppercase tracking-widest">
-              Our Mission
-            </h2>
-            <h3 className="text-white text-3xl font-semibold mb-4">
-              Empowering Business Growth
-            </h3>
-            <p className="text-gray-300 text-lg">
-              To empower businesses with innovative and reliable technology solutions that drive efficiency, enhance productivity, and foster growth. We are committed to delivering exceptional service and support, ensuring our clients can navigate the digital landscape with confidence.
-            </p>
-          </div>
-
-          <div className="bg-gray-800 bg-opacity-60 p-8 rounded-xl border border-gray-700 shadow-md vision">
-            <h2 className="text-teal-400 text-sm font-medium mb-2 uppercase tracking-widest">
-              Our Vision
-            </h2>
-            <h3 className="text-white text-3xl font-semibold mb-4">
-              Leading the Future
-            </h3>
-            <p className="text-gray-300 text-lg">
-              To be a leading provider of cutting-edge IT solutions, recognized for our commitment to quality, innovation, and customer satisfaction. We aspire to transform industries through technology, making advanced solutions accessible to businesses of all sizes while promoting a culture of continuous improvement and sustainability.
-            </p>
-          </div>
+          {cardData.map((item, index) => (
+            <InfoCard
+              key={index}
+              title={item.title}
+              heading={item.heading}
+              description={item.description}
+            />
+          ))}
         </div>
       </div>
     </section>

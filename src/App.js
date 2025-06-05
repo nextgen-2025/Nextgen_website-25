@@ -17,6 +17,9 @@ import BlogPageDetails from "./components/blogs/BlogPageDetails";
 import Traning from "./pages/Traning";
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingContact from "./components/common/FloatingContact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
 
 function App() {
   return (
@@ -43,6 +46,9 @@ function App() {
           <Route path="/blog" element={<BlogPage />}></Route>
           <Route path="/blog-details/:id" element={<BlogPageDetails />}></Route>
           <Route path="/training" element={<Traning />}></Route>
+          <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
+          <Route path="/terms-of-service" element={<TermsOfService />}></Route>
+          <Route path="/cookie-policy" element={<CookiePolicy />}></Route>
         </Routes>
         <FloatingContact />
       </Router>

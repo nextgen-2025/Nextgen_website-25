@@ -1,34 +1,3 @@
-/* banner container */
-/* .aboutus-bnr-cont {
-    position: relative;
-    height: 60vh;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 20px;
-} */
-
-/* .aboutus-bnr-cont::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url(../../assets/about/desktop-wallpaper-office-workers-2018-in-business-workers.jpg) no-repeat center center;
-    background-size: cover;
-    z-index: 0;
-} */
-
-/* .aboutus-bnr-cont::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.767);
-    z-index: 0;
-} */
 html {
     scroll-behavior: smooth;
 }
@@ -128,45 +97,6 @@ html {
     margin-left: 260px;
 }
 
-/* .circle {
-    position: relative;
-    bottom: 350px;
-    right: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to right top, #6bd178, #70d57e, #75d984, #7add89, #7fe18f, #7ade8b, #76db88, #71d884, #61cc75, #50c167, #3eb558, #28aa4a);
-    border-radius: 100%;
-    height: 250px;
-    width: 250px;
-    margin: 0;
-    color: white;
-    font-size: 34px;
-    text-align: center;
-    font-weight: bold;
-    line-height: 1.2;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-} */
-
-/* .circle-big {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to right top, #b4e1b5, #b7e3b8, #b7e5b9, #b8e7ba, #b8e9bb, #a6e4a2, #97df93, #8ade8a, #7cd77d, #6bcf70c4, #5bbf67d7);
-
-    border-radius: 100%;
-    height: 450px;
-    width: 450px;
-    margin: 0;
-    color: white;
-    font-size: 24px;
-    text-align: center;
-    font-weight: bold;
-    line-height: 1.2;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-} */
 .circle-big-txt h2 {
     color: black;
 }

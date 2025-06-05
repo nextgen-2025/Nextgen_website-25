@@ -18,17 +18,17 @@ const ClientsCW = () => {
   ];
 
   return (
-    <div className="w-full py-4">
-      <section id="clients" className="text-center pb-6 px-3 w-full">
-        <div className="my-10 text-center">
-          <h3 className="text-3xl font-semibold mb-5">
+    <div className="w-full py-8 sm:py-12 md:py-16 bg-[#ffffff]">
+      <section id="clients" className="text-center px-4 sm:px-6 lg:px-8 w-full">
+        <div className="mb-8 sm:mb-10 text-center">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-5">
             Trusted by <br className="hidden md:block" />
             Leading Businesses
           </h3>
-          <div className="border-b-2 border-teal-500 w-16 mx-auto mb-8"></div>
+          <div className="border-b-2 border-teal-500 w-16 mx-auto mb-6 sm:mb-8"></div>
         </div>
 
-        <div>
+        <div className="max-w-7xl mx-auto">
           <Marquee
             gradient={false}
             speed={40}
@@ -36,11 +36,11 @@ const ClientsCW = () => {
             className="overflow-hidden"
           >
             {logos.map((logo, index) => (
-              <div key={index} className="mx-4 md:mx-8">
+              <div key={index} className="mx-3 sm:mx-4 md:mx-6 lg:mx-8">
                 <img
                   src={logo}
                   alt={`Client ${index + 1}`}
-                  className="h-20 md:h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             ))}

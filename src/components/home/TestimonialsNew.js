@@ -2,6 +2,24 @@ import React, { useEffect, useRef } from "react";
 import KeenSlider from "keen-slider";
 import "keen-slider/keen-slider.min.css";
 
+const testimonials = [
+  {
+    name: "Yeasin Arafat",
+    role: "Designer, LLCG Team",
+    text: "The coworking space has exceeded my expectations! The vibrant atmosphere and supportive community have helped me stay motivated. It's more than just a workspace; it's a place where I can thrive!"
+  },
+  {
+    name: "Anjali Gupta",
+    role: "CTO",
+    text: "This coworking space has transformed my work life! The professional environment helps me focus, and I've made incredible connections with other entrepreneurs. The amenities are fantastic!"
+  },
+  {
+    name: "John Smith",
+    role: "Developer, Tech Co",
+    text: "One of the best decisions for my startup! The atmosphere is electric, and I'm surrounded by like-minded professionals. The resources available have been invaluable for my business growth."
+  }
+];
+
 const TestimonialsNew = () => {
   const sliderRef = useRef(null);
 
@@ -45,18 +63,18 @@ const TestimonialsNew = () => {
   }, []);
 
   return (
-    <section className="bg-[#131A26] testimonial-area2 py-10">
-      <div className="mx-auto max-w-[1340px] px-4 py-12  sm:px-6 lg:me-0 lg:py-14 lg:pe-0 lg:ps-0 xl:py-20">
+    <section className="bg-[#131A26] py-12 sm:py-16 md:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-10 max-w-full">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
-          <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right lg:px-5">
-            <h2 className="text-teal-400 font-semibold text-lg mb-3 tracking-wide text-start">
+          <div className="max-w-xl text-center lg:text-left">
+            <h2 className="text-teal-400 font-semibold text-base sm:text-lg mb-3 tracking-wide">
               CLIENT TESTIMONIALS
             </h2>
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-4xl text-start mb-6">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4 sm:mb-6">
               Don't just take our word for it...
             </h1>
 
-            <p className="mt-4 text-gray-300 text-start text-lg">
+            <p className="text-gray-300 text-base sm:text-lg">
               Our clients have shared their experiences with us, and we couldn't
               be prouder of their kind words.
             </p>
@@ -112,171 +130,41 @@ const TestimonialsNew = () => {
               id="keen-slider"
               className="keen-slider cursor-grab"
             >
-              {/* Slide 1 */}
-              <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 sm:p-8 lg:p-12">
-                  <div>
-                    <div className="flex gap-0.5 text-teal-400">
-                      {[...Array(5)].map((_, index) => (
-                        <svg
-                          key={index}
-                          className="size-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="keen-slider__slide">
+                  <blockquote className="flex min-w-[200px] h-full flex-col justify-between bg-gray-800 p-4 sm:p-6 lg:p-8 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300">
+                    <div>
+                      <div className="flex gap-0.5 text-teal-400">
+                        {[...Array(5)].map((_, i) => (
+                          <svg
+                            key={i}
+                            className="size-4 sm:size-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+
+                      <div className="mt-3 sm:mt-4">
+                        <p className="text-xl sm:text-2xl font-bold text-teal-400">
+                          {testimonial.name}
+                        </p>
+
+                        <p className="mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed text-gray-300">
+                          {testimonial.text}
+                        </p>
+                      </div>
                     </div>
 
-                    <div className="mt-4">
-                      <p className="text-2xl font-bold text-teal-400 sm:text-3xl text-start">
-                        Yeasin Arafat
-                      </p>
-
-                      <p className="mt-4 leading-relaxed text-gray-300 text-start">
-                        As a freelancer, finding a space that fuels my
-                        creativity was essential. This coworking space has
-                        exceeded my expectations! The vibrant atmosphere and
-                        supportive community have helped me stay motivated and
-                        inspired. I love the networking events and workshops
-                        that allow me to connect with other amazing women in
-                        business. It's more than just a workspace; it's a place
-                        where I can thrive!
-                      </p>
-                    </div>
-                  </div> 
-                  <footer className="mt-4 text-sm font-medium text-teal-300 sm:mt-6">
-                    &mdash; Designer, LLCG Team
-                  </footer>
-                </blockquote>
-              </div>
-
-              {/* Slide 2 */}
-              <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 sm:p-8 lg:p-12">
-                  <div>
-                    <div className="flex gap-0.5 text-teal-400">
-                      {[...Array(5)].map((_, index) => (
-                        <svg
-                          key={index}
-                          className="size-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-
-                    <div className="mt-4">
-                      <p className="text-2xl font-bold text-teal-400 sm:text-3xl text-start">
-                        Anjali Gupta
-                      </p>
-
-                      <p className="mt-4 leading-relaxed text-gray-300 text-start">
-                        I started my own marketing agency, and working from home
-                        was isolating. This coworking space has transformed my
-                        work life! The professional environment helps me focus,
-                        and I've made incredible connections with other female
-                        entrepreneurs. Plus, the amenities are fantastic! I
-                        can't imagine going back to my home office. It's truly a
-                        hub for collaboration and support.
-                      </p>
-                    </div>
-                  </div>
-
-                  <footer className="mt-4 text-sm font-medium text-teal-300 sm:mt-6">
-                    &mdash; CTO
-                  </footer>
-                </blockquote>
-              </div>
-
-              {/* Slide 3 */}
-              <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 sm:p-8 lg:p-12">
-                  <div>
-                    <div className="flex gap-0.5 text-teal-400">
-                      {[...Array(5)].map((_, index) => (
-                        <svg
-                          key={index}
-                          className="size-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-
-                    <div className="mt-4">
-                      <p className="text-2xl font-bold text-teal-400 sm:text-3xl text-start">
-                        John Smith
-                      </p>
-
-                      <p className="mt-4 leading-relaxed text-gray-300 text-start">
-                        Joining this coworking space was one of the best
-                        decisions I've made for my startup. The atmosphere is
-                        electric, and I'm surrounded by like-minded
-                        professionals who are eager to share ideas. The
-                        resources available, from meeting rooms to tech support,
-                        have been invaluable in helping me grow my business. It
-                        feels great to be part of a community that motivates and
-                        challenges me.
-                      </p>
-                    </div>
-                  </div>
-
-                  <footer className="mt-4 text-sm font-medium text-teal-300 sm:mt-6">
-                    &mdash; Developer, Tech Co
-                  </footer>
-                </blockquote>
-              </div>
-
-              {/* Slide 4 */}
-              <div className="keen-slider__slide">
-                <blockquote className="flex h-full flex-col justify-between bg-gray-800 p-6 shadow-lg rounded-xl border-l-4 border-teal-400 transition-transform duration-300 sm:p-8 lg:p-12">
-                  <div>
-                    <div className="flex gap-0.5 text-teal-400">
-                      {[...Array(5)].map((_, index) => (
-                        <svg
-                          key={index}
-                          className="size-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-
-                    <div className="mt-4">
-                      <p className="text-2xl font-bold text-teal-400 sm:text-3xl text-start">
-                        Priya Patel
-                      </p>
-
-                      <p className="mt-4 leading-relaxed text-gray-300 text-start">
-                        I was tired of working from coffee shops and needed a
-                        more focused environment. This coworking space provides
-                        just that! The layout is designed for productivity, and
-                        the networking opportunities have opened doors I didn't
-                        even know existed. I've formed valuable partnerships
-                        with other members, and the collaborative spirit here is
-                        contagious. I highly recommend it to anyone looking to
-                        take their work to the next level!
-                      </p>
-                    </div>
-                  </div>
-
-                  <footer className="mt-4 text-sm font-medium text-teal-300 sm:mt-6">
-                    &mdash; Manager, Business Inc
-                  </footer>
-                </blockquote>
-              </div>
+                    <footer className="mt-3 sm:mt-4 text-sm font-medium text-teal-300">
+                      &mdash; {testimonial.role}
+                    </footer>
+                  </blockquote>
+                </div>
+              ))}
             </div>
           </div>
         </div>

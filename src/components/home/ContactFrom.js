@@ -75,23 +75,26 @@ const ContactFrom = ({
 
   return (
     <div className="relative bg-gradient-to-r from-gray-900 to-gray-800">
-      <div className="flex justify-center items-center">
-        <div className="flex flex-col lg:flex-row items-center px-4 mx-auto w-full py-8">
-          <div className=" text-white flex flex-col items-start justify-center mt-5 lg:ml-20 lg:w-1/2">
-            <span className="text-teal-400 font-semibold text-lg tracking-wide">{tagline}</span>
-            <h3 className="text-4xl md:text-5xl font-semibold my-7 text-left">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 py-12 sm:py-16 md:py-20">
+          {/* Left Content */}
+          <div className="w-full lg:w-1/2 text-left text-white">
+            <span className="text-teal-400 font-semibold text-base sm:text-lg tracking-wide block">
+              {tagline}
+            </span>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-4 sm:mt-6 mb-4 sm:mb-6 text-left">
               {heading}
             </h3>
-            <p className="text-xl text-left text-gray-300">
+            <p className="text-base sm:text-lg md:text-xl max-w-xl text-gray-300 mb-6 sm:mb-8">
               {description}
             </p>
             <Link
               to="/contact"
-              className="bg-teal-500 hover:bg-teal-600 px-10 py-3 my-10 rounded-lg transition-all duration-300 text-white flex items-center gap-2 font-medium"
+              className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-all duration-300 text-white font-medium"
             >
               Get Started
               <svg
-                className="w-5 h-5"
+                className="w-4 h-4 sm:w-5 sm:h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -106,15 +109,17 @@ const ContactFrom = ({
               </svg>
             </Link>
           </div>
-          <div className="lg:w-1/2 flex flex-col md:mt-4 mt-12 px-4 lg:px-8">
-            <div className="mb-8">
-              <h2 className="text-teal-400 text-4xl font-bold">
+
+          {/* Right Content - Form */}
+          <div className="w-full lg:w-1/2">
+            <div className="mb-6 sm:mb-8">
+              <h2 className="text-teal-400 text-2xl sm:text-3xl md:text-4xl font-bold">
                 Get In Touch
               </h2>
             </div>
-            <div className="w-full max-w-lg mx-auto">
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="w-full">
+              <form onSubmit={handleSubmit} className="w-full space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <input
                     type="text"
                     name="name"
@@ -160,11 +165,11 @@ const ContactFrom = ({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full bg-teal-500 hover:bg-teal-600 text-white rounded-lg py-3 px-6 font-medium transition-all duration-300 flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className={`w-full bg-teal-500 hover:bg-teal-600 text-white rounded-lg py-2.5 sm:py-3 px-6 font-medium transition-all duration-300 flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? (
                     <>
-                      <svg className="animate-spin h-5 w-5 mr-2" viewBox="0 0 24 24">
+                      <svg className="animate-spin h-4 w-4 sm:h-5 sm:w-5 mr-2" viewBox="0 0 24 24">
                         <circle
                           className="opacity-25"
                           cx="12"
