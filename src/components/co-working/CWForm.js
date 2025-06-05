@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaMapMarkerAlt, FaCity } from "react-icons/fa";
 import arrow from "../../assets/aroowog.png";
-import Popup from "./Popup";
 
 const CWForm = () => {
   const [formData, setFormData] = useState({
@@ -251,13 +250,6 @@ const CWForm = () => {
           </form>
         </div>
       </div>
-
-      {/* Popup */}
-      <Popup
-        isOpen={isPopupOpen}
-        onClose={handleClosePopup}
-        selectedSpace={selectedSpace}
-      />
 
       <style>{`
         .animate-spin {

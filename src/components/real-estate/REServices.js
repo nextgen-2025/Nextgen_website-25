@@ -28,13 +28,11 @@ const REServices = () => {
   return (
     <div className="flex flex-col items-center justify-center my-10">
       <div className="mx-4 md:mx-0">
-        <h2 className="text-[#28aa4a] font-Manrope text-xl font-semibold">
-          Our Services
-        </h2>
-        <h1 className="font-Manrope font-extrabold text-gray-900 text-3xl md:text-5xl py-2">
+        <h2 className="text-[#28aa4a]  text-xl font-bold">Our Services</h2>
+        <h2 className="font-semibold text-gray-900 text-3xl md:text-5xl py-2">
           Elevating Your Real Estate Experience
-        </h1>
-        <p className="font-Manrope md:w-[750px] mx-auto py-2">
+        </h2>
+        <p className="md:w-[750px] mx-auto py-2">
           {" "}
           Discover our comprehensive services: from modern co-working
           environments and expert construction to dynamic real estate marketing
@@ -76,12 +74,12 @@ const REServices = () => {
               <div className="why-choose-counter mt-4 text-start">
                 <h3 className="text-2xl font-bold flex items-center">
                   <div
-                    className="text-6xl font-thin counter"
+                    className="text-6xl counter"
                     data-count="10"
                   ></div>
                   +
                 </h3>
-                <p className="text-gray-600">project completed</p>
+                <p className="text-gray-600">Project Completed</p>
               </div>
             </div>
           </div>
@@ -126,12 +124,12 @@ const REServices = () => {
               <div className="why-choose-counter text-start">
                 <h3 className="text-2xl font-bold flex items-center">
                   <div
-                    className="text-6xl font-thin counter"
+                    className="text-6xl counter"
                     data-count="50"
                   ></div>
                   +
                 </h3>
-                <p className="text-gray-600">project completed</p>
+                <p className="text-gray-600">Project Completed</p>
               </div>
             </div>
           </div>
@@ -206,12 +204,12 @@ const REServices = () => {
               <div className="why-choose-counter mt-4 text-start">
                 <h3 className="text-2xl font-bold flex items-center">
                   <div
-                    className="text-6xl font-thin counter"
+                    className="text-6xl counter"
                     data-count="150"
                   ></div>
                   +
                 </h3>
-                <p className="text-gray-600">project completed</p>
+                <p className="text-gray-600">Project Completed</p>
               </div>
             </div>
           </div>

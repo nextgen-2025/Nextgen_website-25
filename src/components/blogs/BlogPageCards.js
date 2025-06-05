@@ -4,6 +4,7 @@ import { createClient } from "contentful";
 
 const BlogPageCards = () => {
   const [blogData, setBlogData] = useState(null);
+  console.log("BLOGS",blogData);
 
   useEffect(() => {
     // Initialize the Contentful client with the Content Delivery API (CDA) token
@@ -25,7 +26,7 @@ const BlogPageCards = () => {
   }, []);
 
   return (
-    <div className="lg:my-20 mt-5 lg:mt-20 lg:w-[70%] lg:mx-0 mx-2">
+    <div className="lg:my-20 mt-5 lg:mt-20 lg:w-[70%] lg:mx-0 mx-2 border">
       {blogData ? (
         <div>
           {blogData.length === 0 ? (

@@ -110,13 +110,13 @@ const REBanner = () => {
             }}
           >
             <div className="flex flex-col gap-5 md:m-20">
-              <h2 className="text-[#28aa4a] font-extrabold text-lg md:text-xl font-Manrope">
+              <h2 className="text-[#28aa4a] font-bold text-lg md:text-xl">
                 {slide.title}
               </h2>
-              <h3 className="carousel-subtitle text-5xl md:text-7xl text-white font-bold font-Manrope ">
+              <h3 className="carousel-subtitle text-2xl md:text-5xl text-white font-bold">
                 {slide.subtitle}
               </h3>
-              <p className="text-white text-lg md:text-xl font-light font-Manrope tracking-wider">
+              <p className="text-white text-lg md:text-xl tracking-wider">
                 {slide.tagline}
               </p>
               <Link

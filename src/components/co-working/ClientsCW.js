@@ -52,3 +52,15 @@ const ClientsCW = () => {
 };
 
 export default ClientsCW;
+
+                />
+              </div>
+            ))}
+          </Marquee>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ClientsCW;

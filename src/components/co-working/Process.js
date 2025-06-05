@@ -29,7 +29,7 @@ const Process = () => {
   return (
     <div className="bg-gradient-to-r from-gray-900 to-gray-800">
       <div className="flex flex-col lg:flex-row justify-around items-start md:items-center py-8 px-10 bg-gradient-to-r from-gray-900 to-gray-800 ">
-        <h1 className="text-2xl md:text-[50px] md:leading-[60px] font-heading py-2 lg:py-0 text-teal-400 text-left">
+        <h1 className="text-2xl md:text-[50px] md:leading-[60px] px-4 py-2 lg:py-0 text-teal-400 text-left">
           24/7 Workspaces,
           <br />
           <span className="text-white">for Every Schedule</span> 

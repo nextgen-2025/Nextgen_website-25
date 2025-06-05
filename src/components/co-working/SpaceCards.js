@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FaCheckSquare } from "react-icons/fa";
 
 const SpaceCards = () => {
   const location = useLocation();
@@ -118,14 +119,14 @@ const SpaceCards = () => {
 
   return (
     <section id="find-your-space" className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
-      <div className="container mx-auto px-5">
+      <div className="w-full px-4 md:px-8">
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-heading text-white font-semibold mb-5">
             Find Your Ideal Workspace
           </h2>
           <div className="border-b-2 border-teal-500 w-16 mx-auto"></div>
         </div>
-        <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 md:mx-5">
+        <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 max-w-7xl mx-auto">
           {spacesToDisplay.map((space, index) => (
             <div
               key={index}
@@ -164,7 +165,7 @@ const SpaceCards = () => {
                 <div className="flex justify-between items-center mb-4">
                   <h4 className="text-xl font-semibold text-gray-800">{space.title}</h4>
                   <Link to="/contact">
-                    <span className="bg-blue-600 text-white font-bold py-1 sm:py-2 px-2 sm:px-4 text-sm sm:text-base rounded-lg cursor-pointer hover:bg-blue-500 transition-colors shadow-md hover:shadow-lg whitespace-nowrap">
+                    <span className="bg-teal-400 text-white font-bold py-1 sm:py-2 px-2 sm:px-4 text-sm sm:text-base rounded-lg cursor-pointer hover:bg-teal-600 transition-colors shadow-md hover:shadow-lg whitespace-nowrap">
                       Get Quote
                     </span>
                   </Link>
@@ -172,16 +173,13 @@ const SpaceCards = () => {
                 <p className="h-24 mb-4 text-gray-600 text-start leading-relaxed">
                   {space.description}
                 </p>
-                <ul className="ul-style-2 list-none space-y-3">
-                  <li className="flex items-center text-gray-700">
-                    <span className="text-green-500 mr-2"></span> High Speed Internet
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <span className="text-green-500 mr-2"></span> Free Tea & Coffee
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <span className="text-green-500 mr-2"></span> Modern Amenities
-                  </li>
+                <ul className="space-y-3">
+                  {["High Speed Internet", "Free Tea & Coffee", "Modern Amenities"].map((amenity, index) => (
+                    <li key={index} className="flex items-center gap-2">
+                      <FaCheckSquare className="text-xl bg-white text-teal-400"/>
+                      <span className="text-gray-600">{amenity}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

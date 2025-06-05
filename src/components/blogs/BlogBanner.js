@@ -4,8 +4,8 @@ const BlogBanner = () => {
   return (
     <div className="blog-banner py-24 flex justify-end items-end">
       <div className="text-white lg:mx-40 lg:my-10 mb-5 lg:mb-5">
-        <h1 className="font-bold font-Manrope text-3xl lg:text-6xl ">
-          Collaborative <span className="text-[#28aa4a]">Spaces</span>:
+        <h1 className="font-bold text-3xl lg:text-6xl mb-5 ">
+          Collaborative <span className="text-[#28aa4a] font-bold">Spaces</span>:
           Inspiring Ideas, Connections, and Growth
         </h1>
         <div className="font-thin font-Manrope lg:text-xl lg:mx-44 my-2">

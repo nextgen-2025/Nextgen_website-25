@@ -63,7 +63,7 @@ const TrainingSection = () => {
             <h3 className="text-2xl font-bold text-teal-400  text-center mb-10">
               Our Training Rooms & Workspaces
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto justify-items-center px-[20px]">
               {workspaces.map((space, index) => (
                 <Suspense key={index} fallback={<div className="h-[300px] bg-gray-100 animate-pulse rounded-xl"></div>}>
                   <div
