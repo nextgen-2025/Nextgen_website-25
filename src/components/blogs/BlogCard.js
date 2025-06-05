@@ -10,13 +10,13 @@ const BlogCard = ({ images, category, shortDescription, title, blog }) => {
         <img
           src={images ? images.fields.file.url : "/Banner-vedio-poster.png"}
           alt="Blog"
-          className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
         
         {/* Category Badge */}
         <span
-          className={`absolute top-4 right-4 text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full text-white ${
+          className={`absolute top-3 right-3 sm:top-4 sm:right-4 text-xs font-semibold uppercase tracking-wide px-2 sm:px-3 py-1 rounded-full text-white ${
             category === "Technology"
               ? "bg-gradient-to-r from-blue-500 to-blue-400"
               : "bg-gradient-to-r from-teal-500 to-teal-400"
@@ -27,12 +27,12 @@ const BlogCard = ({ images, category, shortDescription, title, blog }) => {
       </div>
       
       {/* Card Content */}
-      <div className="p-6 flex flex-col justify-between flex-grow space-y-4">
-        <h4 className="text-xl font-semibold text-white text-left leading-snug group-hover:text-teal-400 transition-colors duration-300">
+      <div className="p-4 sm:p-6 flex flex-col justify-between flex-grow space-y-3 sm:space-y-4">
+        <h4 className="text-lg sm:text-xl font-semibold text-white text-left leading-snug group-hover:text-teal-400 transition-colors duration-300">
           {title}
         </h4>
 
-        <p className="text-sm text-left text-gray-300 leading-relaxed">
+        <p className="text-sm text-left text-gray-300 leading-relaxed line-clamp-3">
           {shortDescription}
         </p>
 
@@ -84,7 +84,7 @@ const BlogSection = () => {
   }, []);
 
   return (
-    <div className="relative py-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white overflow-hidden">
+    <div className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
         <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-teal-500/30 blur-3xl"></div>
@@ -92,36 +92,36 @@ const BlogSection = () => {
       </div>
       
       {/* Content Container */}
-      <div className="container mx-auto px-24 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-10 max-w-full relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-teal-400 font-semibold text-lg tracking-wide uppercase mb-2">
+        <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
+          <h2 className="text-teal-400 font-semibold text-base sm:text-lg tracking-wide uppercase mb-2">
             Our Latest Insights
           </h2>
-          <h1 className="text-4xl md:text-5xl font-bold  text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
             Explore Our Blogs
           </h1>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-base sm:text-lg">
             Dive into a world of knowledge, ideas, and useful resources that can help transform your business.
           </p>
         </div>
 
         {/* Loading and Error States */}
         {loading ? (
-          <div className="flex justify-center items-center py-20">
-            <div className="w-16 h-16 border-4 border-gray-600 border-t-teal-400 rounded-full animate-spin"></div>
+          <div className="flex justify-center items-center py-16 sm:py-20">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-gray-600 border-t-teal-400 rounded-full animate-spin"></div>
           </div>
         ) : error ? (
-          <div className="text-center py-10 text-xl text-red-400 bg-red-900/20 rounded-lg border border-red-800 px-4">
+          <div className="text-center py-8 sm:py-10 text-lg sm:text-xl text-red-400 bg-red-900/20 rounded-lg border border-red-800 px-4">
             {error}
           </div>
         ) : blogData.length === 0 ? (
-          <div className="text-center py-16 text-xl bg-gray-800/50 rounded-lg border border-gray-700">
+          <div className="text-center py-12 sm:py-16 text-lg sm:text-xl bg-gray-800/50 rounded-lg border border-gray-700">
             No blogs found. Check back soon for new content!
           </div>
         ) : (
           /* Blog Grid */
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {blogData.map((blog, index) => {
               const { title, category, images, paragraphs } = blog.fields;
               const shortDescription = paragraphs
@@ -144,14 +144,14 @@ const BlogSection = () => {
 
         {/* Explore More Button */}
         {!loading && !error && blogData.length > 0 && (
-          <div className="flex justify-center mt-12">
+          <div className="flex justify-center mt-10 sm:mt-12">
             <Link
               to="/blog"
-              className="group bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-500 hover:to-teal-400 px-8 py-3 rounded-lg text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 flex items-center gap-2"
+              className="group bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-500 hover:to-teal-400 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 flex items-center gap-2"
             >
               Explore All Articles
               <svg
-                className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

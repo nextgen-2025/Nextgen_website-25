@@ -347,7 +347,7 @@ const Navbar = () => {
                   <div className="flex flex-col items-start">
                     <li>
                       <Link
-                        to="/aboutus"
+                        to="/about"
                         className="block text-2xl py-2 px-4 w-full text-gray-600 font-thin hover:bg-gray-50 border-b border-[#1b23360a] border-dashed"
                       >
                         About
@@ -471,32 +471,6 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <style>{`
-        /* Custom CSS for smooth dropdown transitions */
-        .dropdown-enter {
-          opacity: 0;
-          height: 0;
-          overflow: hidden;
-          transition: opacity 0.3s ease, height 0.3s ease;
-        }
-
-        .dropdown-enter-active {
-          opacity: 1;
-          height: auto;
-        }
-
-        .dropdown-exit {
-          opacity: 1;
-          height: auto;
-          transition: opacity 0.3s ease, height 0.3s ease;
-        }
-
-        .dropdown-exit-active {
-          opacity: 0;
-          height: 0;
-          overflow: hidden;
-        }
-      `}</style>
     </div>
   );
 };
