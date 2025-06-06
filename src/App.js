@@ -20,6 +20,7 @@ import FloatingContact from "./components/common/FloatingContact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
           <Route path="/terms-of-service" element={<TermsOfService />}></Route>
           <Route path="/cookie-policy" element={<CookiePolicy />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
         <FloatingContact />
       </Router>

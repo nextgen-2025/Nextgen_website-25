@@ -46,33 +46,6 @@
             transparent);
 }
 
-.btn-anim {
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: var(--shine-effect);
-        animation: shine 5s ease-in-out infinite;
-    }
-}
-
-@keyframes shine {
-    0% {
-        left: -100%;
-    }
-
-    50% {
-        left: 100%;
-    }
-
-    100% {
-        left: 100%;
-    }
-}
-
 /* Add this CSS to your styles */
 .mobile-menu {
     transition: max-height 0.3s ease-out;

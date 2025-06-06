@@ -7,7 +7,6 @@ const Navbar = () => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [bgColor, setBgColor] = useState("transparent");
   let aboutTimeout, servicesTimeout;
 
   useEffect(() => {
@@ -48,23 +47,6 @@ const Navbar = () => {
     setIsMobileMenuOpen((prev) => !prev);
   };
 
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setBgColor("bg-white");
-    } else {
-      setBgColor("bg-transparent");
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const textColor = bgColor === "bg-white" ? "text-black" : "text-white";
-
   const [isAboutDropdownOpen, setAboutDropdownOpen] = useState(false);
 
   const toggleAboutDropdown = () => {
@@ -79,9 +61,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav
-        className={`fixed w-full py-1 z-[999] top-0 start-0 ${bgColor} transition-colors duration-300`}
-      >
+      <nav className="fixed w-full bg-white shadow-md z-[999] top-0 start-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-2 py-1">
           <Link
             to="/"
@@ -95,12 +75,12 @@ const Navbar = () => {
             id="navbar-sticky"
           >
             <ul
-              className={`flex flex-col p-4 md:p-0 mt-4 ${textColor} font-extralight border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent`}
+              className="flex flex-col p-4 md:p-0 mt-4 text-gray-800 font-extralight border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent"
             >
               <li>
                 <Link
                   to="/"
-                  className="block py-2 px-3  rounded md:bg-transparent md:p-0 hover:text-[#28aa4a]"
+                  className="block py-2 px-3 rounded md:bg-transparent md:p-0 hover:text-[#2DD4BF]"
                   aria-current="page"
                 >
                   Home
@@ -112,7 +92,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeaveAbout}
               >
                 <p
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
+                  className="block py-2 px-3 text-gray-800 cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2DD4BF] md:p-0"
                 >
                   About
                   <span>
@@ -124,7 +104,7 @@ const Navbar = () => {
                   </span>
                 </p>
                 <ul
-                  className={`absolute left-0 top-12 mt-2 w-48 bg-white rounded shadow-lg transition-opacity duration-300 ease-in-out ${
+                  className={`absolute left-0 top-8 mt-2 w-48 bg-white rounded-b-md shadow-lg transition-opacity duration-300 ease-in-out ${
                     isAboutOpen
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 -translate-y-2 pointer-events-none"
@@ -162,7 +142,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeaveServices}
               >
                 <p
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
+                  className="block py-2 px-3 text-gray-800 cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2DD4BF] md:p-0"
                 >
                   Services
                   <span>
@@ -174,7 +154,7 @@ const Navbar = () => {
                   </span>
                 </p>
                 <ul
-                  className={`absolute left-0 top-12 mt-2 w-72 bg-white rounded shadow-lg transition-opacity duration-300 ease-in-out ${
+                  className={`absolute left-0 top-8 mt-2 w-72 bg-white rounded-b-md shadow-lg transition-opacity duration-300 ease-in-out ${
                     isServicesOpen
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 -translate-y-2 pointer-events-none"
@@ -182,7 +162,6 @@ const Navbar = () => {
                 >
                   <li>
                     <Link
-                      // to="/it-services"
                       to="/it-services"
                       className="block py-2 px-4 text-gray-900 hover:bg-gray-100 border-b border-[#1b23360a] border-dashed"
                     >
@@ -205,15 +184,14 @@ const Navbar = () => {
                     >
                       Real Estate
                     </Link>
-                    </li>
-                    
+                  </li>
                 </ul>
               </li>
 
               <li>
                 <Link
                   to="/coworking"
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
+                  className="block py-2 px-3 text-gray-800 cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2DD4BF] md:p-0"
                 >
                   Co-Working Space
                 </Link>
@@ -221,7 +199,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/training"
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
+                  className="block py-2 px-3 text-gray-800 cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2DD4BF] md:p-0"
                 >
                   Training
                 </Link>
@@ -229,16 +207,16 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/blog"
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
+                  className="block py-2 px-3 text-gray-800 cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2DD4BF] md:p-0"
                 >
-                 Blogs
+                  Blogs
                 </Link>
               </li>
 
               <li>
                 <Link
                   to="/careers"
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
+                  className="block py-2 px-3 text-gray-800 cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2DD4BF] md:p-0"
                 >
                   Careers
                 </Link>
@@ -246,7 +224,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/contact"
-                  className={`block py-2 px-3 ${textColor} cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#28aa4a] md:p-0`}
+                  className="block py-2 px-3 text-gray-800 cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2DD4BF] md:p-0"
                 >
                   Contact
                 </Link>
@@ -258,36 +236,36 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => (window.location.href = "tel:+919930365555")}
-              className="hidden md:hidden lg:block btn btn-anim text-white bg-[#28aa4a] hover:bg-[#3eb85e] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 p-0 md:py-2 text-center h-9"
+              className="hidden md:hidden lg:block btn btn-anim text-white bg-[#22685e] hover:bg-[#2f4a47c7] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 p-0 md:py-2 text-center h-9"
             >
               <i className="fa fa-phone"></i> <span>+91 9930365555</span>
             </button>
             {/* hamburger button */}
             <div>
               <button
-                className="relative z-50 group "
+                className="relative z-50 group"
                 onClick={toggleMobileMenu}
               >
                 <div className="md:hidden relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all mr-2">
-                  <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center ">
+                  <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center">
                     <div
                       className={`h-[2px] w-10 transform transition-all duration-300 ${
                         isMobileMenuOpen
                           ? "rotate-45 translate-y-[9px]"
                           : "origin-left"
-                      } ${bgColor === "bg-white" ? "bg-black" : "bg-white"}`}
+                      } bg-gray-800`}
                     ></div>
                     <div
-                      className={` h-[2px] w-1/2 rounded transform transition-all duration-300 ${
+                      className={`h-[2px] w-1/2 rounded transform transition-all duration-300 ${
                         isMobileMenuOpen ? "opacity-0" : ""
-                      } ${bgColor === "bg-white" ? "bg-black" : "bg-white"}`}
+                      } bg-gray-800`}
                     ></div>
                     <div
                       className={`h-[2px] w-10 transform transition-all duration-300 ${
                         isMobileMenuOpen
                           ? "-rotate-45 -translate-y-[9px]"
                           : "origin-left"
-                      } ${bgColor === "bg-white" ? "bg-black" : "bg-white"}`}
+                      } bg-gray-800`}
                     ></div>
                   </div>
                 </div>
@@ -300,12 +278,12 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed z-[999] mt-16 w-full ${
-          isMobileMenuOpen ? "block " : "hidden"
+        className={`md:hidden fixed z-[999] mt-[3.7rem] w-full ${
+          isMobileMenuOpen ? "block" : "hidden"
         }`}
       >
         <div>
-          <ul className="flex flex-col justify-start items-start py-20 gap-10 p-4  bg-white shadow-lg max-h-[100vh] h-[100vh] overflow-y-auto">
+          <ul className="flex flex-col justify-start items-start py-18 gap-10 p-4 bg-white shadow-lg  overflow-y-auto">
             <li className="">
               <Link
                 to="/"
@@ -408,12 +386,11 @@ const Navbar = () => {
                     <li>
                       <Link
                         to="/real-estate"
-                        className="block text-2xl py-2 px-4 text-gray-600 font-thin  hover:bg-gray-100 border-b border-[#1b23360a] border-dashed"
+                        className="block text-2xl py-2 px-4 text-gray-600 font-thin hover:bg-gray-100 border-b border-[#1b23360a] border-dashed"
                       >
                         Real Estate
                       </Link>
                     </li>
-                    
                   </div>
                 )}
               </ul>
@@ -434,7 +411,6 @@ const Navbar = () => {
               >
                 Careers
               </Link>
-
             </li>
             <li className="">
               <Link
@@ -444,7 +420,6 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-            
             <li className="">
               <Link
                 to="/training"

@@ -9,7 +9,7 @@ const ClientsCW = () => {
     "./Clients/CMS.png",
     "./Clients/Healthcare.png",
     "./Clients/vishesh.png",
-    "./Clients/finmech.png",
+    "./Clients/finmech_business.png",
     "./Clients/pilrim.png",
     "./Clients/eduonix.png",
     "./Clients/casita.png",
@@ -40,7 +40,7 @@ const ClientsCW = () => {
                 <img
                   src={logo}
                   alt={`Client ${index + 1}`}
-                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300"
                 />
               </div>
             ))}

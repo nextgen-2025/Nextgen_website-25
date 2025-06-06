@@ -70,15 +70,20 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
-          <div className="space-y-6 lg:text-left">
+          <div className="space-y-6 text-left">
             <Link to="/" className="inline-block">
-              <img src={logo} alt="NextGen Infratech Logo" className="h-16 sm:h-20 w-auto" />
+              <img 
+                src={logo} 
+                alt="NextGen Infratech Logo" 
+                className="h-16 w-auto object-contain" 
+                style={{ maxWidth: '190px' }}
+              />
             </Link>
-            <p className="text-gray-300 text-sm sm:text-base lg:text-left leading-relaxed max-w-md">
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-md">
               Welcome to Nextgen Infratech Solutions! With 20+ years of experience, 
               we deliver innovative IT infrastructure solutions to help you succeed.
             </p>
-            <div className="flex space-x-4 justify-center lg:justify-start">
+            <div className="flex space-x-4">
               {socialLinks.map((item) => (
                 <a
                   key={item.name}
@@ -95,7 +100,7 @@ const Footer = () => {
           </div>
 
           {/* Company Links */}
-          <div>
+          <div className="text-left">
             <h3 className="text-teal-400 font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
@@ -112,7 +117,7 @@ const Footer = () => {
           </div>
 
           {/* Services Links */}
-          <div>
+          <div className="text-left">
             <h3 className="text-teal-400 font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
@@ -129,17 +134,17 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="text-left">
             <h3 className="text-teal-400 font-semibold text-lg mb-4">Contact Us</h3>
-            <ul className="space-y-3 flex flex-col gap-2 items-center">
+            <ul className="space-y-3">
               <li>
                 <a
                   href="https://wa.me/9930365555"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-teal-400 transition-colors duration-300 text-sm sm:text-base flex items-center space-x-3"
+                  className="text-gray-300 hover:text-teal-400 transition-colors duration-300 text-sm sm:text-base flex items-center gap-3"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                   <span>Chat with us</span>
@@ -148,9 +153,9 @@ const Footer = () => {
               <li>
                 <a
                   href="tel:9930365555"
-                  className="text-gray-300 hover:text-teal-400 transition-colors duration-300 text-sm sm:text-base flex items-center space-x-3"
+                  className="text-gray-300 hover:text-teal-400 transition-colors duration-300 text-sm sm:text-base flex items-center gap-3"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <span>+91 9930365555</span>
@@ -167,11 +172,11 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-700/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
               © {currentYear} NextGen Infratech. All rights reserved.
             </p>
-            <div className="flex space-x-6">
+            <div className="flex gap-6">
               {footerLinks.legal.map((link) => (
                 <Link
                   key={link.name}
