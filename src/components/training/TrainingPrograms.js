@@ -132,68 +132,70 @@ function TrainingPrograms() {
     : trainingPrograms.slice(0, 8);
 
   return (
-    <div className="container mx-auto px-4">
-      {/* Contact Form Section - Positioned at Top */}
-      <div>
-        <div className="max-w-6xl mx-auto bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl overflow-hidden shadow-xl">
-          <div>
-            <ContactFrom
-              tagline="Get Started with Training"
-              heading="Connect with our experts to discuss your training needs"
-              description="We offer comprehensive training programs tailored to your needs, a long with fully equipped spaces designed to foster effective learning and skill development."
-            />
+    <div className="w-full bg-gradient-to-r from-gray-900 to-gray-800 py-4 lg:px-2">
+      <div className="max-w-full">
+        {/* Contact Form Section - Positioned at Top */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl overflow-hidden">
+            
+              <ContactFrom
+                tagline="Get Started with Training"
+                heading="Connect with our experts to discuss your training needs"
+                description="We offer comprehensive training programs tailored to your needs, a long with fully equipped spaces designed to foster effective learning and skill development."
+              />
+      
           </div>
         </div>
-      </div>
 
-      {/* Training Programs Section */}
-      <div className="py-16 bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl shadow-lg">
-        <h2 className="text-4xl font-bold text-teal-400 text-center mb-12">
-          Our Training Programs
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
-          {visiblePrograms.map((p, i) => (
-            <Suspense key={i} fallback={<CardSkeleton />}>
-              <div
-                className="relative group bg-white/90 rounded-2xl overflow-hidden
-                transition-all duration-300 h-[200px] backdrop-blur-sm border border-purple-100
-                hover:bg-blue-900/50 hover:shadow-xl hover:-translate-y-1
-                [&>._top]:bg-blue-100/50 [&>._bottom]:bg-blue-200/60
-                hover:[&>._top]:bg-blue-600/30 hover:[&>._bottom]:bg-blue-800/50"
-              >
-                {/* top-right diagonal */}
-                <div className="absolute _top top-0 right-0 w-1/2 h-full bg-purple-100/50 skew-x-[-20deg] origin-top-right"></div>
-                {/* bottom-half overlay */}
-                <div className="absolute _bottom bottom-0 left-0 w-full h-1/2 bg-purple-200/60 opacity-80"></div>
+        {/* Training Programs Section */}
+        <div>
+          <h2 className="text-4xl font-bold text-teal-400 text-center mb-12">
+            Our Training Programs
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {visiblePrograms.map((p, i) => (
+              <Suspense key={i} fallback={<CardSkeleton />}>
+                <div
+                  className="relative group bg-white/90 rounded-2xl overflow-hidden
+                  transition-all duration-300 h-[200px] backdrop-blur-sm border border-purple-100
+                  hover:bg-blue-900/50 hover:shadow-xl hover:-translate-y-1
+                  [&>._top]:bg-blue-100/50 [&>._bottom]:bg-blue-200/60
+                  hover:[&>._top]:bg-blue-600/30 hover:[&>._bottom]:bg-blue-800/50"
+                >
+                  {/* top-right diagonal */}
+                  <div className="absolute _top top-0 right-0 w-1/2 h-full bg-purple-100/50 skew-x-[-20deg] origin-top-right"></div>
+                  {/* bottom-half overlay */}
+                  <div className="absolute _bottom bottom-0 left-0 w-full h-1/2 bg-purple-200/60 opacity-80"></div>
 
-                {/* content */}
-                <div className="relative z-10 flex flex-col items-center justify-center h-full p-6 text-center">
-                  <div className="mb-4 transform group-hover:scale-110 transition-transform duration-200">
-                    {p.icon}
+                  {/* content */}
+                  <div className="relative z-10 flex flex-col items-center justify-center h-full p-6 text-center">
+                    <div className="mb-4 transform group-hover:scale-110 transition-transform duration-200">
+                      {p.icon}
+                    </div>
+                    <h4 className="text-xl font-bold text-black-900">
+                      {p.title}
+                    </h4>
+                    <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+                      {p.description}
+                    </p>
                   </div>
-                  <h4 className="text-xl font-bold text-black-900">
-                    {p.title}
-                  </h4>
-                  <p className="mt-2 text-sm text-gray-600 line-clamp-2">
-                    {p.description}
-                  </p>
                 </div>
-              </div>
-            </Suspense>
-          ))}
-        </div>
-
-        {/* View All Button */}
-        {trainingPrograms.length > 8 && (
-          <div className="text-center mt-8">
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="px-6 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-700 transition-colors duration-200 font-semibold"
-            >
-              {showAll ? "Show Less" : "View All Programs"}
-            </button>
+              </Suspense>
+            ))}
           </div>
-        )}
+
+          {/* View All Button */}
+          {trainingPrograms.length > 8 && (
+            <div className="text-center mt-8">
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="px-6 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-700 transition-colors duration-200 font-semibold"
+              >
+                {showAll ? "Show Less" : "View All Programs"}
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

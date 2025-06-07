@@ -404,6 +404,22 @@ const Navbar = () => {
                 Co-Working Space
               </Link>
             </li>
+            <li>
+              <Link
+                to="/training"
+                className="block text-3xl py-2 px-4 text-gray-600 font-thin"
+              >
+                Training
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog"
+                className="block text-3xl py-2 px-4 text-gray-600 font-thin"
+              >
+                Blog
+              </Link>
+            </li>
             <li className="">
               <Link
                 to="/careers"
@@ -418,14 +434,6 @@ const Navbar = () => {
                 className="block text-3xl py-2 px-4 text-gray-600 font-thin"
               >
                 Contact
-              </Link>
-            </li>
-            <li className="">
-              <Link
-                to="/training"
-                className="block text-3xl py-2 px-4 text-gray-600 font-thin"
-              >
-                Training
               </Link>
             </li>
           </ul>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import "./aboutus.css";
 import NIS from "../../assets/about/Nextgen Infratech Solutions.jpg";
 import { gsap } from "gsap";
@@ -34,41 +34,54 @@ const AboutSection = () => {
     }
   ];
 
-  useEffect(() => {
-    statsData.forEach(({ id, target, ref }) => {
-      gsap.fromTo(
-        ref.current,
-        { innerText: 0 },
-        {
-          innerText: target,
-          duration: 2,
-          ease: "power1.out",
-          snap: { innerText: 1 },
-          scrollTrigger: {
-            trigger: ref.current,
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-          },
-          onUpdate: () => {
-            setCounts(prev => ({
-              ...prev,
-              [id]: Math.round(gsap.getProperty(ref.current, "innerText"))
-            }));
-          }
+  // Memoize the animation function
+  const animateCount = useCallback(({ id, target, ref }) => {
+    const animation = gsap.fromTo(
+      ref.current,
+      { innerText: 0 },
+      {
+        innerText: target,
+        duration: 2,
+        ease: "power1.out",
+        snap: { innerText: 1 },
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        onUpdate: () => {
+          setCounts(prev => ({
+            ...prev,
+            [id]: Math.round(gsap.getProperty(ref.current, "innerText"))
+          }));
         }
-      );
-    });
+      }
+    );
+
+    return () => {
+      animation.kill();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
+
+  useEffect(() => {
+    const cleanupFunctions = statsData.map(animateCount);
+    return () => cleanupFunctions.forEach(cleanup => cleanup());
+  }, [animateCount]);
 
   return (
     <div className="w-full bg-gradient-to-r from-gray-900 to-gray-800 py-16">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto px-4 lg:px-10 max-w-full">
         <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
           <div className="lg:w-1/2">
             <img 
               src={NIS} 
               alt="Nextgen Infratech Solutions" 
-              className="w-full rounded-md" 
+              className="w-full rounded-md"
+              loading="lazy"
+              decoding="async"
+              width="600"
+              height="400"
             />
           </div>
           <div className="lg:w-1/2">

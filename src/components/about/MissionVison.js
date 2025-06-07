@@ -1,7 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-
-export const InfoCard = ({ title, heading, description }) => (
+export const InfoCard = memo(({ title, heading, description }) => (
   <div className="bg-gray-800 bg-opacity-60 p-8 rounded-xl border border-gray-700 shadow-md">
     <h2 className="text-teal-400 text-sm font-medium mb-2 uppercase tracking-widest">
       {title}
@@ -13,9 +12,7 @@ export const InfoCard = ({ title, heading, description }) => (
       {description}
     </p>
   </div>
-);
-
-
+));
 
 const MissionVision = () => {
   const cardData = [
@@ -35,15 +32,15 @@ const MissionVision = () => {
 
   return (
     <section className="relative bg-gradient-to-r from-gray-900 to-gray-800 py-24 overflow-hidden">
-      <div
-        className="absolute top-2 left-0 right-0 flex justify-center opacity-30"
-      >
+      <div className="absolute top-2 left-0 right-0 flex justify-center opacity-30">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="537.92521"
           height="486.18104"
           fill="#28aa4b27"
           viewBox="0 0 537.92521 486.18104"
+          aria-hidden="true"
+          className="pointer-events-none"
         >
           <path
             id="shape01"
@@ -79,4 +76,4 @@ const MissionVision = () => {
   );
 };
 
-export default MissionVision;
+export default memo(MissionVision);
