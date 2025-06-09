@@ -12,7 +12,7 @@ const leaders = [
   {
     name: "Mr. Vinay Agrawal",
     title: "Executive Director",
-    image: "./team/vinay-agrawal.jpg",
+    image: "./team/vinay_agrawal.jpg",
     reverse: true,
     headingColor: "#ffffff",
     bio: `Mr. Vinay Agrawal, a commerce graduate, brings decades of leadership from his family's established construction business. He oversees overseas capital, strategic planning, and financial operations. Under his leadership, the Vishesh Group has flourished in Navi Mumbai. With a strong technical and architectural vision, he manages administration, sales, and marketing, ensuring daily operations align with the company's goals and long-term vision.`
