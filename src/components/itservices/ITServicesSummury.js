@@ -2,9 +2,9 @@ import React from "react";
 
 const ITServicesSummury = () => {
   return (
-    <div className="flex justify-between itser-summ my-5">
-      <div className="flex flex-col items-start max-w-3xl p-6 lg:ml-20">
-        <h2 className="text-3xl md:text-5xl font-semibold text-[#28aa4a] mb-4">
+    <div className="flex justify-between itser-summ my-5 ">
+      <div className="flex flex-col items-start max-w-3xl p-6 lg:ml-20  ">
+        <h2 className="text-3xl md:text-5xl font-semibold text-[] mb-4">
           IT Services Overview
         </h2>
         <p className="mb-6 text-justify lg:text-start text-lg">

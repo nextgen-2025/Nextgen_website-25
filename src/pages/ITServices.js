@@ -14,7 +14,7 @@ const ITServices = () => {
     setIsLoading(false); // Set loading to false when the video is loaded
   };
   return (
-    <div>
+    <div className="bg-gradient-to-r from-gray-900 to-gray-800">
       
         <>
           <Navbar />

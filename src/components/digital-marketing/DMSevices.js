@@ -63,7 +63,7 @@ const DMSevices = () => {
     <div className="py-10">
       <div className="pb-10 flex items-center justify-center">
         <div className="">
-          <h2 className="text-[#28aa4a] text-4xl font-semibold">
+          <h2 className="text-teal-400 text-4xl font-semibold">
             Digital Marketing Services We Offer
           </h2>
         </div>
@@ -77,7 +77,7 @@ const DMSevices = () => {
                 alt={service.title}
                 className="relative z-40 w-full h-64 object-cover"
               />
-              <div className="absolute z-40 p-2 bg-[#28aa4a] top-52 left-2 w-14 h-14 mx-2 transition-transform transform group-hover:rotate-180">
+              <div className="absolute z-40 p-2 bg-teal-400 top-52 left-2 w-14 h-14 mx-2 transition-transform transform group-hover:rotate-180">
                 <img
                   src={service.icon}
                   alt="icon"

@@ -7,7 +7,7 @@ const DMSummmury = () => {
     <div>
       <div className="flex justify-center dmser-summ my-5">
         <div className="flex flex-col items-center max-w-3xl p-3 ">
-          <h2 className="text-5xl font-semibold text-[#28aa4a] mb-4">
+          <h2 className="text-5xl font-semibold text-teal-400 mb-4">
             Digital Marketing
           </h2>
           <div className="lg:mx-8">
@@ -33,7 +33,7 @@ const DMSummmury = () => {
 
           <Link
             to="/contact"
-            className=" drop-in-3 btn-dm flex items-center justify-center w-fit bg-[#24aa4a] px-5 py-2 md:py-2 mt-5 rounded-3xl"
+            className=" drop-in-3 btn-dm flex items-center justify-center w-fit bg-teal-500 px-5 py-2 md:py-2 mt-5 rounded-3xl"
           >
             <span className="hover-text1">Be a Part of Team</span>
             <svg

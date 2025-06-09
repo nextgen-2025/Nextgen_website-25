@@ -10,18 +10,18 @@ const ITBanner = ({ onVideoLoad }) => {
     >
       <div className="flex flex-col md:items-start px-10 mb-8 md:mb-20">
         <div>
-          <h1 className="text-[#28aa4a] text-start text-6xl font-bold ">
+          <h1 className="text-teal-400 text-start text-6xl font-bold ">
             IT Services
           </h1>
         </div>
         <div>
           <nav aria-label="breadcrumb" className="w-max">
             <ol className="flex w-full flex-wrap items-center rounded-md px-1 py-2">
-              <li className="flex cursor-pointer items-center text-lg font-thin text-white transition-colors duration-300 hover:text-[#28aa4a]">
+              <li className="flex cursor-pointer items-center text-lg font-thin text-teal-400 transition-colors duration-300 hover:text-[#1F726D]">
                 <Link to="/">Home</Link>
-                <span className="pointer-events-none mx-2 text-white">/</span>
+                <span className="pointer-events-none mx-2 text-teal-400">/</span>
               </li>
-              <li className="flex cursor-pointer items-center text-lg font-thin text-white transition-colors duration-300 hover:text-[#28aa4a]">
+              <li className="flex cursor-pointer items-center text-lg font-thin text-teal-400 transition-colors duration-300 hover:text-[#1F726D]">
                 <Link href="/it-services">IT Services</Link>
                 {/* <span className="pointer-events-none mx-2 text-white">&gt;</span> */}
               </li>

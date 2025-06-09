@@ -12,7 +12,7 @@ const ITServices = () => {
     setIsLoading(false);
   };
   return (
-    <div>
+    <div className="bg-gradient-to-r from-gray-900 to-gray-800">
       <>
         <Navbar />
         <DMBanner onVideoLoad={handleVideoLoad} />

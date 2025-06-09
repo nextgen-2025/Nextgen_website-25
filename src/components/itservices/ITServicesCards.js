@@ -5,8 +5,7 @@ const servicesData = [
   {
     id: 1,
     title: "Network Services",
-    description:
-      "Safeguard your data with our comprehensive network security solutions.",
+    description:"Safeguard your data with our comprehensive network security solutions.",
     icon: "./ITCardsServices/icon1.png",
     image: "./ITCardsServices/1.png",
     shape: "./ITCardsServices/itshape.png",
@@ -62,10 +61,10 @@ const ITServicesCards = () => {
     <div className="pt-2">
       <div className="pb-5">
         <div className="">
-          <h2 className="text-[#28aa4a] text-5xl font-semibold">
+          <h2 className="text-teal-400 text-5xl font-semibold">
             IT Services We Offer
           </h2>
-          <p className="text-[#28aa4a] text-2xl  py-3">
+          <p className="text-teal-400 text-2xl  py-3">
             Smart Solutions for Smart Businesses
           </p>
         </div>
@@ -79,11 +78,11 @@ const ITServicesCards = () => {
                 alt={service.title}
                 className="relative z-40 w-full h-64 object-cover"
               />
-              <div className="absolute z-40 p-2 bg-[#28aa4a] top-52 left-2 w-14 h-14 mx-2 transition-transform transform group-hover:rotate-180">
+              <div className="absolute z-40 p-2 text-teal-400 top-52 left-2 w-14 h-14 mx-2 transition-transform transform group-hover:rotate-180">
                 <img
                   src={service.icon}
                   alt="icon"
-                  className="w-full h-full transition-transform transform group-hover:rotate-180"
+                  className="w-full  bg-gradient-to-r from-gray-900 to-gray-800 h-full transition-transform transform group-hover:rotate-180"
                 />
               </div>
               <div className="p-4 relative">
@@ -97,7 +96,7 @@ const ITServicesCards = () => {
                 <h4 className="text-start text-lg font-semibold cursor-pointer">
                   <Link
                     to={`/it-services/${service.id}`}
-                    className="relative z-50 text-[#28aa4a]"
+                    className="relative z-50 text-teal-400"
                   >
                     {service.title}
                   </Link>
@@ -107,7 +106,7 @@ const ITServicesCards = () => {
                 </p>
                 <Link
                   to={`/it-services/${service.id}`}
-                  className="relative z-50 mt-4 flex justify-start cursor-pointer text-[#28aa4a] group-hover:font-bold"
+                  className="relative z-50 mt-4 flex justify-start cursor-pointer text-teal-400 group-hover:font-bold"
                 >
                   Read More
                   <svg
