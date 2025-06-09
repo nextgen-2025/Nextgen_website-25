@@ -6,7 +6,6 @@ import SideSection from "../components/blogs/SideSection";
 
 const BlogPage = () => {
 
-   
   return (
     <div>
       <>
