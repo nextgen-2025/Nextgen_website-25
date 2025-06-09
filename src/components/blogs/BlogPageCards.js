@@ -26,7 +26,7 @@ const BlogPageCards = () => {
   }, []);
 
   return (
-    <div className="lg:my-20 mt-5 lg:mt-20 lg:w-[70%] lg:mx-0 mx-2 border">
+    <div className="lg:my-20 mt-5 lg:mt-20 lg:w-[70%] lg:mx-0 mx-2">
       {blogData ? (
         <div>
           {blogData.length === 0 ? (
