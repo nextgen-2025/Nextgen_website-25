@@ -20,7 +20,7 @@ const TeamValues = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-6xl text-white font-bold text-center mb-20 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
+        <h2 className="text-3xl md:text-6xl text-white font-bold text-center mb-20 bg-clip-text bg-gradient-to-r from-white to-white/80">
           Our Values & Mission
         </h2>
 

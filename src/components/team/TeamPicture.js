@@ -57,7 +57,7 @@ const TeamPicture = () => {
         <span className="inline-block text-teal-400 font-semibold text-lg mb-3 tracking-wide">
           Meet Our Team
         </span>
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 bg-clip-text  bg-gradient-to-r from-white to-white/80">
           The People Powering Our Vision
         </h2>
         <p className="text-md md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
