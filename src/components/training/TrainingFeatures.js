@@ -10,27 +10,27 @@ import {
 
 const features = [
   {
-    icon: <Wifi className="w-6 h-6 text-green-500" />,
+    icon: <Wifi className="w-6 h-6 text-teal-500" />,
     label: "High-Speed Wi-Fi",
   },
   {
-    icon: <Fan className="w-6 h-6 text-green-500" />,
+    icon: <Fan className="w-6 h-6 text-teal-500" />,
     label: "Air Conditioning",
   },
   {
-    icon: <PlugZap className="w-6 h-6 text-green-500" />,
+    icon: <PlugZap className="w-6 h-6 text-teal-500" />,
     label: "Power Backup",
   },
   {
-    icon: <Coffee className="w-6 h-6 text-green-500" />,
+    icon: <Coffee className="w-6 h-6 text-teal-500" />,
     label: "Free Beverages",
   },
   {
-    icon: <ParkingCircle className="w-6 h-6 text-green-500" />,
+    icon: <ParkingCircle className="w-6 h-6 text-teal-500" />,
     label: "Parking Facility",
   },
   {
-    icon: <ShieldCheck className="w-6 h-6 text-green-500" />,
+    icon: <ShieldCheck className="w-6 h-6 text-teal-500" />,
     label: "24/7 Security",
   },
 ];

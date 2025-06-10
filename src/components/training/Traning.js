@@ -44,7 +44,7 @@ const TrainingBanner = () => {
           </p>
           <Link
             to="/contact"
-            className="drop-in-3 btn-abt flex items-center justify-center w-fit bg-[#24aa4a] px-5 py-2 rounded-3xl"
+            className="drop-in-3 btn-abt flex items-center justify-center w-fit bg-teal-400 px-5 py-2 rounded-3xl"
           >
             <span className="hover-text">Be a Part of Team</span>
             <svg
