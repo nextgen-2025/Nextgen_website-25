@@ -16,7 +16,7 @@ const CareerBanner = () => {
     >
       <div className="flex flex-col md:items-start px-10 mb-8 md:mb-10">
         <div>
-          <h1 className="text-[#28aa4a] text-start text-6xl font-extrabold font-lato">
+          <h1 className="text-teal-400 text-start text-6xl font-bold">
             Careers
           </h1>
         </div>

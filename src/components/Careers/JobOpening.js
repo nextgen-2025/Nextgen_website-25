@@ -24,7 +24,7 @@ const JobOpening = ({ onApplyClick }) => {
   return (
     <div className="w-full lg:w-[50%] lg:mx-16">
       <div className="mb-10">
-        <h1 className="text-[#28aa4a] font-bold text-3xl font-lato text-start">
+        <h1 className="text-white font-bold text-3xl text-start">
           Current Openings
         </h1>
       </div>
@@ -45,7 +45,7 @@ const JobOpening = ({ onApplyClick }) => {
               </div>
               <a
                 href="#form-career"
-                className="btn btn-apply py-2 px-2.5 lg:px-8 text-xs lg:text-sm font-extrabold uppercase tracking-wide border-2 border-green-800 text-green-800 rounded-full hover:bg-green-800 hover:text-white transition font-lato"
+                className="btn btn-apply py-2 px-2.5 lg:px-8 text-xs lg:text-sm font-extrabold uppercase tracking-wide border-2 border-teal-500 text-teal-500 rounded-full hover:bg-teal-800 hover:text-white transition"
                 onClick={(e) => {
                   e.stopPropagation();
                   onApplyClick(job.title);
@@ -55,19 +55,19 @@ const JobOpening = ({ onApplyClick }) => {
               </a>
             </div>
             {selectedJob?.title === job.title && (
-              <div className="mt-4 pt-4 border-t border-green-200 text-left">
-                <p className="text-gray-600 font-Manrope mb-4">
+              <div className="mt-4 pt-4 border-t border-teal-500 text-left">
+                <p className="text-gray-600  mb-4">
                   {job.description}
                 </p>
                 <ul>
                   {job.descriptionList?.map((desc, idx) => (
-                    <li key={idx} className="text-gray-600 font-Manrope mb-2">
+                    <li key={idx} className="text-gray-600 mb-2">
                       - {desc}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-3">
-                  <h6 className="font-Manrope text-gray-700 mb-2">
+                  <h6 className=" text-gray-700 mb-2">
                     <strong>Required Skills:</strong>
                   </h6>
                   <div className="flex flex-wrap gap-2">
@@ -82,11 +82,11 @@ const JobOpening = ({ onApplyClick }) => {
                   </div>
                 </div>
                 <div className="mt-3">
-                  <p className="font-Manrope text-gray-700 mb-2">
+                  <p className=" text-gray-700 mb-2">
                     <strong>Salary: </strong>
                     {job.salary}
                   </p>
-                  <p className="font-Manrope text-gray-700 mb-2">
+                  <p className=" text-gray-700 mb-2">
                     <strong>Open Positions: </strong> {job.openPositions}{" "}
                   </p>
                 </div>
