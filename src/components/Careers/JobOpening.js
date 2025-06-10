@@ -7,7 +7,6 @@ const JobOpening = ({ onApplyClick }) => {
   useEffect(() => {
     // Fetch job openings from backend
     fetch("https://job-opening-backend-production.up.railway.app/jobs")
-    
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
@@ -56,9 +55,7 @@ const JobOpening = ({ onApplyClick }) => {
             </div>
             {selectedJob?.title === job.title && (
               <div className="mt-4 pt-4 border-t border-teal-500 text-left">
-                <p className="text-gray-600  mb-4">
-                  {job.description}
-                </p>
+                <p className="text-gray-600  mb-4">{job.description}</p>
                 <ul>
                   {job.descriptionList?.map((desc, idx) => (
                     <li key={idx} className="text-gray-600 mb-2">

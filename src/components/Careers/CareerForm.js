@@ -160,7 +160,7 @@ const CareerForm = ({ selectedJob }) => {
         className="bg-white p-8 rounded-xl shadow-xl w-full"
         id="form-career"
       >
-        <h2 className="text-3xl font-bold text-center text-green-800 mb-6">
+        <h2 className="text-3xl font-bold text-center text-teal-400 mb-6">
           Career Application
         </h2>
 
@@ -169,7 +169,7 @@ const CareerForm = ({ selectedJob }) => {
             <div>
               <label
                 htmlFor="jobTitle"
-                className="block text-lg font-semibold text-green-700 text-start"
+                className="block text-lg font-semibold text-teal-500 text-start"
               >
                 Job Title
               </label>
@@ -178,7 +178,7 @@ const CareerForm = ({ selectedJob }) => {
                 name="jobTitle"
                 value={formData.jobTitle}
                 disabled
-                className="w-full px-4 py-2 mt-2 text-black border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full px-4 py-2 mt-2 text-black border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
               >
                 {" "}
                 <option value={formData.jobTitle}>
@@ -191,7 +191,7 @@ const CareerForm = ({ selectedJob }) => {
           <div>
             <label
               htmlFor="name"
-              className="block text-lg font-semibold text-green-700 text-start"
+              className="block text-lg font-semibold text-teal-500 text-start"
             >
               Full Name
             </label>
@@ -201,7 +201,7 @@ const CareerForm = ({ selectedJob }) => {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="Enter your full name"
             />
             {errors.name && (
@@ -215,7 +215,7 @@ const CareerForm = ({ selectedJob }) => {
           <div>
             <label
               htmlFor="email"
-              className="block text-lg font-semibold text-green-700 text-start"
+              className="block text-lg font-semibold text-teal-500 text-start"
             >
               Email Address
             </label>
@@ -225,7 +225,7 @@ const CareerForm = ({ selectedJob }) => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="Enter your email"
             />
             {errors.email && (
@@ -240,7 +240,7 @@ const CareerForm = ({ selectedJob }) => {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-lg font-semibold text-green-700 text-start"
+                className="block text-lg font-semibold text-teal-500 text-start"
               >
                 Phone Number
               </label>
@@ -250,7 +250,7 @@ const CareerForm = ({ selectedJob }) => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="Enter your number"
               />
               {errors.phone && (
@@ -264,7 +264,7 @@ const CareerForm = ({ selectedJob }) => {
             <div>
               <label
                 htmlFor="experience"
-                className="block text-lg font-semibold text-green-700 text-start"
+                className="block text-lg font-semibold text-teal-500 text-start"
               >
                 Experience (years)
               </label>
@@ -274,7 +274,7 @@ const CareerForm = ({ selectedJob }) => {
                 name="experience"
                 value={formData.experience}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="Example: 3 years"
               />
               {errors.experience && (
@@ -289,7 +289,7 @@ const CareerForm = ({ selectedJob }) => {
           <div>
             <label
               htmlFor="location"
-              className="block text-lg font-semibold text-green-700 text-start"
+              className="block text-lg font-semibold text-teal-500 text-start"
             >
               Location
             </label>
@@ -299,7 +299,7 @@ const CareerForm = ({ selectedJob }) => {
               name="location"
               value={formData.location}
               onChange={handleInputChange}
-              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="Enter your Location"
             />
             {errors.location && (
@@ -313,7 +313,7 @@ const CareerForm = ({ selectedJob }) => {
           <div>
             <label
               htmlFor="resume"
-              className="block text-lg font-semibold text-green-700 text-start"
+              className="block text-lg font-semibold text-teal-500 text-start"
             >
               Upload Resume (PDF only)
             </label>
@@ -323,7 +323,7 @@ const CareerForm = ({ selectedJob }) => {
               name="resume"
               accept=".pdf"
               onChange={handleFileChange}
-              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
             {errors.resume && (
               <p className="text-red-500 text-sm mt-1 text-start">
@@ -341,7 +341,7 @@ const CareerForm = ({ selectedJob }) => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-2 mt-4 bg-green-600 text-white font-bold rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full py-2 mt-4 bg-teal-500 text-white font-bold rounded-md hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-500"
             disabled={isSubmitting} // Disable button while submitting
           >
             {isSubmitting ? "Submitting..." : "Submit Application"}

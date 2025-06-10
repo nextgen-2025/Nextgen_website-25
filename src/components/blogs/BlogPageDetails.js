@@ -177,7 +177,7 @@ const BlogPageDetails = () => {
                 <h1 className="font-bold font-Manrope text-4xl lg:text-6xl ">
                   {shortTitle || title || "The Rise of Co-Working Spaces"}
                 </h1>
-                <h3 className="font-bold font-Manrope  text-xl py-4">
+                <h3 className="font-bold  text-xl py-4">
                   Collaborative <span className="text-[#28aa4a]">Spaces</span>:
                   Inspiring Ideas, Connections, and Growth
                 </h3>
@@ -185,13 +185,13 @@ const BlogPageDetails = () => {
             </div>
             <div className="flex flex-col lg:flex-row w-full items-start justify-center">
               <div className="lg:my-20 lg:mr-20 mr-2 w-full lg:w-[60%] text-start">
-                <h1 className="text-3xl lg:text-5xl lg:tracking-wide font-Manrope">
+                <h1 className="text-3xl lg:text-5xl lg:tracking-wide">
                   {title ||
                     "The Rise of Co-Working Spaces: A New Era for Workplaces"}
                 </h1>
                 <div className="flex items-center gap-1 justify-start py-1">
-                  <h1 className="font-Manrope">- Kanchan Gosavi</h1>
-                  <p className="text-xs font-Manrope pt-1">
+                  <h1>- Kanchan Gosavi</h1>
+                  <p className="text-xs pt-1">
                     on {formatDate(createdAt)}
                   </p>
                 </div>

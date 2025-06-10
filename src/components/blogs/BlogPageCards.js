@@ -69,7 +69,7 @@ const BlogPageCards = () => {
                         className="h-60 object-cover rounded-lg"
                       />
                       <h3 className="absolute top-2 left-2 text-black rounded-xl px-3 shadow-lg font-semibold bg-white">
-                        {category || "co-working"}
+                        {category || "Co-working"}
                       </h3>
                     </div>
                     <div className="flex flex-col space-x-4 gap-2 items-start lg:w-[40%]">
@@ -84,7 +84,7 @@ const BlogPageCards = () => {
                       </div>
                       <div className="">
                         <Link
-                          className="inline-flex p-1.5 items-center justify-center text-white bg-button  px-4 rounded-md leading-tight tracking-normal  font-thin cursor-pointer shadow-none overflow-hidden relative z-10 bg-[#28aa4a]"
+                          className="inline-flex p-1.5 items-center justify-center text-white bg-button  px-4 rounded-md leading-tight tracking-normal  cursor-pointer shadow-none overflow-hidden relative z-10 bg-teal-400"
                           to={`/blog-details/${blog.sys.id}`}
                           title={`Discover More: ${title}`}
                         >
