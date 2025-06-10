@@ -7,7 +7,7 @@ const DMSummmury = () => {
     <div>
       <div className="flex justify-center dmser-summ my-5">
         <div className="flex flex-col items-center max-w-3xl p-3 ">
-          <h2 className="text-5xl font-semibold text-teal-400 mb-4">
+          <h2 className="text-5xl font-bold text-teal-500 mb-4">
             Digital Marketing
           </h2>
           <div className="lg:mx-8">

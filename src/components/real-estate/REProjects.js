@@ -10,13 +10,13 @@ const REProjects = () => {
     },
     {
       image: "/RealEstate/service-img-2.png",
-      title: "Evara",
+      title: "Balaji Evara",
       description:
         "A cutting-edge commercial development designed to enhance business operations with state-of-the-art facilities.",
     },
     {
       image: "/RealEstate/service-img-3.png",
-      title: "Avante",
+      title: "Balaji Avvante",
       description:
         "A visionary project blending contemporary design with sustainability, providing exceptional living and working environments.",
     },
@@ -36,13 +36,13 @@ const REProjects = () => {
         className="absolute right-0 top-0 h-full"
       />
       <div>
-        <h2 className="text-[#28aa4a]  text-xl font-semibold">
+        <h2 className="text-gray-300  text-xl font-semibold">
           Our Projects
         </h2>
-        <h2 className="font-semibold text-gray-900 text-5xl py-2">
+        <h2 className="font-semibold text-teal-400 text-5xl py-2">
           Explore Our Landmark Developments
         </h2>
-        <p className="md:w-[750px] mx-auto py-2">
+        <p className="md:w-[750px] mx-auto py-2 text-white">
           Our projects, such as Balaji Symphony, Evara, and Avante, reflect our
           commitment to quality, innovation, and customer satisfaction
         </p>
@@ -56,10 +56,10 @@ const REProjects = () => {
             <img
               src={card.image}
               alt={card.title}
-              className="w-full h-full object-cover transition-transform duration-300 ease-in-out "
+              className="w-full h-full object-cover transition-transform duration-300 ease-in-out text-teal-400"
             />
             <div className="absolute inset-0 bg-[#0000009f] bg-opacity-75 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 flex flex-col justify-start py-10 items-center text-center">
-              <h3 className="mb-2 transition-transform duration-300 ease-in-out transform translate-y-4 group-hover:translate-y-0 font-Manrope text-2xl font-semibold tracking-wider text-white">
+              <h3 className="mb-2 transition-transform duration-300 ease-in-out transform translate-y-4 group-hover:translate-y-0  text-2xl font-semibold tracking-wider text-teal-400">
                 {card.title}
               </h3>
               <p className="text-white mb-4 transition-transform duration-300 ease-in-out transform translate-y-4 group-hover:translate-y-0 text-left px-7 py-3 text-md">

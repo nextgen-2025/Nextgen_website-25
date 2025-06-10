@@ -1,0 +1,23 @@
+.training-bnr-cont {
+    background-image: url(../../assets/testimonials-background.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+.training-bnr-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.7); /* dark overlay */
+    z-index: 2;
+}
+.training-bnr-cont > * {
+    position: relative;
+    z-index: 1;
+}
+.training-bnr-cont>* { 
+    position: relative;
+    z-index: 1;
+}

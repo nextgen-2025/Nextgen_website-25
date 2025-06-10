@@ -28,11 +28,11 @@ const REServices = () => {
   return (
     <div className="flex flex-col items-center justify-center my-10">
       <div className="mx-4 md:mx-0">
-        <h2 className="text-[#28aa4a]  text-xl font-bold">Our Services</h2>
-        <h2 className="font-semibold text-gray-900 text-3xl md:text-5xl py-2">
+        <h2 className="text-gray-400  text-xl font-bold">Our Services</h2>
+        <h2 className="font-semibold text-teal-400 text-3xl md:text-5xl py-2">
           Elevating Your Real Estate Experience
         </h2>
-        <p className="md:w-[750px] mx-auto py-2">
+        <p className="md:w-[750px] mx-auto py-2  text-white">
           {" "}
           Discover our comprehensive services: from modern co-working
           environments and expert construction to dynamic real estate marketing
@@ -45,14 +45,14 @@ const REServices = () => {
           {" "}
           <div className="">
             <div className="p-4 border rounded-lg shadow-md w-80 h-96">
-              <div className="icon-box mb-4">
+              <div className="icon-box mb-4 ">
                 <svg
                   id="Layer_1"
                   data-name="Layer 1"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 114.1 122.88"
                   className="w-12"
-                  fill="#28aa4a"
+                  fill="#0d9488"
                 >
                   <defs></defs>
                   <title>bulb</title>
@@ -62,9 +62,9 @@ const REServices = () => {
                   />
                 </svg>
               </div>
-              <div className="text-start">
+              <div className="text-start text-teal-400">
                 <h3 className="text-xl font-semibold py-2">Construction</h3>
-                <p className="text-gray-700">
+                <p className="text-white">
                   Vishesh Group is known for crafting world-class residential
                   and commercial spaces, blending precision, innovation, and
                   sustainability in every project.
@@ -72,14 +72,14 @@ const REServices = () => {
               </div>
               <div className="border my-5"></div>
               <div className="why-choose-counter mt-4 text-start">
-                <h3 className="text-2xl font-bold flex items-center">
+                <h3 className="text-2xl font-bold flex items-center text-white">
                   <div
-                    className="text-6xl counter"
+                    className="text-6xl counter text-white"
                     data-count="10"
                   ></div>
                   +
                 </h3>
-                <p className="text-gray-600">Project Completed</p>
+                <p className="text-white">Project Completed</p>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ const REServices = () => {
               <div className="icon-box mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="#24aa4a"
+                  fill="#0d9488"
                   className="w-14"
                   viewBox="0 0 64 64"
                 >
@@ -112,9 +112,9 @@ const REServices = () => {
                   </g>
                 </svg>
               </div>
-              <div className="why-choose-content text-start">
-                <h3 className="text-xl font-semibold py-2">Co-working Space</h3>
-                <p className="text-gray-700">
+              <div className="why-choose-content text-start ">
+                <h3 className="text-xl font-semibold py-2 text-teal-400">Co-working Space</h3>
+                <p className="text-white">
                   Our modern co-working spaces promote creativity and
                   productivity, offering flexible workstations, meeting rooms,
                   and high-speed internet.
@@ -122,14 +122,14 @@ const REServices = () => {
               </div>
               <div className="border my-5"></div>
               <div className="why-choose-counter text-start">
-                <h3 className="text-2xl font-bold flex items-center">
+                <h3 className="text-2xl font-bold flex items-center text-white">
                   <div
                     className="text-6xl counter"
                     data-count="50"
                   ></div>
                   +
                 </h3>
-                <p className="text-gray-600">Project Completed</p>
+                <p className="text-white">Project Completed</p>
               </div>
             </div>
           </div>
@@ -154,7 +154,7 @@ const REServices = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-14"
-                  fill="#24aa4a"
+                  fill="#0d9488"
                   viewBox="0 0 24 24"
                 >
                   <g id="ic-real-estate-flat">
@@ -191,10 +191,10 @@ const REServices = () => {
                 </svg>
               </div>
               <div className="why-choose-content text-start">
-                <h3 className="text-xl font-semibold py-2">
+                <h3 className="text-xl font-semibold py-2 text-teal-400">
                   Real Estate Marketing
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-white">
                   We provide full real estate marketing services using
                   data-driven strategies and cutting-edge technology to help you
                   buy, sell, or lease properties.
@@ -202,14 +202,14 @@ const REServices = () => {
               </div>
               <div className="border my-4"></div>
               <div className="why-choose-counter mt-4 text-start">
-                <h3 className="text-2xl font-bold flex items-center">
+                <h3 className="text-2xl font-bold flex items-center text-white">
                   <div
                     className="text-6xl counter"
                     data-count="150"
                   ></div>
                   +
                 </h3>
-                <p className="text-gray-600">Project Completed</p>
+                <p className="text-white">Project Completed</p>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./training.css"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,7 +34,7 @@ const TrainingBanner = () => {
   return (
     <div className="bg-gradient-to-r from-gray-900 to-gray-800">
       {/* Banner Section */}
-      <div className="aboutus-bnr-cont flex justify-center bg-center bg-fixed relative overflow-hidden w-full h-[40vh] md:h-[60vh] rounded-b-[60px] ">
+      <div className="training-bnr-cont flex justify-center bg-center bg-fixed relative overflow-hidden w-full h-[40vh] md:h-[60vh] rounded-b-[60px]')] ">
         <div className="text-white flex flex-col justify-center items-center mx-auto mt-10 md:mt-0">
           <h1 className="text-4xl md:text-[60px] font-bold drop-in">
             Training and WorkSpace

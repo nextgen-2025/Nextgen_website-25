@@ -95,7 +95,7 @@ const DMSevices = () => {
                 <h4 className="text-start text-lg font-semibold cursor-pointer">
                   <Link
                     to={`/digtal-marketing/${service.id}`}
-                    className="relative z-50 text-[#28aa4a]"
+                    className="relative z-50 text-teal-400"
                   >
                     {service.title}
                   </Link>
@@ -105,7 +105,7 @@ const DMSevices = () => {
                 </p>
                 <Link
                   to={`/digtal-marketing/${service.id}`}
-                  className="relative z-50 mt-4 flex justify-start cursor-pointer text-[#28aa4a] group-hover:font-bold"
+                  className="relative z-50 mt-4 flex justify-start cursor-pointer text-teal-400 group-hover:font-bold"
                 >
                   Read More
                   <svg
