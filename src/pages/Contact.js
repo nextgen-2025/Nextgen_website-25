@@ -3,6 +3,7 @@ import "../components/customcss/contact.css";
 import Navbar from "../components/navbar/Navbar";
 import axios from "axios";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaYoutube, FaLinkedinIn, FaInstagram, FaPaperPlane } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -74,6 +75,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 font-sans">
+      <Helmet>
+        <title>Contact NextGen Infratech | Get in Touch</title>
+        <meta name="description" content="Have questions or need support? Contact NextGen Infratech in Mahape, Navi Mumbai for coworking, real estate, and digital marketing solutions." />
+      </Helmet>
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="text-center mb-16">

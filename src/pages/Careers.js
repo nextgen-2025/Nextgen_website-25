@@ -5,6 +5,7 @@ import Footer from "../components/home/Footer";
 import CareerBanner from "../components/Careers/CareerBanner";
 import CareerForm from "../components/Careers/CareerForm";
 import JobOpening from "../components/Careers/JobOpening";
+import { Helmet } from "react-helmet-async";
 
 const Careers = () => {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -16,6 +17,10 @@ const Careers = () => {
   return (
     <div className="bg-gradient-to-r from-gray-900 to-gray-800">
       <>
+        <Helmet>
+          <title>Careers at NextGen Infratech | Join Our Team</title>
+          <meta name="description" content="Explore exciting career opportunities at NextGen Infratech. Join our team in Mahape, Navi Mumbai and grow your career with us!" />
+        </Helmet>
         <Navbar />
         <CareerBanner />
         <CareerHome />

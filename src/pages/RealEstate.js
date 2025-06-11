@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/home/Footer";
 import REBanner from "../components/real-estate/REBanner";
@@ -14,8 +15,12 @@ const RealEstate = () => {
   // };
   return (
     <div className="bg-gradient-to-r from-gray-900 to-gray-800 ">
-        <>
-          <Navbar />
+      <>
+        <Helmet>
+          <title>Commercial Real Estate in Navi Mumbai | NextGen Infratech</title>
+          <meta name="description" content="Find the best commercial real estate solutions in Mahape, Navi Mumbai with NextGen Infratech. Offices, retail, coworking, and more." />
+        </Helmet>
+        <Navbar />
           <REBanner />
           <REHistory />
           <REAbout />
