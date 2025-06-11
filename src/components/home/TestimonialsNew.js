@@ -70,9 +70,9 @@ const TestimonialsNew = () => {
             <h2 className="text-teal-400 font-semibold text-base sm:text-lg mb-3 tracking-wide">
               CLIENT TESTIMONIALS
             </h2>
-            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4 sm:mb-6">
               Don't just take our word for it...
-            </h1>
+            </h2>
 
             <p className="text-gray-300 text-base sm:text-lg">
               Our clients have shared their experiences with us, and we couldn't

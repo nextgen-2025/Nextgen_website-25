@@ -98,9 +98,9 @@ const BlogSection = () => {
           <h2 className="text-teal-400 font-semibold text-base sm:text-lg tracking-wide uppercase mb-2">
             Our Latest Insights
           </h2>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
             Explore Our Blogs
-          </h1>
+          </h2>
           <p className="text-gray-300 text-base sm:text-lg">
             Dive into a world of knowledge, ideas, and useful resources that can help transform your business.
           </p>
