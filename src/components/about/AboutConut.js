@@ -9,7 +9,7 @@ const AboutConut = () => {
     >
       {[
         { count: "4k", label: "Workstations" },
-        { count: "25", label: "Happy Clients" },
+        { count: "30", label: "Happy Clients" },
         { count: "7", label: "Years of Experience" },
       ].map((stat, index) => (
         <div
