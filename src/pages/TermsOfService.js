@@ -24,7 +24,7 @@ const TermsOfService = () => {
               <section className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
                 <h2 className="text-2xl font-semibold text-teal-400 mb-4">2. Use of Services</h2>
                 <p className="text-gray-300 mb-4">You agree to use our services only for lawful purposes and in accordance with these Terms. You shall not:</p>
-                <ul className="list-disc pl-6 text-gray-300 space-y-2">
+                <ul className="list-disc text-start text-gray-300 space-y-2">
                   <li>Use our services in any way that violates any applicable laws or regulations.</li>
                   <li>Engage in any activity that interferes with or disrupts our services.</li>
                   <li>Attempt to gain unauthorized access to any part of our services.</li>
@@ -42,7 +42,7 @@ const TermsOfService = () => {
               <section className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
                 <h2 className="text-2xl font-semibold text-teal-400 mb-4">4. User Accounts</h2>
                 <p className="text-gray-300 mb-4">When creating an account with us, you must provide accurate and complete information. You are responsible for:</p>
-                <ul className="list-disc pl-6 text-gray-300 space-y-2">
+                <ul className="list-disc text-start text-gray-300 space-y-2">
                   <li>Maintaining the confidentiality of your account credentials.</li>
                   <li>All activities that occur under your account.</li>
                   <li>Notifying us immediately of any unauthorized use of your account.</li>
@@ -52,7 +52,7 @@ const TermsOfService = () => {
               <section className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
                 <h2 className="text-2xl font-semibold text-teal-400 mb-4">5. Payment Terms</h2>
                 <p className="text-gray-300 mb-4">For services requiring payment:</p>
-                <ul className="list-disc pl-6 text-gray-300 space-y-2">
+                <ul className="list-disc text-start text-gray-300 space-y-2">
                   <li>All fees are non-refundable unless otherwise stated.</li>
                   <li>We reserve the right to modify our pricing with notice.</li>
                   <li>Payment must be made in full before service delivery.</li>

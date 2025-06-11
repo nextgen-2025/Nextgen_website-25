@@ -40,7 +40,7 @@ const ClientsCW = () => {
                 <img
                   src={logo}
                   alt={`Client ${index + 1}`}
-                  className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300"
+                  className="h-20 sm:h-24 md:h-32 lg:h-36 w-auto object-contain transition-all duration-300"
                 />
               </div>
             ))}

@@ -48,7 +48,7 @@ const CookiePolicy = () => {
               <section className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
                 <h2 className="text-2xl font-semibold text-teal-400 mb-4">3. How We Use Cookies</h2>
                 <p className="text-gray-300 mb-4">We use cookies for the following purposes:</p>
-                <ul className="list-disc pl-6 text-gray-300 space-y-2">
+                <ul className="list-disc text-start text-gray-300 space-y-2">
                   <li>To provide you with a better user experience</li>
                   <li>To analyze how our website is used</li>
                   <li>To remember your preferences and settings</li>
