@@ -61,10 +61,10 @@ const ITServicesCards = () => {
     <div className="pt-2">
       <div className="pb-5">
         <div className="">
-          <h2 className="text-teal-400 text-5xl font-semibold">
+          <h2 className="text-teal-400 text-3xl lg:text-5xl font-semibold">
             IT Services We Offer
           </h2>
-          <p className="text-teal-400 text-2xl  py-3">
+          <p className="text-teal-400 text-2xl px-4 py-3">
             Smart Solutions for Smart Businesses
           </p>
         </div>
@@ -72,7 +72,7 @@ const ITServicesCards = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 gap-y-10 justify-items-center lg:mx-20">
         {servicesData.map((service) => (
           <div className="p-4 " key={service.id}>
-            <div className="bg-white w-full  rounded-tl-[100px] shadow-lg overflow-hidden relative group">
+            <div className="bg-white w-full  rounded-md shadow-lg overflow-hidden relative group">
               <img
                 src={service.image}
                 alt={service.title}

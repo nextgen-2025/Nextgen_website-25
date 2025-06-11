@@ -6,11 +6,11 @@ const ITBanner = ({ onVideoLoad }) => {
   return (
     <div
       onLoadedData={onVideoLoad}
-      className="it-banner flex justify-start items-end bg-center bg-fixed relative overflow-hidden w-full h-[40vh] md:h-[60vh] pt-10 md:pt-0 rounded-b-[60px]"
+      className="it-banner flex justify-start items-end bg-center bg-fixed relative overflow-hidden w-full h-[40vh] md:h-[60vh] pt-10 md:pt-0 rounded-b-[30px]"
     >
       <div className="flex flex-col md:items-start px-10 mb-8 md:mb-20">
         <div>
-          <h1 className="text-teal-400 text-start text-6xl font-bold ">
+          <h1 className="text-teal-400 text-start text-4xl lg:text-6xl font-bold ">
             IT Services
           </h1>
         </div>

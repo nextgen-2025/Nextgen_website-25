@@ -48,7 +48,7 @@ const FullScreenImageSections = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen flex items-center justify-center bg-gray-900 py-16 px-4 md:px-0"
+      className="relative w-full lg:min-h-screen flex items-center justify-center bg-gray-900 py-16 px-4 md:px-0"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900 z-10" />
       

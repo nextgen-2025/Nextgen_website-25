@@ -87,7 +87,7 @@ const REBanner = () => {
 
   return (
     <div
-      className="relative overflow-hidden w-full h-[100vh]"
+      className="relative overflow-hidden w-full min-h-[100vh]"
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}

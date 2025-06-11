@@ -4,32 +4,20 @@ import { Link } from "react-router-dom";
 
 const DMSummmury = () => {
   return (
-    <div>
-      <div className="flex justify-center dmser-summ my-5">
-        <div className="flex flex-col items-center max-w-3xl p-3 ">
-          <h2 className="text-5xl font-bold text-teal-500 mb-4">
+      <div className="flex justify-center text-white py-12 ">
+      <div className="flex flex-col items-center px-8">
+        <h2 className="text-3xl text-teal-300 md:text-5xl font-semibold mb-4">
             Digital Marketing
           </h2>
-          <div className="lg:mx-8">
-            <p className="mb-6 text-lg text-justify">
-              At Nextgen Infratech Solutions, we offer a range of digital
-              marketing services to enhance your business's online presence. Our
-              Search Engine Optimization (SEO) strategies ensure improved
-              visibility and higher rankings, while our targeted Pay-Per-Click
-              (PPC) advertising drives immediate traffic and results. With
-              engaging Social Media Marketing, we foster connections and build
-              community around your brand.
+          <p className="text-md lg:text-xl text-gray-300 mb-6">
+              Digital Marketing That Delivers Results Nextgen Infratech
+              Solutions offers ROI-driven digital marketing services to boost
+              your online presence. Our expertise spans SEO for higher
+              visibility, PPC for instant traffic, and Social Media Marketing to
+              grow your brand. We craft impactful content, run targeted email
+              campaigns, and provide data-driven insights to refine your
+              strategy and maximize performance.
             </p>
-            <p className="text-justify text-lg">
-              Our Content Marketing services focus on creating valuable content
-              to attract and retain customers, aligning with their interests and
-              needs. We provide effective Email Marketing campaigns to nurture
-              leads and enhance customer loyalty through personalized
-              communication. Additionally, our Analytics and Reporting services
-              deliver insights to optimize your marketing strategies and measure
-              success.
-            </p>
-          </div>
 
           <Link
             to="/contact"
@@ -60,7 +48,6 @@ const DMSummmury = () => {
           </Link>
         </div>
       </div>
-    </div>
   );
 };
 

@@ -71,7 +71,7 @@ const DMSevices = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-10 justify-items-center lg:mx-20">
         {servicesData.map((service) => (
           <div className="p-4 " key={service.id}>
-            <div className="bg-white rounded-tl-[100px] shadow-lg overflow-hidden relative group">
+            <div className="bg-white rounded-md shadow-lg overflow-hidden relative group">
               <img
                 src={service.image}
                 alt={service.title}
