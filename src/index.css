@@ -23,7 +23,7 @@ code {
 :root {
   --scroll-size: 10px;
   /* Width and height of the scrollbar */
-  --scroll-thumb-color: #28aa4a;
+  --scroll-thumb-color: #0d8e81;
   /* Color of the scrollbar thumb */
   --scroll-track: transparent;
   /* Background color of the scrollbar track */
