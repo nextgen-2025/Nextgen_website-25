@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const Landing = () => {
   return (
     <section className="w-full min-h-[500px] md:h-screen bg-gradient-to-r from-gray-900 to-gray-800 relative pt-24 pb-16 md:py-24 lg:py-16 flex items-center">
-      <div className="absolute inset-0 bg-opacity-30 bg-black z-0">
+      <div className="landing-banner absolute inset-0 bg-opacity-30 bg-black z-0">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
       </div>
 
