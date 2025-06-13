@@ -170,7 +170,7 @@ const SpaceCards = () => {
                     </span>
                   </Link>
                 </div>
-                <p className="h-24 mb-4 text-gray-600 text-start leading-relaxed">
+                <p className="mb-4 text-gray-600 text-start leading-relaxed">
                   {space.description}
                 </p>
                 <ul className="space-y-3">
