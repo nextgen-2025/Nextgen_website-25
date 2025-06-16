@@ -16,63 +16,64 @@ const images = [
 
 const Process = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();  // Add this line
+  const navigate = useNavigate();
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change every 5 seconds
-
-    return () => clearInterval(intervalId); // Cleanup on unmount
+    }, 5000);
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-gray-900 to-gray-800">
-      <div className="flex flex-col lg:flex-row justify-around items-start md:items-center py-8 px-10 bg-gradient-to-r from-gray-900 to-gray-800 ">
-        <h1 className="text-2xl md:text-[50px] md:leading-[60px] px-4 py-2 lg:py-0 text-teal-400 text-left">
-          24/7 Workspaces,
-          <br />
-          <span className="text-white">for Every Schedule</span> 
-        </h1>
-        <p className="lg:w-[50%] pb-5 md:pb-0 text-left text-xl text-gray-300 md:px-3">
-          No matter when you work, NextGen Infratech is here for you. Our day
-          and night process options ensure that your team has access to premium
-          office spaces, offering flexibility and productivity at any hour.
-        </p>
-      </div>
-      <div
-        id="process"
-        className="relative  w-[85%] h-[100vh] mx-auto md:h-screen overflow-hidden"
-      >
+    <section className="relative w-full min-h-[60vh] flex flex-col justify-center items-center bg-gradient-to-br from-gray-900 to-gray-800 py-12 overflow-hidden">
+      <div className="absolute inset-0">
         <img
-          id="shift-image"
           src={images[currentIndex].src}
           alt="shifts"
-          className="w-full h-full  object-cover transition-opacity duration-1000"
-          style={{ opacity: currentIndex === 0 ? 1 : 1 }}
+          className="w-full h-full object-cover opacity-60 transition-opacity duration-1000"
+          style={{ opacity: 1 }}
         />
-        <div className="w-full md:w-[60%] absolute bottom-0 left-0 bg-white px-5 py-2 shadow-lg flex justify-between">
-          <div className="mb-2">
-            <h1 id="shift-title" className="text-2xl font-bold">
-              {images[currentIndex].title}
-            </h1>
-            <h3 className="md:text-lg font-semibold">Office Shifts</h3>
-          </div>
-          <div className="mb-2">
-            <h1 id="shift-count" className="text-2xl font-bold">
-              {images[currentIndex].count}
-            </h1>
-            <h3 className="md:text-lg font-semibold">Seats Available</h3>
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
+      </div>
+      <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-6">
+        <div className="flex-1 text-left">
+          <h1 className="text-3xl md:text-5xl font-bold text-teal-400 mb-4">
+            24/7 Workspaces,<br />
+            <span className="text-white">for Every Schedule</span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 mb-6">
+            No matter when you work, NextGen Infratech is here for you. Our day and night process options ensure that your team has access to premium office spaces, offering flexibility and productivity at any hour.
+          </p>
           <button
-            onClick={() => navigate('/contact')}  // Changed this line
-            className="bg-teal-700 text-white font-bold py-3 px-5 rounded hover:bg-teal-500 transition-colors"
+            onClick={() => navigate('/contact')}
+            className="bg-teal-600 hover:bg-teal-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 text-lg"
           >
             Book Now
           </button>
         </div>
+        <div className="flex-1 flex flex-col items-center">
+          <div className="bg-white/90 rounded-xl shadow-2xl p-8 w-full max-w-sm flex flex-col items-center">
+            <h2 className="text-2xl font-bold text-teal-600 mb-2">{images[currentIndex].title} Shift</h2>
+            <h3 className="text-lg font-semibold text-gray-700 mb-4">Office Shifts</h3>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-3xl font-bold text-teal-700">{images[currentIndex].count}</span>
+              <span className="text-lg font-semibold text-gray-700">Seats Available</span>
+            </div>
+            <div className="flex gap-2 mt-2">
+              {images.map((img, idx) => (
+                <button
+                  key={img.title}
+                  onClick={() => setCurrentIndex(idx)}
+                  className={`w-3 h-3 rounded-full border-2 border-teal-400 transition-all duration-300 ${currentIndex === idx ? 'bg-teal-400' : 'bg-white'}`}
+                  aria-label={`Show ${img.title} shift`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
