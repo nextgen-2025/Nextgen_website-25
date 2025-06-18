@@ -37,11 +37,11 @@ const TrainingHomeSection = () => {
       capacity: "Seats up to 50 attendees",
     },
     {
-      title: "Private Cabin",
-      image: "/space-cards/Private Office.webp",
+      title: "Traning Room",
+      image: "/space-cards/traning_room.png",
       description:
-        "Quiet, distraction-free cabins designed for personalized coaching and compact group sessions.",
-      capacity: "Ideal for up to 10 participants",
+        "Dedicated IT training facility with high-performance computers and specialized software for technical courses.",
+      capacity: "Ideal for groups of 20-40",
     },
   ];
 

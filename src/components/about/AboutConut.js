@@ -8,9 +8,9 @@ const AboutConut = () => {
       aria-label="Company Highlights"
     >
       {[
-        { count: "4k", label: "Workstations" },
+        { count: "5k", label: "Workstations" },
         { count: "30", label: "Happy Clients" },
-        { count: "7", label: "Years of Experience" },
+        { count: "8", label: "Years of Experience" },
       ].map((stat, index) => (
         <div
           key={`stat-${index}`}
