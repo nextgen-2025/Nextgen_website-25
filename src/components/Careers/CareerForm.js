@@ -8,10 +8,7 @@ const CareerForm = ({ selectedJob }) => {
     email: "",
     phone: "",
     location: "",
-    currentSalary: "",
-    expectedSalary: "",
     experience: "",
-    skills: "",
     resume: null,
     jobTitle: selectedJob || "",
   });
@@ -22,11 +19,10 @@ const CareerForm = ({ selectedJob }) => {
     phone: "",
     location: "",
     experience: "",
-    resume: "", // New error state for resume
+    resume: "",
   });
 
   useEffect(() => {
-    // console.log(selectedJob);
     setFormData((prevState) => ({ ...prevState, jobTitle: selectedJob || "" }));
   }, [selectedJob]);
 
@@ -36,6 +32,13 @@ const CareerForm = ({ selectedJob }) => {
       ...formData,
       [name]: value,
     });
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: "",
+      });
+    }
   };
 
   const handleFileChange = (e) => {
@@ -45,19 +48,19 @@ const CareerForm = ({ selectedJob }) => {
       if (file.type !== "application/pdf") {
         setErrors({ ...errors, resume: "Only PDF files are allowed." });
         setFormData({ ...formData, resume: null });
+        return;
       }
-      // Check if file size is less than 200KB
-      else if (file.size > 2000 * 1024) {
-        // 200KB in bytes
+      // Check if file size is less than 2MB
+      if (file.size > 2 * 1024 * 1024) {
         setErrors({
           ...errors,
           resume: "File size should be less than 2MB.",
         });
         setFormData({ ...formData, resume: null });
-      } else {
-        setErrors({ ...errors, resume: "" }); // Clear error if file is valid
-        setFormData({ ...formData, resume: file });
+        return;
       }
+      setErrors({ ...errors, resume: "" });
+      setFormData({ ...formData, resume: file });
     }
   };
 
@@ -65,7 +68,7 @@ const CareerForm = ({ selectedJob }) => {
     let tempErrors = {};
     let isValid = true;
 
-    if (!formData.name) {
+    if (!formData.name.trim()) {
       tempErrors.name = "Name is required";
       isValid = false;
     }
@@ -85,7 +88,7 @@ const CareerForm = ({ selectedJob }) => {
       isValid = false;
     }
 
-    if (!formData.location) {
+    if (!formData.location.trim()) {
       tempErrors.location = "Location is required";
       isValid = false;
     }
@@ -95,7 +98,8 @@ const CareerForm = ({ selectedJob }) => {
       isValid = false;
     }
 
-    if (!formData.jobTitle) {
+    // Only validate jobTitle if no selectedJob is provided
+    if (!selectedJob && !formData.jobTitle) {
       tempErrors.jobTitle = "Please apply for a role";
       isValid = false;
     }
@@ -106,51 +110,65 @@ const CareerForm = ({ selectedJob }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      setIsSubmitting(true);
-      const formDataToSend = new FormData();
-      formDataToSend.append("name", formData.name);
-      formDataToSend.append("email", formData.email);
-      formDataToSend.append("phone", formData.phone);
-      formDataToSend.append("experience", formData.experience);
-      formDataToSend.append("location", formData.location);
-      formDataToSend.append("jobTitle", formData.jobTitle);
-      formDataToSend.append("resume", formData.resume);
+    
+    if (!validateForm()) {
+      return;
+    }
 
-      try {
-        const response = await fetch(
-          `https://nextgen-backend-2025-production.up.railway.app/submit-application`,
-          {
-            method: "POST",
-            body: formDataToSend,
-          }
-        );
-        if (response.ok) {
-          setSubmitSuccess(true);
-          setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            experience: "",
-            location: "",
-            expectedSalary: "",
-            currentSalary: "",
-            skills: "",
-            resume: null,
-            jobTitle: "",
-          });
-          setErrors({});
-        } else {
-          setSubmitSuccess(false);
-          alert("Failed to submit the form");
+    setIsSubmitting(true);
+    setSubmitSuccess(null);
+
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.name.trim());
+    formDataToSend.append("email", formData.email.trim());
+    formDataToSend.append("phone", formData.phone.trim());
+    formDataToSend.append("experience", formData.experience);
+    formDataToSend.append("location", formData.location.trim());
+    formDataToSend.append("jobTitle", formData.jobTitle);
+    
+    if (formData.resume) {
+      formDataToSend.append("resume", formData.resume);
+    }
+
+    try {
+      const response = await fetch(
+        `https://nextgen-backend-2025-production-f2de.up.railway.app/jobs`,
+        {
+          method: "POST",
+          body: formDataToSend,
         }
-      } catch (error) {
+      );
+
+      if (response.ok) {
+        const result = await response.json();
+        setSubmitSuccess(true);
+        
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          experience: "",
+          location: "",
+          resume: null,
+          jobTitle: selectedJob || "",
+        });
+        setErrors({});
+        
+        console.log("Form submitted successfully:", result);
+      } else {
+        const errorData = await response.text();
+        console.error("Server error:", errorData);
         setSubmitSuccess(false);
-        console.error("Error submitting the form:", error);
-        alert("Error submitting the form");
-      } finally {
-        setIsSubmitting(false); // Reset submitting state
+        alert(`Failed to submit the form. Server responded with: ${response.status}`);
+        console.log(`Failed to submit the form. Server responded with: ${response}`);
       }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      setSubmitSuccess(false);
+      alert("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
