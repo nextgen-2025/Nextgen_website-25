@@ -132,7 +132,7 @@ const CareerForm = ({ selectedJob }) => {
 
     try {
       const response = await fetch(
-        `https://nextgen-backend-2025-production-f2de.up.railway.app/jobs`,
+        `https://nextgen-backend-2025-production-f2de.up.railway.app/api/jobs`,
         {
           method: "POST",
           body: formDataToSend,
